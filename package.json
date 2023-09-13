@@ -1,13 +1,14 @@
 {
-  "name": "nazox",
-  "version": "0.0.0",
+  "name": "cd-shell",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve cd-shell",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {
@@ -92,6 +93,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.0.0",
+    "ngx-build-plus": "^15.0.0",
     "protractor": "^7.0.0",
     "ts-node": "~10.9.1",
     "tslint": "~6.1.3",

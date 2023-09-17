@@ -13,8 +13,9 @@ NB:
 2. create new 'app' in the project:
   - Ref: https://www.tektutorialshub.com/angular/angular-multiple-apps-in-one-project/
   - ng generate application cd-shell
-3. replace src folder:
+3. replace src folder, them modify the angular.json file:
   - replace the ./projects/cd-shell/src folder with the working 'src' of starter kit
+  - adjust the angular.json file for cd-shell project in terms of assets and styles
 4. Test working project/cd-shell:
   - run: ng serve cd-shell
   - when confirmed working, replace npm script/start with ng serve cd-shell. 

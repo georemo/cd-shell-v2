@@ -15,6 +15,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RightsidebarComponent } from './rightsidebar/rightsidebar.component';
 import { HorizontaltopbarComponent } from './horizontaltopbar/horizontaltopbar.component';
 import { HorizontalnavbarComponent } from './horizontalnavbar/horizontalnavbar.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
@@ -30,6 +31,11 @@ import { HorizontalnavbarComponent } from './horizontalnavbar/horizontalnavbar.c
     ReactiveFormsModule
   ],
   exports: [TopbarComponent, FooterComponent, SidebarComponent, RightsidebarComponent, HorizontaltopbarComponent, HorizontalnavbarComponent],
-  providers: [LanguageService]
+  providers: [
+    LanguageService,
+    {
+      provide: 'env', useValue: environment
+    }
+  ]
 })
 export class SharedModule { }

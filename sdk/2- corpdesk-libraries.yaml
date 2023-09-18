@@ -1,0 +1,36 @@
+install coprdesk libraries:
+"@corpdesk/core": "^0.1.7",
+"@corpdesk/naz": "^0.1.7",
+npm install @corpdesk/core @corpdesk/naz
+
+- set environment files
+
+- install sio
+  npm install socket.io-client
+- install sio-client.service.ts
+
+- update IBase for cd-ui-lib following modification in ngSio project
+  - check ngSio/IBase for CdObjId and ICdPushEnvelop
+  - update cd-ui-lib
+  - publish cd-ui-lib
+  - update naz-lib with cd-ui-lib
+  - publish naz-lib
+
+- update environment for cd-shell-v2
+
+- issue: Injection error when cd-ui-lib env is not initialized in a module
+solution:
+  - set environment for sidebar module:
+  providers: [
+      {
+        provide: 'env', useValue: environment
+      }
+    ]
+
+- test sio
+
+- integrate sio with cd-ui-lib
+login page:
+http://localhost:4500/account/login?returnUrl=%2F
+
+

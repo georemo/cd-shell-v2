@@ -1,3 +1,4 @@
 {
-    "user": "http://localhost:4407/remoteEntry.js"
+	"cd-user": "http://localhost:4407/remoteEntry.js",
+	"cd-comm": "http://localhost:4401/remoteEntry.js"
 }

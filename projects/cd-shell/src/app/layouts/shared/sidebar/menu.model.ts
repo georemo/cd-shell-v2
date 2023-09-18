@@ -1,11 +1,12 @@
 export interface MenuItem {
-    id?: number;
-    label?: string;
-    icon?: string;
-    link?: string;
-    subItems?: any;
-    isTitle?: boolean;
-    badge?: any;
-    parentId?: number;
-    isLayout?: boolean;
+    id?: number; // menuId
+    label?: string; // manuLabel
+    icon?: string; // icon: https://remixicon.com/
+    link?: string; // path
+    subItems?: any; // children
+    isTitle?: boolean; // isTitel
+    badge?: any; // badge
+    parentId?: number; // parentId
+    isLayout?: boolean; // isLayout
+    moduleIsPublic?: boolean // moduleIsPublic // to determine routes that need guarding
 }

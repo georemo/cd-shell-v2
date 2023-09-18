@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
             data => {
-              this.router.navigate(['/user']);
+              this.router.navigate(['/']);
             },
             error => {
               this.error = error ? error : '';

@@ -21,24 +21,119 @@ const routes: Routes = [
     { path: 'form', loadChildren: () => import('./form/form.module').then(m => m.FormModule) },
     { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },
     { path: 'maps', loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule) },
+    // {
+    //     path: 'user',
+    //     loadChildren: () => loadRemoteModule({
+    //         type: 'manifest',
+    //         remoteName: 'cd-user',
+    //         exposedModule: './PagesModule'
+    //     })
+    //         .then(m => m.PagesModule)
+    // },
+    // {
+    //     path: 'login',
+    //     loadChildren: () => loadRemoteModule({
+    //         type: 'manifest',
+    //         remoteName: 'cd-user',
+    //         exposedModule: './LoginComponent'
+    //     })
+    //         .then(m => m.AccountModule)
+    // },
+    // {
+    //     path: 'comm',
+    //     loadChildren: () => loadRemoteModule({
+    //         type: 'manifest',
+    //         remoteName: 'cd-comm',
+    //         exposedModule: './PagesModule'
+    //     })
+    //         .then(m => m.PagesModule)
+    // },
     {
-        path: 'cd-user',
-        loadChildren: () => loadRemoteModule({
-            type: 'manifest',
-            remoteName: 'cd-user',
-            exposedModule: './PagesModule'
-          })
-          .then(m => m.PagesModule)
-      },
-      {
-        path: 'cd-comm',
-        loadChildren: () => loadRemoteModule({
-            type: 'manifest',
-            remoteName: 'cd-comm',
-            exposedModule: './PagesModule'
-          })
-          .then(m => m.PagesModule)
-      },
+        path: 'user',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-user-01:4407/remoteEntry.js',
+                remoteName: 'cdUser',
+                exposedModule: './UserFrontModule'
+            })
+                .then(m => m.UserFrontModule)
+    },
+    {
+        path: 'pms',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://:cd-pms-01:4400/remoteEntry.js',
+                remoteName: 'cdPms',
+                exposedModule: './PmsModule'
+            })
+                .then(m => m.PmsModule)
+    },
+    // {
+    //     path: 'comm',
+    //     loadChildren: () =>
+    //         loadRemoteModule({
+    //             remoteEntry: 'http://cd-comm-01:4401/remoteEntry.js',
+    //             remoteName: 'cdComm',
+    //             exposedModule: './MemoModule'
+    //         })
+    //             .then(m => m.MemoModule)
+    // },
+    /**
+     * Note how the memo and inte-ract are served from one remote app cdComm
+     * - check the remoteEntry is the same but different exposed module
+     * - you can got to the remote project to see how it is also configured
+     * to allow this to happen
+     */
+    {
+        path: 'memo',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://:cd-comm-01:4401/remoteEntry.js',
+                remoteName: 'cdComm',
+                exposedModule: './MemoModule'
+            })
+                .then(m => m.MemoModule)
+    },
+    {
+        path: 'inte-ract',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-comm-01:4401/remoteEntry.js',
+                remoteName: 'cdComm',
+                exposedModule: './InteRactModule'
+            })
+                .then(m => m.InteRactModule)
+    },
+    {
+        path: 'moduleman',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-moduleman-01:4402/remoteEntry.js',
+                remoteName: 'cdModuleman',
+                exposedModule: './ModulemanModule'
+            })
+                .then(m => m.ModulemanModule)
+    },
+    // {
+    //     path: 'menu',
+    //     loadChildren: () =>
+    //         loadRemoteModule({
+    //             remoteEntry: 'http://localhost:4402/remoteEntry.js',
+    //             remoteName: 'cdModuleman',
+    //             exposedModule: './MenuModule'
+    //         })
+    //             .then(m => m.MenuModule)
+    // },
+    {
+        path: 'hrm',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-hrm-01:4408/remoteEntry.js',
+                remoteName: 'cdHrm',
+                exposedModule: './RecruitModule'
+            })
+                .then(m => m.RecruitModule)
+    }
 ];
 
 @NgModule({

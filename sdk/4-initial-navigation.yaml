@@ -1,0 +1,14 @@
+set remote route items as per older shell
+
+set initial page
+- dedicated login page
+- nested login page
+
+restore top bar:
+  - set navigation to login from drop down
+
+restore moduleman facilities from old shell
+restore all facilities from old shell
+
+restore all items from old user
+

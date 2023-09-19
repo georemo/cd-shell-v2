@@ -2,11 +2,13 @@ import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 import { AuthenticationService } from '../../../core/services/auth.service';
 import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
 import { LanguageService } from '../../../core/services/language.service';
 import { environment } from '../../../../environments/environment';
+import { BaseModel, ICdResponse, NavService, SocketIoService } from '@corpdesk/core';
 
 @Component({
   selector: 'app-topbar',
@@ -14,7 +16,7 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent implements OnInit {
-
+  baseModel: BaseModel;
   element: any;
   configData: any;
   cookieValue;
@@ -31,7 +33,19 @@ export class TopbarComponent implements OnInit {
   ];
 
   // tslint:disable-next-line: max-line-length
-  constructor(@Inject(DOCUMENT) private document: any, private router: Router, private authService: AuthenticationService, private authFackservice: AuthfakeauthenticationService, public languageService: LanguageService, public cookiesService: CookieService) { }
+  constructor(
+    @Inject(DOCUMENT) private document: any, 
+    private router: Router, 
+    private authService: AuthenticationService, 
+    private authFackservice: AuthfakeauthenticationService, 
+    public languageService: LanguageService, 
+    public cookiesService: CookieService,
+    private svSocket: SocketIoService,
+    private toastr: ToastrService,
+    private svNav: NavService,
+    ) { 
+      this.init();
+    }
 
   @Output() mobileMenuButtonClicked = new EventEmitter();
   @Output() settingsButtonClicked = new EventEmitter();
@@ -51,6 +65,11 @@ export class TopbarComponent implements OnInit {
     } else {
       this.flagvalue = val.map(element => element.flag);
     }
+    this.pushSubscribe()
+  }
+
+  init(){
+    this.baseModel = new BaseModel('moduleman', 'module');
   }
 
   /**
@@ -112,6 +131,44 @@ export class TopbarComponent implements OnInit {
     this.flagvalue = flag;
     this.cookieValue = lang;
     this.languageService.setLanguage(lang);
+  }
+
+  login() {
+    this.svNav.sNavigate(this, '/user/login');
+    // this.svNav.sNavigate(this, 'account/login');
+  }
+
+  register() {
+    this.svNav.sNavigate(this, '/inte-ract');
+  }
+
+  profile() {
+    this.svNav.sNavigate(this, '/user/profile');
+  }
+
+  // set all the events that compose-doc should listen to
+  pushSubscribe() {
+    this.svSocket.listen('push-notif')
+      .subscribe((data: any) => {
+        this.showNotif(data);
+      });
+  }
+
+  showNotif(data: ICdResponse) {
+    if(data.app_state.success){
+      if(data.app_state.info){
+        this.toastr.success(data.app_state.info.app_msg!);
+      } else {
+        this.toastr.success('success')
+      }
+    }
+    else{
+      if(data.app_state.info){
+        this.toastr.warning(data.app_state.info.app_msg!);
+      } else {
+        this.toastr.warning('some error occurred!')
+      }
+    } 
   }
 
 

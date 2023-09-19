@@ -374,6 +374,15 @@
           <a class="dropdown-item" href="javascript: void(0);"><i class="ri-lock-unlock-line align-middle me-1"></i>
             {{ 'HEADER.LOGIN.LOCK_SCREEN' | translate}}</a>
           <div class="dropdown-divider"></div>
+          
+          <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="login()"><i
+            class="ri-shut-down-line align-middle mr-1 text-danger"></i>
+          {{ 'Login' | translate}}</a>
+
+          <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="register()"><i
+            class="ri-shut-down-line align-middle mr-1 text-danger"></i>
+          {{ 'Register' | translate}}</a>
+
           <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="logout()"><i
               class="ri-shut-down-line align-middle me-1 text-danger"></i>
             {{ 'HEADER.LOGIN.LOGOUT' | translate}}</a>

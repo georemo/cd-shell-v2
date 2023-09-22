@@ -68,16 +68,16 @@ const routes: Routes = [
             })
                 .then(m => m.PmsModule)
     },
-    // {
-    //     path: 'comm',
-    //     loadChildren: () =>
-    //         loadRemoteModule({
-    //             remoteEntry: 'http://cd-comm-01:4401/remoteEntry.js',
-    //             remoteName: 'cdComm',
-    //             exposedModule: './MemoModule'
-    //         })
-    //             .then(m => m.MemoModule)
-    // },
+    {
+        path: 'comm',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-comm-01:4401/remoteEntry.js',
+                remoteName: 'cdComm',
+                exposedModule: './MemoModule'
+            })
+                .then(m => m.MemoModule)
+    },
     /**
      * Note how the memo and inte-ract are served from one remote app cdComm
      * - check the remoteEntry is the same but different exposed module

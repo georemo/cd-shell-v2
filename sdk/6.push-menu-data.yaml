@@ -1,0 +1,15 @@
+sidebar component:
+- init socket.io
+- listen to push-menu
+- save socketid by appId to LocalStorage
+
+on successfull authentication:
+- pick appId saved by appId to LocalStorage
+- at the push server, search for socketid by appId
+
+push message to destination by socketid:
+- https://stackoverflow.com/questions/4647348/send-message-to-specific-client-with-socket-io-and-node-js
+
+
+--------------------------------
+try: on-connection, get socketid and push back to client to inform of socketid

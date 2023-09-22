@@ -1,5 +1,5 @@
 install coprdesk libraries:
-- @corpdesk/core @corpdesk/naz socket.io-client ng-toggle-button fuzzy-search
+- npm install @corpdesk/core @corpdesk/naz socket.io-client ng-toggle-button fuzzy-search
 npm install @corpdesk/core @corpdesk/naz
 
 - set environment files

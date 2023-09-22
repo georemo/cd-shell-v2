@@ -10,13 +10,13 @@ import { environment } from 'src/environments/environment';
 })
 export class SioClientService {
   jwtToken = '';
-  socket = io('http://localhost:3001');
+  socket: any = null;
   public message$: BehaviorSubject<string> = new BehaviorSubject('');
   pushDataList: ICdPushEnvelop[] = [];
   constructor(
 
   ) {
-
+    this.socket = io(environment.sioEndpoint);
   }
   /**
    * - save resource in localStorag so it is sharable

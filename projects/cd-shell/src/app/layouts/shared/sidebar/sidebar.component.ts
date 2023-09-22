@@ -1,3 +1,7 @@
+/**
+ * note: sender.cdObjId.resourceGuid is used to id the sender and the origin app.
+ */
+import { v4 as uuidv4 } from 'uuid';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 // import MetisMenu from 'metismenujs/dist/metismenujs';
 import MetisMenu from 'metismenujs';
@@ -5,11 +9,16 @@ import MetisMenu from 'metismenujs';
 import { Router, NavigationEnd } from '@angular/router';
 import { map, mergeMap } from 'rxjs/operators';
 import { EventService } from '../../../core/services/event.service';
-import { MenuCollection, MenuService, SocketIoService, UserService, IdleTimeoutService, IAppState, WebsocketService, BaseService, WsHttpService, CdObjId, ICdResponse, ICdPushEnvelop } from '@corpdesk/core';
+import {
+  MenuCollection, MenuService, SocketIoService, SioClientService, UserService,
+  IdleTimeoutService, IAppState, WebsocketService, BaseService,
+  // WsHttpService,
+  CdObjId, ICdResponse, ICdPushEnvelop, ISocketItem
+} from '@corpdesk/core';
 import { HtmlElemService, HtmlCtx } from '@corpdesk/core/src/lib/guig';
 import { MenuItem } from './menu.model';
 import { environment } from 'src/environments/environment';
-import { SioClientService } from '../../../core/services/sio-client.service';
+// import { SioClientService } from '../../../core/services/sio-client.service';
 
 let $ = new HtmlElemService();
 interface IdleTimerOptions {
@@ -39,41 +48,21 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     skipLocationChange: true,
     replaceUrl: false
   };
-  // socket = new IO();
-  // pushMenuEvent = new ioEvent(`push-menu`);
   constructor(
     private elementRef: ElementRef,
     private eventService: EventService,
     private router: Router,
     private svMenu: MenuService,
-    // private svSocket: SocketIoService,
     private svWs: WebsocketService,
     private svHtml: HtmlElemService,
-    private svWsHttp: WsHttpService,
     private svUser: UserService,
     private svIdleTimeout: IdleTimeoutService,
     public cd: ChangeDetectorRef,
     private svBase: BaseService,
-    private soiService: SioClientService
+    private svSio: SioClientService,
   ) {
-    // this.setAppId()
-    // this.registerWsService();
-    // this.resourceGuid = this.svBase.getGuid();
-    // const key = this.resourceGuid;
-    // const value = {
-    //   ngModule:'SharedModule',
-    //   resourceName:'SidebarComponent',
-    //   resourceGuid: this.resourceGuid,
-    //   commTrack: {
-    //     initTime: Number(new Date()),
-    //     relayTime: null,
-    //     relayed: false,
-    //     deliveryTime: null,
-    //     deliverd: null,
-    //   }
-    // }
-    // localStorage.setItem(key,JSON.stringify(value));
-    // this.socket.connect(`http://localhost:3200`);
+    this.svSio.env = environment;
+    this.svSio.initSio(this, this.onPushRegisteredClient);
 
     $ = this.svHtml;
     router.events.forEach((event) => {
@@ -84,31 +73,62 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    // console.log('starting ngOnInit()');
-    // this.initialize();
+    console.log('starting SidebarComponent::ngOnInit()');
+    this.initialize();
   }
 
   ngAfterViewInit() {
-    // console.log('starting ngAfterViewInit()');
-    this.initialize();
+    console.log('starting ngAfterViewInit()');
+    this.setAppId()
     this._activateMenuDropdown();
     this.initSession();
   }
 
+  saveSocket(payLoad: ICdPushEnvelop) {
+    console.log('SidebarComponent::saveSocket()/payLoad:', payLoad);
+    /**
+     * - get socketStore
+     * - search socketStore for item with name='appInit'
+     * - remove existing item with the same key
+     * - save socketData to LocalStorage with resourceGuide as reference
+     */
+    const socketData: ISocketItem[] | null = payLoad.pushData.appSockets.filter(appInit)
+    function appInit(s: ISocketItem): ISocketItem | null {
+      if (s.name === 'appInit') {
+        return s;
+      } else {
+        return null;
+      }
+    }
+
+    if (socketData.length > 0) {
+      const socketStr = JSON.stringify(socketData)
+      localStorage.removeItem('socketData');
+      localStorage.setItem('socketData', socketStr);
+    }
+  }
+
   setAppId() {
+    console.log('starting SidebarComponent::setAppId()')
     localStorage.removeItem('appId');
     localStorage.setItem('appId', this.svBase.getGuid());
-    const pushEnvelop: ICdPushEnvelop = {
+    const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
+    this.svSio.sendPayLoad(envl)
+  }
+
+  configPushPayload(triggerEvent: string, emittEvent: string, cuid: number | string): ICdPushEnvelop {
+    console.log('starting cd-shell-v2::SidebarComponent::configPushPayload()');
+    const pushEnvelope: ICdPushEnvelop = {
       pushData: {
-        appId: localStorage.getItem('appId')!,
-        socketScope: 'app',
-        pushGuid: this.svBase.getGuid(),
+        pushGuid: '',
         m: '',
         pushRecepients: [],
-        triggerEvent: 'login',
-        emittEvent: 'push-menu',
+        triggerEvent: '',
+        emittEvent: '',
         token: '',
-        isNotification: false,
+        isNotification: null,
+        appSockets: [],
+        isAppInit: true,
         commTrack: {
           initTime: Number(new Date()),
           relayTime: null,
@@ -119,13 +139,64 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           delivered: false,
           completed: false,
           completedTime: null
-        }
+        },
       },
       req: null,
       resp: null
-    };
-    // this.soiService.pushData(pushEnvelop, 'register-client')
-    // this.soiService.sendPayLoad(pushEnvelop)
+    }
+
+    const users = [
+      {
+        userId: cuid,
+        subTypeId: 1,
+        cdObjId: {
+          appId: environment.appId,
+          ngModule: 'SharedModule',
+          resourceName: 'SidebarComponent',
+          resourceGuid: uuidv4(),
+          jwtToken: '',
+          socket: null,
+          socketId: '',
+          commTrack: {
+            initTime: Number(new Date()),
+            relayTime: null,
+            relayed: false,
+            pushed: false,
+            pushTime: null,
+            deliveryTime: null,
+            delivered: false,
+            completed: false,
+            completedTime: null
+          },
+        },
+      },
+    ]
+
+    const envl: ICdPushEnvelop = { ...pushEnvelope };
+    envl.pushData.triggerEvent = triggerEvent;
+    envl.pushData.emittEvent = emittEvent;
+
+    // set sender
+    const uSender: any = { ...users[0] }
+    uSender.subTypeId = 1;
+    envl.pushData.pushRecepients.push(uSender)
+
+
+    /**
+     * recepient is only used when sending message to 
+     * remote user or component.
+     * In this case we are just connecting and
+     * collecting connection info.
+     */
+    // set recepient
+    // const uRecepient: any = { ...users[0] }
+    // uRecepient.subTypeId = 7;
+    // envl.pushData.pushRecepients.push(uRecepient)
+
+    console.log('starting cd-user-v2::LoginComponent::configPushPayload()/envl:', envl);
+
+    return envl;
+
   }
 
   registerWsService() {
@@ -169,22 +240,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       args: {}
     }
     localStorage.setItem(key, JSON.stringify(value));
-    // register and get a token for subsequent Websocket communication
-    // ... and get jwtToken from the server
-    this.svWsHttp.registerResource$(env)
-      .subscribe((res: any) => {
-        const regResponse: ICdResponse = res;
-        console.log('SidebarComponent::registerWsService()/regResponse:', JSON.stringify(regResponse))
-        if (regResponse.app_state.success) {
-          console.log('SidebarComponent::registerWsService()/succeded!!:')
-          this.jwtWsToken = regResponse.app_state.sess!.jwt!.jwtToken!;
-          value.jwtToken = this.jwtWsToken;
-          console.log('SidebarComponent::registerWsService()/value:', value)
-          localStorage.setItem(key, JSON.stringify(value));
-          console.log('SidebarComponent::registerWsService()/this.jwtWsToken:', this.jwtWsToken)
-          this.initWebSocket(this.jwtWsToken)
-        }
-      })
   }
 
   idleTimerCallback() {
@@ -197,8 +252,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    * Initialize
    */
   initialize(): void {
-    // console.log('starting initialize()');
-    this.pushSubscribe();
+    console.log('starting initialize()');
   }
 
   initSession() {
@@ -220,7 +274,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   // set all the events that compose-doc should listen to
-  pushSubscribe() {
+  pushSubscribe(cls: any) {
     console.log('SidebarComponent::pushSubscribe()/01');
     // this.initWebSocket();
     // this.svSocket.listen('push-menu')
@@ -243,9 +297,20 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     //     this.htmlMenu(data.m);
     //   })
 
-    this.soiService.listenSecure('push-menu')
+
+    cls.listenSecure('push-registered-client')
       .subscribe((payLoadStr: string) => {
-        console.log('listenSecure()/push-msg-relayed/:payLoadStr:', payLoadStr)
+        console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoadStr:', payLoadStr)
+        if (payLoadStr) {
+          const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+          console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
+          this.saveSocket(payLoad);
+        }
+      })
+
+    cls.listenSecure('push-menu')
+      .subscribe((payLoadStr: string) => {
+        console.log('SidebarComponent::listenSecure()/push-menu/:payLoadStr:', payLoadStr)
         if (payLoadStr) {
           const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
           console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
@@ -254,11 +319,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           this.svIdleTimeout.startTimer(this.cd, idleTimerOptions);
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
-          if(menuData){
+          if (menuData) {
             this.htmlMenu(JSON.parse(payLoad.pushData.m));
           }
         }
       })
+
+
 
     // this.socket.listenToEvent(this.pushMenuEvent).event$
     // .subscribe((data) => {
@@ -318,23 +385,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   }
 
-  initWebSocket(jwtWsToken: string) {
-    console.log('SidebarComponent::initWebSocket()/01')
-    console.log('SidebarComponent::initWebSocket()/jwtWsToken:', jwtWsToken)
-    console.log('SidebarComponent::initWebSocket()/this.resourceGuid:', this.resourceGuid)
-    this.svWs.listenSecure(jwtWsToken, this.resourceGuid)
-      .subscribe(
-        (msg: any) => {
-          console.log('SidebarComponent::initWebSocket()/msg:', JSON.stringify(msg))
-          this.svWs.onMsgReceived(msg);
-        }, // Called whenever there is a message from the server.
-        (err: any) => {
-          console.log('SidebarComponent::initWebSocket()/Subscriber Error:', err)
-        }, // Called if at any point WebSocket API signals some kind of error.
-        () => console.log('complete') // Called when connection is closed (for whatever reason).
-      );
+  onPushRegisteredClient(cls:any, payLoadStr) {
+    console.log('SidebarComponent::onPushRegisteredClient():payLoadStr:', payLoadStr)
+    if (payLoadStr) {
+      // const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+      // console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
+      cls.saveSocket(payLoadStr);
+    }
   }
-
 
   /**
    * remove active and mm-active class

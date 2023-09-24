@@ -62,7 +62,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     private svSio: SioClientService,
   ) {
     this.svSio.env = environment;
-    this.svSio.initSio(this, this.onPushRegisteredClient);
+    this.svSio.initSio(this, this.socketAction);
 
     $ = this.svHtml;
     router.events.forEach((event) => {
@@ -118,6 +118,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   configPushPayload(triggerEvent: string, emittEvent: string, cuid: number | string): ICdPushEnvelop {
     console.log('starting cd-shell-v2::SidebarComponent::configPushPayload()');
+    this.resourceGuid = this.svBase.getGuid();
+
+
     const pushEnvelope: ICdPushEnvelop = {
       pushData: {
         pushGuid: '',
@@ -145,30 +148,35 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       resp: null
     }
 
+    console.log('cd-shell-v2::SidebarComponent::configPushPayload()/this.resourceGuid:', this.resourceGuid);
+    const key = this.resourceGuid;
+    const cdObj: CdObjId = {
+      appId: localStorage.getItem('appId')!,
+      ngModule: 'SharedModule',
+      resourceName: 'SidebarComponent',
+      resourceGuid: this.resourceGuid,
+      jwtToken: this.jwtWsToken,
+      socket: null,
+      commTrack: {
+        initTime: Number(new Date()),
+        relayTime: null,
+        relayed: false,
+        pushed: false,
+        pushTime: null,
+        deliveryTime: null,
+        delivered: false,
+        completed: false,
+        completedTime: null
+      },
+    }
+
+    localStorage.setItem(key, JSON.stringify(cdObj));
+
     const users = [
       {
         userId: cuid,
         subTypeId: 1,
-        cdObjId: {
-          appId: environment.appId,
-          ngModule: 'SharedModule',
-          resourceName: 'SidebarComponent',
-          resourceGuid: uuidv4(),
-          jwtToken: '',
-          socket: null,
-          socketId: '',
-          commTrack: {
-            initTime: Number(new Date()),
-            relayTime: null,
-            relayed: false,
-            pushed: false,
-            pushTime: null,
-            deliveryTime: null,
-            delivered: false,
-            completed: false,
-            completedTime: null
-          },
-        },
+        cdObjId: cdObj,
       },
     ]
 
@@ -385,12 +393,41 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   }
 
-  onPushRegisteredClient(cls:any, payLoadStr) {
+  socketAction(cls, emittEvent, payLoad) {
+    if (emittEvent == 'push-registered-client') {
+      cls.onPushRegisteredClient(cls, payLoad)
+    }
+    if (emittEvent === 'push-msg-pushed') {
+      cls.onPushMsgPushed(cls, payLoad)
+    }
+  }
+
+  onPushRegisteredClient(cls: any, payLoadStr) {
     console.log('SidebarComponent::onPushRegisteredClient():payLoadStr:', payLoadStr)
     if (payLoadStr) {
       // const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
       // console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
       cls.saveSocket(payLoadStr);
+    }
+  }
+
+  onPushMsgPushed(cls: any, payLoad) {
+    console.log('SidebarComponent::onPushMsgPushed():payLoad:', payLoad)
+    if (payLoad) {
+      console.log('SidebarComponent::onPushMsgPushed()/push-menu/:payLoad:', payLoad)
+      if (payLoad) {
+        // const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+        // const payLoad: ICdPushEnvelop = payLoadStr
+        console.log('SidebarComponent::onPushMsgPushed()/payLoad:', payLoad);
+        // start idletimeout
+        cls.routParams.queryParams.token = payLoad.pushData.token;
+        cls.svIdleTimeout.startTimer(cls.cd, idleTimerOptions);
+        // load menu
+        const menuData = payLoad.pushData.m;
+        if (menuData) {
+          cls.htmlMenu(payLoad.pushData.m);
+        }
+      }
     }
   }
 
@@ -540,9 +577,11 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   async htmlMenu(menuData: MenuItem[]) {
+    menuData = await this.svMenu.mapMenu(menuData)
+    console.log('starting cdShellV2::SidebarComponent/htmlMenu()')
     this.toggleEvents = [];
-    console.log('htmlMenu()/01')
-    console.log('htmlMenu()/menuData:', menuData)
+    console.log('cdShellV2::SidebarComponent/htmlMenu()/01')
+    console.log('cdShellV2::SidebarComponent/htmlMenu()/menuData:', menuData)
     if (menuData) {
       this.htmlRootMenu(menuData).then(() => {
         this.activateDropdown(menuData);
@@ -559,6 +598,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       srtHtml: await this.htmlMenuContainer('root', null),
       position: 'afterbegin'
     };
+    console.log('cdShellV2::SidebarComponent/htmlRootMenu()/01')
     // append root container
     $.append(h)
       .then(async (success) => {
@@ -568,6 +608,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         //   menuData = [];
         // }
         menuData.forEach((mi: MenuItem) => {
+          console.log('cdShellV2::SidebarComponent/htmlRootMenu()/02')
+          console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
           rootMenus += this.htmlMenuItem(mi);
         });
 
@@ -580,8 +622,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         //insert menus to root container
         $.append(h)
           .then(() => {
+            console.log('cdShellV2::SidebarComponent/htmlRootMenu()/03')
+            console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
             // for each menu item, set children
             menuData.forEach(async (mi: MenuItem) => {
+              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/04')
+              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
+              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
               this.htmlChildren(mi, menuData)
             });
           })
@@ -589,6 +636,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   async htmlChildren(mi: MenuItem, parentData: MenuItem[]) {
+    console.log('cdShellV2::SidebarComponent/htmlChildren()/01')
+    console.log('cdShellV2::SidebarComponent/htmlChildren()/01/mi:', mi)
     let h: HtmlCtx = {
       elementRef: this.elementRef,
       selector: `#li_${mi.id}`,
@@ -598,9 +647,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     // set subMenu container
     await $.append(h)
       .then(async (success) => {
+        console.log('cdShellV2::SidebarComponent/htmlChildren()/02')
+        console.log('cdShellV2::SidebarComponent/htmlChildren()/02/mi:', mi)
         // set children html
         let htmlSubMenu = '';
         mi.subItems.forEach((sm) => {
+          console.log('cdShellV2::SidebarComponent/htmlChildren()/03')
+          console.log('cdShellV2::SidebarComponent/htmlChildren()/03/sm:', sm)
           htmlSubMenu += this.htmlMenuItem(sm);
         });
         //insert menus to sub-menu container
@@ -611,8 +664,12 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           position: 'afterbegin'
         };
         $.append(h).then(() => {
+          console.log('cdShellV2::SidebarComponent/htmlChildren()/04')
+          console.log('cdShellV2::SidebarComponent/htmlChildren()/parentData:', parentData)
           this.activateDropdown(parentData);
           mi.subItems.forEach((sm) => {
+            console.log('cdShellV2::SidebarComponent/htmlChildren()/05')
+            console.log('cdShellV2::SidebarComponent/htmlChildren()/sm:', sm)
             this.setRoutTarget(sm);
           });
         });
@@ -624,10 +681,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     console.log('SidebarComponent::activateDropdown()/01')
     console.log('SidebarComponent::activateDropdown()/parentData:', parentData)
     parentData.forEach((mi: MenuItem) => {
-      console.log('SidebarComponent::activateDropdown()/01')
+      console.log('SidebarComponent::activateDropdown()/02')
       const parentElem = document.getElementById(`a_${mi.id?.toString()}`) as HTMLElement;
       if (parentElem) {
+        console.log('SidebarComponent::activateDropdown()/03')
+        console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
         if (!this.isRepeatedEvent(mi.id!)) {
+          console.log('SidebarComponent::activateDropdown()/04')
+          console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
           this.saveEvent(mi.id!);
           // add event to menu ul
           parentElem.addEventListener('click', (e: Event) => this.toggleSetting(mi.id));

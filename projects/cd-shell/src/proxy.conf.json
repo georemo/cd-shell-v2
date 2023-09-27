@@ -15,7 +15,7 @@
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-moduleman-26:4401",
+        "target": "http://cd-moduleman-26:4402",
         "secure": false,
         "logLevel": "debug"
     },

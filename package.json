@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve cd-shell",
+    "start": "ng serve --host=0.0.0.0 --disable-host-check cd-shell",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

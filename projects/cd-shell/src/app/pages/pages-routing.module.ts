@@ -114,16 +114,16 @@ const routes: Routes = [
             })
                 .then(m => m.ModulemanModule)
     },
-    // {
-    //     path: 'menu',
-    //     loadChildren: () =>
-    //         loadRemoteModule({
-    //             remoteEntry: 'http://localhost:4402/remoteEntry.js',
-    //             remoteName: 'cdModuleman',
-    //             exposedModule: './MenuModule'
-    //         })
-    //             .then(m => m.MenuModule)
-    // },
+    {
+        path: 'menu',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'http://cd-moduleman-26:4402/remoteEntry.js',
+                remoteName: 'cdModuleman',
+                exposedModule: './MenuModule'
+            })
+                .then(m => m.MenuModule)
+    },
     {
         path: 'hrm',
         loadChildren: () =>

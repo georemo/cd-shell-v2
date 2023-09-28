@@ -60,6 +60,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public cd: ChangeDetectorRef,
     private svBase: BaseService,
     private svSio: SioClientService,
+    private route: Router,
   ) {
     this.svSio.env = environment;
     this.svSio.initSio(this, this.socketAction);
@@ -324,6 +325,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
           // start idletimeout
           this.routParams.queryParams.token = payLoad.pushData.token;
+          console.log('SidebarComponent::pushSubscribe()/this.routParams.queryParams.token:', this.routParams.queryParams.token);
           this.svIdleTimeout.startTimer(this.cd, idleTimerOptions);
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
@@ -777,9 +779,21 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       if (menuItem.moduleIsPublic) {
         menuItemEl.addEventListener('click', (e: Event) => this.router.navigate([menuItem.link]));
       } else {
+        console.log('cdShellV2::SidebarComponent::setroutTarget()/this.routParams:', this.routParams)
         menuItemEl.addEventListener('click', (e: Event) => this.router.navigate([menuItem.link], this.routParams));
       }
     }
   }
+
+  // nav(path,cdToken) {
+  //   // this.baseModel.sess = res.app_state.sess;
+  //   const params = {
+  //     queryParams: { token: cdToken },
+  //     skipLocationChange: true,
+  //     replaceUrl: false
+  //   };
+  //   // below: old method
+  //   this.route.navigate([path], params);
+  // }
 
 }

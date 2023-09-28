@@ -174,8 +174,8 @@
           id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="ri-search-line"></i>
         </button>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-          aria-labelledby="page-header-search-dropdown" ngbDropdownMenu>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown"
+          ngbDropdownMenu>
 
           <form class="p-3">
             <div class="form-group m-0">
@@ -309,8 +309,8 @@
                   <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.SECOND.TITLE' | translate}}</h6>
                   <div class="font-size-12 text-muted">
                     <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.SECOND.TEXT' | translate}}</p>
-                    <p class="mb-0"><i
-                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.SECOND.TIME' | translate}}</p>
+                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.SECOND.TIME' |
+                      translate}}</p>
                   </div>
                 </div>
               </div>
@@ -326,8 +326,8 @@
                   <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.THIRD.TITLE' | translate}}</h6>
                   <div class="font-size-12 text-muted">
                     <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.THIRD.TEXT' | translate}}</p>
-                    <p class="mb-0"><i
-                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.THIRD.TIME' | translate}}</p>
+                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.THIRD.TIME' |
+                      translate}}</p>
                   </div>
                 </div>
               </div>
@@ -339,8 +339,8 @@
                   <h6 class="mt-0 mb-1">{{ 'HEADER.NOTIFICATIONS.FOUR.TITLE' | translate}}</h6>
                   <div class="font-size-12 text-muted">
                     <p class="mb-1">{{ 'HEADER.NOTIFICATIONS.FOUR.TEXT' | translate}}</p>
-                    <p class="mb-0"><i
-                        class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.FOUR.TIME' | translate}}</p>
+                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i>{{ 'HEADER.NOTIFICATIONS.FOUR.TIME' |
+                      translate}}</p>
                   </div>
                 </div>
               </div>
@@ -366,16 +366,21 @@
           <!-- item-->
           <a class="dropdown-item" href="javascript: void(0);"><i class="ri-user-line align-middle me-1"></i>
             {{ 'HEADER.LOGIN.PROFILE' | translate}}</a>
-          <a class="dropdown-item" href="javascript: void(0);"><i
-              class="ri-wallet-2-line align-middle me-1"></i>{{ 'HEADER.LOGIN.MY_WALLET' | translate}}</a>
-          <a class="dropdown-item d-block" href="javascript: void(0);"><span
-              class="badge badge-success float-end mt-1">11</span><i
-              class="ri-settings-2-line align-middle me-1"></i>{{ 'HEADER.LOGIN.SETTINGS' | translate}} </a>
-          <a class="dropdown-item" href="javascript: void(0);"><i class="ri-lock-unlock-line align-middle me-1"></i>
-            {{ 'HEADER.LOGIN.LOCK_SCREEN' | translate}}</a>
+          <a class="dropdown-item" href="javascript: void(0);"><i class="ri-wallet-2-line align-middle me-1"></i>{{
+            'HEADER.LOGIN.MY_WALLET' | translate}}</a>
+          <a class="dropdown-item d-block" href="javascript: void(0);">
+            <span class="badge badge-success float-end mt-1">11
+            </span>
+            <i class="ri-settings-2-line align-middle me-1">
+            </i>{{ 'HEADER.LOGIN.SETTINGS' | translate}}
+          </a>
+          <a class="dropdown-item" href="javascript: void(0);">
+            <i class="ri-lock-unlock-line align-middle me-1"></i>
+            {{ 'HEADER.LOGIN.LOCK_SCREEN' | translate}}
+          </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="logout()"><i
-              class="ri-shut-down-line align-middle me-1 text-danger"></i>
+          <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="logout()">
+            <i class="ri-shut-down-line align-middle me-1 text-danger"></i>
             {{ 'HEADER.LOGIN.LOGOUT' | translate}}</a>
         </div>
       </div>

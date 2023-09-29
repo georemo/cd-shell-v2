@@ -429,7 +429,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
           if (menuData) {
-
             this.htmlMenu(JSON.parse(payLoad.pushData.m));
           }
         }

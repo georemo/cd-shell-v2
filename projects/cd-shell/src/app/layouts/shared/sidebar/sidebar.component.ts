@@ -522,6 +522,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         console.log('SidebarComponent::onPushMsgPushed()/payLoad:', payLoad);
         // start idletimeout
         cls.routParams.queryParams.token = payLoad.pushData.token;
+        console.log('SidebarComponent::pushSubscribe()/this.routParams.queryParams.token:', cls.routParams.queryParams.token);
         cls.svIdleTimeout.startTimer(cls.cd, idleTimerOptions);
         // load menu
         const menuData = payLoad.pushData.m;

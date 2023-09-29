@@ -873,13 +873,18 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   setRoutTarget(menuItem: MenuItem) {
+    console.log('cdShellV2::SidebarComponent::setroutTarget()/01:')
     const strId = `a_${menuItem.id!.toString()}`;
     const menuItemEl = document.getElementById(strId) as HTMLElement;
     if (menuItemEl && menuItem.link) {
+      console.log('cdShellV2::SidebarComponent::setroutTarget()/02:')
       if (menuItem.moduleIsPublic) {
+        console.log('cdShellV2::SidebarComponent::setroutTarget()/03:')
+        console.log('cdShellV2::SidebarComponent::setroutTarget()/menuItem.moduleIsPublic=true/this.routParams:', this.routParams)
         menuItemEl.addEventListener('click', (e: Event) => this.router.navigate([menuItem.link]));
       } else {
-        console.log('cdShellV2::SidebarComponent::setroutTarget()/this.routParams:', this.routParams)
+        console.log('cdShellV2::SidebarComponent::setroutTarget()/04:')
+        console.log('cdShellV2::SidebarComponent::setroutTarget()/menuItem.moduleIsPublic=false/this.routParams:', this.routParams)
         menuItemEl.addEventListener('click', (e: Event) => this.router.navigate([menuItem.link], this.routParams));
       }
     }

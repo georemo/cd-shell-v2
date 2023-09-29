@@ -6,7 +6,25 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ChangeDetector
 // import MetisMenu from 'metismenujs/dist/metismenujs';
 import MetisMenu from 'metismenujs';
 // import { IO, ioEvent } from 'rxjs-socket.io';
-import { Router, NavigationEnd } from '@angular/router';
+import {
+  ActivatedRoute, Router,
+  Event as NavigationEvent,
+  /**
+   * router events
+   */
+  NavigationStart, //	the Angular router stats the navigation.
+  RouteConfigLoadStart, //	the Router lazy loads a route configuration.
+  RouteConfigLoadEnd, //	after a route has been lazy-loaded.
+  RoutesRecognized, //	the Router parses the URL and the routes are recognized.
+  GuardsCheckStart, //	the Router begins the Guards phase of routing.
+  ChildActivationStart, //	the Router begins activating a route's children.
+  ActivationStart, //	the Router begins activating a route.
+  GuardsCheckEnd, //	the Router finishes the Guards phase of routing successfully.
+  ResolveStart, //	the Router begins the Resolve phase of routing.
+  ResolveEnd, //	the Router finishes the Resolve phase of routing successfully.
+  ChildActivationEnd, //	the Router finishes activating a route's children.
+  ActivationEnd, //	the Router finishes activating a route. 
+} from '@angular/router';
 import { map, mergeMap } from 'rxjs/operators';
 import { EventService } from '../../../core/services/event.service';
 import {
@@ -67,7 +85,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
     $ = this.svHtml;
     router.events.forEach((event) => {
-      if (event instanceof NavigationEnd) {
+      if (event instanceof Event) {
         this._activateMenuDropdown();
       }
     });
@@ -330,6 +348,86 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
           if (menuData) {
+            /**
+             * listen to router events
+             */
+            this.router.events
+              .subscribe(
+                (event: NavigationEvent) => {
+                  // NavigationStart, //	the Angular router stats the navigation.
+                  if (event instanceof NavigationStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Angular router stats the navigation');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: NavigationStart:', event);
+                  }
+                  // RouteConfigLoadStart, //	the Router lazy loads a route configuration.
+                  if (event instanceof RouteConfigLoadStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router lazy loads a route configuration');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: RouteConfigLoadStart:', event);
+                  }
+                  // RouteConfigLoadEnd, //	after a route has been lazy-loaded.
+                  if (event instanceof RouteConfigLoadEnd) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: after a route has been lazy-loaded.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: RouteConfigLoadEnd:', event);
+                  }
+                  // RoutesRecognized, //	the Router parses the URL and the routes are recognized.
+                  if (event instanceof RoutesRecognized) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router parses the URL and the routes are recognized.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: RoutesRecognized:', event);
+                  }
+                  // GuardsCheckStart, //	the Router begins the Guards phase of routing.
+                  if (event instanceof GuardsCheckStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router begins the Guards phase of routing.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: GuardsCheckStart:', event);
+                  }
+                  // ChildActivationStart, //	the Router begins activating a route's children.
+                  if (event instanceof ChildActivationStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router begins activating a routes children.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ChildActivationStart:', event);
+                  }
+                  // ActivationStart, //	the Router begins activating a route.
+                  if (event instanceof ActivationStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router begins activating a route.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ActivationStart:', event);
+                  }
+                  // GuardsCheckEnd, //	the Router finishes the Guards phase of routing successfully.
+                  if (event instanceof GuardsCheckEnd) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router finishes the Guards phase of routing successfully.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: GuardsCheckEnd:', event);
+                  }
+                  // ResolveStart, //	the Router begins the Resolve phase of routing.
+                  if (event instanceof ResolveStart) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router parses the URL and the routes are recognized.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ResolveStart:', event);
+                  }
+                  // ResolveEnd, //	the Router finishes the Resolve phase of routing successfully.
+                  if (event instanceof ResolveEnd) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router finishes the Resolve phase of routing successfully.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ResolveEnd:', event);
+                  }
+                  // ChildActivationEnd, //	the Router finishes activating a route's children.
+                  if (event instanceof ChildActivationEnd) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router finishes activating a routes children.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ChildActivationEnd:', event);
+                  }
+                  // ActivationEnd, //	the Router finishes activating a route. 
+                  if (event instanceof ActivationEnd) {
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: Description: the Router finishes activating a route.');
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/this.routParams.queryParams.token:', this.routParams.queryParams.token);
+                    console.log('cdShellV2::SidebarComponent::cls.listenSecure(push-menu)/router event: ActivationEnd:', event);
+                  }
+
+                });
             this.htmlMenu(JSON.parse(payLoad.pushData.m));
           }
         }

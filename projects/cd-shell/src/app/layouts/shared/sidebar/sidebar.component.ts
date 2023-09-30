@@ -710,8 +710,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         //   menuData = [];
         // }
         menuData.forEach((mi: MenuItem) => {
-          console.log('cdShellV2::SidebarComponent/htmlRootMenu()/02')
-          console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
+          // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/02')
+          // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
           rootMenus += this.htmlMenuItem(mi);
         });
 
@@ -724,13 +724,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         //insert menus to root container
         $.append(h)
           .then(() => {
-            console.log('cdShellV2::SidebarComponent/htmlRootMenu()/03')
-            console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
+            // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/03')
+            // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
             // for each menu item, set children
             menuData.forEach(async (mi: MenuItem) => {
-              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/04')
-              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
-              console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
+              // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/04')
+              // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/menuData:', menuData)
+              // console.log('cdShellV2::SidebarComponent/htmlRootMenu()/mi:', mi)
               this.htmlChildren(mi, menuData)
             });
           })
@@ -739,7 +739,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   async htmlChildren(mi: MenuItem, parentData: MenuItem[]) {
     console.log('cdShellV2::SidebarComponent/htmlChildren()/01')
-    console.log('cdShellV2::SidebarComponent/htmlChildren()/01/mi:', mi)
+    // console.log('cdShellV2::SidebarComponent/htmlChildren()/01/mi:', mi)
     let h: HtmlCtx = {
       elementRef: this.elementRef,
       selector: `#li_${mi.id}`,
@@ -749,13 +749,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     // set subMenu container
     await $.append(h)
       .then(async (success) => {
-        console.log('cdShellV2::SidebarComponent/htmlChildren()/02')
-        console.log('cdShellV2::SidebarComponent/htmlChildren()/02/mi:', mi)
+        // console.log('cdShellV2::SidebarComponent/htmlChildren()/02')
+        // console.log('cdShellV2::SidebarComponent/htmlChildren()/02/mi:', mi)
         // set children html
         let htmlSubMenu = '';
         mi.subItems.forEach((sm) => {
-          console.log('cdShellV2::SidebarComponent/htmlChildren()/03')
-          console.log('cdShellV2::SidebarComponent/htmlChildren()/03/sm:', sm)
+          // console.log('cdShellV2::SidebarComponent/htmlChildren()/03')
+          // console.log('cdShellV2::SidebarComponent/htmlChildren()/03/sm:', sm)
           htmlSubMenu += this.htmlMenuItem(sm);
         });
         //insert menus to sub-menu container
@@ -766,12 +766,12 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           position: 'afterbegin'
         };
         $.append(h).then(() => {
-          console.log('cdShellV2::SidebarComponent/htmlChildren()/04')
-          console.log('cdShellV2::SidebarComponent/htmlChildren()/parentData:', parentData)
+          // console.log('cdShellV2::SidebarComponent/htmlChildren()/04')
+          // console.log('cdShellV2::SidebarComponent/htmlChildren()/parentData:', parentData)
           this.activateDropdown(parentData);
           mi.subItems.forEach((sm) => {
-            console.log('cdShellV2::SidebarComponent/htmlChildren()/05')
-            console.log('cdShellV2::SidebarComponent/htmlChildren()/sm:', sm)
+            // console.log('cdShellV2::SidebarComponent/htmlChildren()/05')
+            // console.log('cdShellV2::SidebarComponent/htmlChildren()/sm:', sm)
             this.setRoutTarget(sm);
           });
         });
@@ -781,16 +781,16 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   activateDropdown(parentData: MenuItem[]) {
     console.log('SidebarComponent::activateDropdown()/01')
-    console.log('SidebarComponent::activateDropdown()/parentData:', parentData)
+    // console.log('SidebarComponent::activateDropdown()/parentData:', parentData)
     parentData.forEach((mi: MenuItem) => {
-      console.log('SidebarComponent::activateDropdown()/02')
+      // console.log('SidebarComponent::activateDropdown()/02')
       const parentElem = document.getElementById(`a_${mi.id?.toString()}`) as HTMLElement;
       if (parentElem) {
-        console.log('SidebarComponent::activateDropdown()/03')
-        console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
+        // console.log('SidebarComponent::activateDropdown()/03')
+        // console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
         if (!this.isRepeatedEvent(mi.id!)) {
-          console.log('SidebarComponent::activateDropdown()/04')
-          console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
+          // console.log('SidebarComponent::activateDropdown()/04')
+          // console.log('SidebarComponent::activateDropdown()/mi.id:', mi.id)
           this.saveEvent(mi.id!);
           // add event to menu ul
           parentElem.addEventListener('click', (e: Event) => this.toggleSetting(mi.id));

@@ -1,5 +1,5 @@
 {
-	"cdUser": "http://cd-user-25:4407/remoteEntry.js",
-	"cdComm": "http://cd-comm-27:4401/remoteEntry.js",
-	"cdModuleman": "http://cd-moduleman-26:4402/remoteEntry.js"
+	"cdUser": "http://cd-user.io/remoteEntry.js",
+	"cdComm": "http://cd-comm.io/remoteEntry.js",
+	"cdModuleman": "http://cd-moduleman.io/remoteEntry.js"
 }

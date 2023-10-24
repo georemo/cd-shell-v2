@@ -1,26 +1,26 @@
 {
     "/": {
-        "target": "http://cd-api-22:3001",
+        "target": "http://cd-api-01:3001",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-sio-23:3002",
+        "target": "http://cd-api-01:3002",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-user-25:4407",
+        "target": "http://cd-user.io:80",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-moduleman-26:4402",
+        "target": "http://cd-moduleman.io:80",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-comm-27:4401",
+        "target": "http://cd-comm.io:80",
         "secure": false,
         "logLevel": "debug"
     }

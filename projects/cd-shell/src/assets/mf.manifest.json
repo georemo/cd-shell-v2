@@ -1,7 +1,7 @@
 {
-	"cdUser": "http://cd-user-01:4407/remoteEntry.js",
-	"cdComm": "http://cd-comm-01:4401/remoteEntry.js",
-	"cdPms": "http://cd-pms-01:4401/remoteEntry.js",
-	"cdHrm": "http://cd-hrm-01:4401/remoteEntry.js",
-	"cdModuleman": "http://cd-moduleman-01:4401/remoteEntry.js"
+	"cdUser": "http://localhost:4407/remoteEntry.js",
+	"cdComm": "http://localhost:4401/remoteEntry.js",
+	"cdPms": "http://localhost:4401/remoteEntry.js",
+	"cdHrm": "http://localhost:4401/remoteEntry.js",
+	"cdModuleman": "http://localhost:4401/remoteEntry.js"
 }

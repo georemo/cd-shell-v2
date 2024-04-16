@@ -52,7 +52,7 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-user-01:4407/remoteEntry.js',
+                remoteEntry: 'http://localhost:4407/remoteEntry.js',
                 remoteName: 'cdUser',
                 exposedModule: './UserFrontModule'
             })

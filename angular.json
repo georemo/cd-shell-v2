@@ -215,7 +215,7 @@
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"proxyConfig": "projects/cd-shell/src/proxy.conf.json",
+						"proxyConfig": "projects/cd-shell/src/proxy.conf.js",
 						"port": 4500,
 						"publicHost": "http://localhost:4500",
 						"extraWebpackConfig": "projects/cd-shell/webpack.config.js"

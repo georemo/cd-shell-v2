@@ -4,13 +4,10 @@
         "secure": false,
         "logLevel": "debug"
     },
-    "/**": {
+    "/": {
         "target": "http://cd-sio-93:3002",
         "secure": false,
-        "changeOrigin": true,
-        "pathRewrite": {
-           "^/": ""
-        }
+        "logLevel": "debug"
     },
     "/": {
         "target": "http://localhost:4407",

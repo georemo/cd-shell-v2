@@ -7,7 +7,7 @@ import { EnvConfig } from "@corpdesk/core";
 export const environment: EnvConfig = {
   appId: '',
   production: true,
-  // apiEndpoint: 'http://localhost/cdapi/public/api/cd',
+  // apiEndpoint: 'http://192.168.0.12/cdapi/public/api/cd',
   apiEndpoint: 'http://cd-api-92:3001',
   sioEndpoint: 'http://cd-sio-93:3002',
   wsEndpoint: 'ws://cd-sio-93:3000',

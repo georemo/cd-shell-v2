@@ -18,7 +18,7 @@ export const environment: EnvConfig = {
   apiHost: 'http://cd-api-92',
   sioHost: 'http://cd-sio-93',
   // sioHost: 'http://cd-sio-23',
-  shellHost: 'http://emp',
+  shellHost: 'http://192.168.0.12',
   consumer: '',
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id

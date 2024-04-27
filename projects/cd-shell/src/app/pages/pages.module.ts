@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { UiModule } from '../shared/ui/ui.module';
 import { WidgetModule } from '../shared/widget/widget.module';
+import { HttpClientModule } from  '@angular/common/http';
 
 import { PagesRoutingModule } from './pages-routing.module';
 
@@ -39,6 +40,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [DashboardComponent, CalendarComponent, ChatComponent, KanbanComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     PagesRoutingModule,

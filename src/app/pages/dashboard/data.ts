@@ -38,12 +38,12 @@ const revenueChart: ChartType = {
 };
 
 const salesAnalytics: ChartType = {
-    series: [42, 26, 15],
+    series: [20, 20, 20, 20, 20],
     chart: {
         height: 250,
         type: 'donut',
     },
-    labels: ['Product A', 'Product B', 'Product C'],
+    labels: ['Tanzania', 'Malawi', 'Eswatini', 'The Gambia', 'Ghana'],
     plotOptions: {
         pie: {
             donut: {
@@ -57,7 +57,7 @@ const salesAnalytics: ChartType = {
     legend: {
         show: false,
     },
-    colors: ['#5664d2', '#1cbb8c', '#eeb902'],
+    colors: ['#5664d2', '#1cbb8c', '#eeb902', 'red', 'pink'],
 };
 
 const sparklineEarning: ChartType = {
@@ -219,11 +219,11 @@ const statData = [
     {
         icon: 'ri-stack-line',
         title: 'Number of Sales',
-        value: '1452'
+        value: '1459'
     }, {
         icon: 'ri-store-2-line',
         title: 'Sales Revenue',
-        value: '$ 38452'
+        value: '$ 38453'
     }, {
         icon: 'ri-briefcase-4-line',
         title: 'Average Price',

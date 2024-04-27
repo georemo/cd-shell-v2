@@ -7,9 +7,9 @@ import { EnvConfig } from "@corpdesk/core";
 export const environment: EnvConfig = {
   appId: '',
   production: false,
-  // apiEndpoint: 'http://localhost:3001',
+  // apiEndpoint: 'http://192.168.0.12:3001',
   apiEndpoint: 'http://cd-api-92:3001',
-  // sioEndpoint: 'http://localhost:3002',
+  // sioEndpoint: 'http://192.168.0.12:3002',
   sioEndpoint: 'http://cd-sio-93:3002',
   wsEndpoint: 'ws://cd-sio-93:3002',
   CD_PORT: 3001,
@@ -18,7 +18,7 @@ export const environment: EnvConfig = {
   apiHost: 'http://cd-api-92',
   sioHost: 'http://cd-sio-93',
   // sioHost: 'http://cd-sio-23',
-  shellHost: 'http://cd-shell-01',
+  shellHost: 'http://192.168.0.12',
   consumer: '',
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id

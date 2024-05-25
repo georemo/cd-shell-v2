@@ -11,8 +11,8 @@ import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     document.body.classList.add('auth-body-bg');
 
     this.loginForm = this.formBuilder.group({
-      email: ['admin@themesdesign.in', [Validators.required, Validators.email]],
+      email: ['user@asdap.africa', [Validators.required, Validators.email]],
       password: ['123456', [Validators.required]],
     });
 

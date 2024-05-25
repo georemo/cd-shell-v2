@@ -1,7 +1,7 @@
 {
-	"cdUser": "http://192.168.0.12:4407/remoteEntry.js",
-	"cdComm": "http://192.168.0.12:4401/remoteEntry.js",
-	"cdPms": "http://192.168.0.12:4401/remoteEntry.js",
-	"cdHrm": "http://192.168.0.12:4401/remoteEntry.js",
-	"cdModuleman": "http://192.168.0.12:4401/remoteEntry.js"
+	"cdUser": "https://cd-shell.asdap.africa:4407/remoteEntry.js",
+	"cdComm": "https://cd-shell.asdap.africa:4401/remoteEntry.js",
+	"cdPms": "https://cd-shell.asdap.africa:4401/remoteEntry.js",
+	"cdHrm": "https://cd-shell.asdap.africa:4401/remoteEntry.js",
+	"cdModuleman": "https://cd-shell.asdap.africa:4401/remoteEntry.js"
 }

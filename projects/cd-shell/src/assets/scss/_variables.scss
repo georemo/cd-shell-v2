@@ -1814,3 +1814,10 @@ $kbd-bg: var(--#{$prefix}body-color);
 $nested-kbd-font-weight: null; // Deprecated in v5.2.0, removing in v6
 
 $pre-color: $gray-900;
+
+/**
+For corpdesk apps
+*/
+$authentication-bg-img : "../../../images/authentication-bg.jpg";
+// authentication_bg_svg.svg
+// $authentication-bg-img : "../../../images/authentication_bg_svg.svg";

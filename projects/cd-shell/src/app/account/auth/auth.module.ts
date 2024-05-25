@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,6 +15,7 @@ import { PasswordresetComponent } from './passwordreset/passwordreset.component'
   declarations: [LoginComponent, SignupComponent, PasswordresetComponent],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
     NgbAlertModule,
     UiModule,

@@ -217,7 +217,7 @@
 					"options": {
 						"proxyConfig": "projects/cd-shell/src/proxy.conf.js",
 						"port": 4500,
-						"publicHost": "http://192.168.0.12:4500",
+						"publicHost": "https://cd-shell.asdap.africa:4500",
 						"extraWebpackConfig": "projects/cd-shell/webpack.config.js"
 					}
 				},

@@ -1,14 +1,14 @@
-const CD_API = "http://cd-api-92:3001"
-const CD_SIO = "http://cd-api-93:3002"
+const CD_API = "https://cd-api.co.ke"
+const CD_SIO = "https://cd-api.co.ke"
 
 const PROXY_CONFIG = [
 {
-	context: ["/"],
+	context: ["/api"],
 	target: CD_API,
 	secure: false
 },
 {
-	context: ["/"],
+	context: ["/sio"],
 	target: CD_SIO,
 	secure: false
 },

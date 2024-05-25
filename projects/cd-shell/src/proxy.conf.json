@@ -1,11 +1,11 @@
 {
     "/": {
-        "target": "http://cd-api-92:3001",
+        "target": "https://cd-api.co.ke/api",
         "secure": false,
         "logLevel": "debug"
     },
-    "/**": {
-        "target": "http://cd-sio-93:3002",
+    "/": {
+        "target": "https://cd-api.co.ke/sio",
         "secure": false,
         "changeOrigin": true,
         "pathRewrite": {
@@ -13,12 +13,12 @@
         }
     },
     "/": {
-        "target": "http://192.168.0.12:4407",
+        "target": "https://cd-api.co.ke",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://192.168.0.12:4401",
+        "target": "https://cd-api.co.ke",
         "secure": false,
         "logLevel": "debug"
     }

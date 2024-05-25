@@ -1,21 +1,21 @@
 {
-    "/": {
-        "target": "http://cd-api-92:3001",
+    "/api": {
+        "target": "https://cd-shell.asdap.africa:8181",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/sio": {
+        "target": "https://cd-shell.asdap.africa:8181",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://cd-sio-93:3002",
+        "target": "https://cd-shell.asdap.africa:4407",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "http://192.168.0.12:4407",
-        "secure": false,
-        "logLevel": "debug"
-    },
-    "/": {
-        "target": "http://192.168.0.12:4401",
+        "target": "https://cd-shell.asdap.africa:4401",
         "secure": false,
         "logLevel": "debug"
     }

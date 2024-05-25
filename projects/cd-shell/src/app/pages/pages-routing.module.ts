@@ -52,7 +52,7 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4407/remoteEntry.js',
+                remoteEntry: 'http://cd-user.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdUser',
                 exposedModule: './UserFrontModule'
             })
@@ -62,7 +62,7 @@ const routes: Routes = [
         path: 'pms',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://:192.168.0.12:4400/remoteEntry.js',
+                remoteEntry: 'http://cd-pms.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdPms',
                 exposedModule: './PmsModule'
             })
@@ -72,7 +72,7 @@ const routes: Routes = [
         path: 'comm',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4401/remoteEntry.js',
+                remoteEntry: 'http://cd-comm.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './MemoModule'
             })
@@ -88,7 +88,7 @@ const routes: Routes = [
         path: 'memo',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4401/remoteEntry.js',
+                remoteEntry: 'http://cd-memo.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './MemoModule'
             })
@@ -98,7 +98,7 @@ const routes: Routes = [
         path: 'inte-ract',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4401/remoteEntry.js',
+                remoteEntry: 'http://cd-interact.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './InteRactModule'
             })
@@ -108,7 +108,7 @@ const routes: Routes = [
         path: 'moduleman',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4402/remoteEntry.js',
+                remoteEntry: 'http://cd-moduleman.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdModuleman',
                 exposedModule: './ModulemanModule'
             })
@@ -118,7 +118,7 @@ const routes: Routes = [
     //     path: 'menu',
     //     loadChildren: () =>
     //         loadRemoteModule({
-    //             remoteEntry: 'http://192.168.0.12:4402/remoteEntry.js',
+    //             remoteEntry: 'http://asdap.africa:4402/remoteEntry.js',
     //             remoteName: 'cdModuleman',
     //             exposedModule: './MenuModule'
     //         })
@@ -128,7 +128,7 @@ const routes: Routes = [
         path: 'hrm',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://192.168.0.12:4408/remoteEntry.js',
+                remoteEntry: 'http://cd-hrm.asdap.africa:80/remoteEntry.js',
                 remoteName: 'cdHrm',
                 exposedModule: './RecruitModule'
             })

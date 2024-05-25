@@ -7,6 +7,7 @@ export interface ChartType {
     legend?: any;
     colors?: any;
     labels?: any;
+    tooltip?: any;
 }
 
 export interface SeriesItem {
@@ -87,7 +88,7 @@ export interface IGeoLocation {
     cdGeoLocationDisplay?: boolean;
 }
 
-export interface IDisplayConfig{
+export interface IDisplayConfig {
     cdGeoLocationId: number,
     cdGeoLocationDisplay: boolean
 }
@@ -99,4 +100,16 @@ export interface Email {
     subject: string;
     date: string;
     unread?: boolean;
+    flag?: string;
+    checked?: boolean;
+}
+
+export interface ICoopDataSeries {
+    coopCountSeries: number[];
+    membersCountSeries: number[];
+    coopSavesSharesSeries: number[];
+    coopAssetsSeries: number[];
+    coopReservesSeries: number[];
+    coopLoansSeries: number[];
+    coopMemberPenetrationSeries: number[];
 }

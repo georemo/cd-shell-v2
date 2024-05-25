@@ -1,0 +1,427 @@
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+
+import { AuthenticationService } from '../../../core/services/auth.service';
+import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
+
+import { ActivatedRoute, Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { v4 as uuidv4 } from 'uuid';
+
+import { environment } from '../../../../environments/environment';
+
+import {
+  UserService, AuthData, SessService, MenuService, NavService, SioClientService, ICommConversationSub,
+  BaseModel, IAppState, CdObjId, BaseService, LsFilter, StorageType, ICdPushEnvelop, ISocketItem
+} from '@corpdesk/core';
+
+interface IInitData {
+  key: string;
+  value: CdObjId;
+}
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit {
+  debug = true;
+  // loginForm: UntypedFormGroup;
+  submitted = false;
+  loginInvalid = false;
+  fg: FormGroup;
+  errMsg: string;
+  sidebarInitData: IInitData;
+  socketData: ISocketItem[] | null = [];
+  error = '';
+  returnUrl: string;
+
+  // set the currenr year
+  year: number = new Date().getFullYear();
+
+  // tslint:disable-next-line: max-line-length
+  constructor(
+    private formBuilder: UntypedFormBuilder, 
+    // private route: ActivatedRoute, 
+    // private router: Router, 
+    private route: Router,
+    public authenticationService: AuthenticationService,
+    public authFackservice: AuthfakeauthenticationService,
+    private svSio: SioClientService,
+    private svUser: UserService,
+    private svSess: SessService,
+    private svMenu: MenuService,
+    private svNav: NavService,
+    private svBase: BaseService,
+  ) { }
+
+  ngOnInit() {
+    document.body.removeAttribute('data-layout');
+    document.body.classList.add('auth-body-bg');
+
+    this.fg = this.formBuilder.group({
+      // email: ['admin@themesdesign.in', [Validators.required, Validators.email]],
+      // password: ['123456', [Validators.required]],
+      userName: [''],
+      password: [''],
+      rememberMe: [false],
+      consumerGuid: [environment.consumerToken],
+    });
+
+    // reset login status
+    // this.authenticationService.logout();
+    // get return url from route parameters or default to '/'
+    // tslint:disable-next-line: no-string-literal
+
+    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    ///////////////////////////////////////////////////////////////////////////////
+    console.log('cd-user-v2::cdLoginComponent::ngOnInit()/StorageType.CdObjId:', StorageType.CdObjId);
+    const filter: LsFilter = {
+      storageType: StorageType.CdObjId,
+      cdObjId: {
+        appId: localStorage.getItem('appId'),
+        resourceGuid: null,
+        resourceName: 'SidebarComponent',
+        ngModule: 'SharedModule',
+        jwtToken: localStorage.getItem('accessToken'),
+        socket: null,
+        commTrack: null
+      }
+    }
+    console.log('cd-user-v2::cdLoginComponent::ngOnInit()/filter:', filter);
+    // this.sidebarInitData = this.svBase.searchLocalStorage(filter);
+    this.sidebarInitData = this.searchLocalStorage(filter);
+    console.log('user/LoginComponent::ngOnInit()/this.sidebarInitData:', this.sidebarInitData);
+    const socketDataStr = localStorage.getItem('socketData')
+    if (socketDataStr) {
+      this.socketData = JSON.parse(socketDataStr).filter(appInit)
+      function appInit(s: ISocketItem): ISocketItem | null {
+        if (s.name === 'appInit') {
+          return s;
+        } else {
+          return null;
+        }
+      }
+      console.log('user/LoginComponent::ngOnInit()/this.socketData:', this.socketData);
+    } else {
+      console.log('Err: socket data is not valid')
+    }
+  }
+
+  // convenience getter for easy access to form fields
+  // get f() { return this.loginForm.controls; }
+
+  /**
+   * Form submit
+   */
+  // onSubmit() {
+  //   this.submitted = true;
+
+  //   // stop here if form is invalid
+  //   if (this.loginForm.invalid) {
+  //     return;
+  //   } else {
+  //     if (environment.defaultauth === 'cd-auth') {
+  //       this.cdLogin()
+  //     } else if (environment.defaultauth === 'firebase') {
+  //       this.authenticationService.login(this.f.email.value, this.f.password.value).then((res: any) => {
+  //         this.router.navigate(['/']);
+  //       })
+  //         .catch(error => {
+  //           this.error = error ? error : '';
+  //         });
+  //     } else {
+  //       this.authFackservice.login(this.f.email.value, this.f.password.value)
+  //         .pipe(first())
+  //         .subscribe(
+  //           data => {
+  //             this.router.navigate(['/']);
+  //           },
+  //           error => {
+  //             this.error = error ? error : '';
+  //           });
+  //     }
+  //   }
+  // }
+
+  cdLogin(fg: any) {
+    console.log('index/LoginComponent::cdLogin/01');
+    let authData: AuthData = fg.value;
+    const valid = fg.valid;
+    
+    console.log('index/LoginComponent::cdLogin/fg:', fg);
+    console.log('index/LoginComponent::cdLogin/valid:', valid);
+    this.submitted = true;
+    const consumerGuid = { consumerGuid: environment.consumerToken };
+    authData = Object.assign({}, authData, consumerGuid); // merge data with consumer object
+    try {
+      console.log('index/LoginComponent::cdLogin/02');
+      if (valid) {
+        console.log('index/LoginComponent::cdLogin/03');
+        // this.router.navigate(['/']);
+        this.initSession(authData)
+      }
+    } catch (err) {
+      console.log('index/LoginComponent::cdLogin/04');
+      this.errMsg = "Something went wrong!!"
+      this.loginInvalid = true;
+    }
+  }
+
+  initSession(authData: AuthData) {
+    console.log('index/LoginComponent::initSession/01');
+    this.svUser.auth$(authData).subscribe((res: any) => {
+      if (res.app_state.success === true) {
+        console.log('index/LoginComponent::initSession/res:', JSON.stringify(res));
+        this.svSess.appState = res.app_state;
+        /*
+        create a session on successfull authentication.
+        For subsequeng successull request to the server,
+        use renewSess(res);
+        */
+        if (res.app_state.sess.cd_token !== null && res.app_state.success) {
+          console.log('index/LoginComponent::initSession/02');
+          const envl: ICdPushEnvelop = this.configPushPayload('login', 'push-menu', res.data.userData.userId)
+          envl.pushData.m = res.data.menuData;
+          console.log('index/LoginComponent::initSession/envl:', envl);
+          this.svSio.sendPayLoad(envl)
+          ///////////////////////////////////////
+          this.svSess.createSess(res, this.svMenu);
+          this.svUser.currentUser = { name: `${res.data.userData.userName}`, picture: `${environment.shellHost}/user-resources/${res.data.userData.userGuid}/avatar-01/a.jpg` };
+          this.svNav.userMenu = [
+            { title: 'Profile', link: '/pages/cd-auth/register' },
+            { title: 'Log out', link: '/pages/cd-auth/logout' }
+          ];
+          // this.baseModel.sess = res.app_state.sess;
+          const params = {
+            queryParams: { token: res.app_state.sess.cd_token },
+            skipLocationChange: true,
+            replaceUrl: false
+          };
+          // below: old method
+          // this.route.navigate(['/comm'], params);
+          this.route.navigate(['/'], params);
+
+          // below new method based on this.baseModel;
+          // this.svNav.nsNavigate(this,'/comm','message from cd-user')
+        }
+      } else {
+        this.errMsg = "The userName and password were not valid"
+        this.loginInvalid = true;
+        this.svSess.logout();
+      }
+    });
+
+  }
+
+  configPushPayload(triggerEvent: string, emittEvent: string, cuid: number): ICdPushEnvelop {
+    console.log('starting cd-user-v2::cdLoginComponent::configPushPayload()');
+    const pushEnvelope: ICdPushEnvelop = {
+      pushData: {
+        pushGuid: '',
+        m: '',
+        pushRecepients: [],
+        triggerEvent: '',
+        emittEvent: '',
+        token: '',
+        isNotification: null,
+        appSockets: this.socketData,
+        commTrack: {
+          initTime: Number(new Date()),
+          relayTime: null,
+          relayed: false,
+          pushed: false,
+          pushTime: null,
+          deliveryTime: null,
+          delivered: false,
+          completed: false,
+          completedTime: null
+        },
+      },
+      req: null,
+      resp: null
+    }
+
+    const users: ICommConversationSub[] = [
+      {
+        userId: cuid,
+        subTypeId: 1,
+        cdObjId: {
+          appId: environment.appId,
+          ngModule: 'UserFrontModule',
+          resourceName: 'LoginComponent',
+          resourceGuid: uuidv4(),
+          jwtToken: '',
+          socket: null,
+          socketId: '',
+          commTrack: {
+            initTime: Number(new Date()),
+            relayTime: null,
+            relayed: false,
+            pushed: false,
+            pushTime: null,
+            deliveryTime: null,
+            delivered: false,
+            completed: false,
+            completedTime: null
+          },
+        },
+      },
+    ]
+
+    /**
+     * - search socketStore for item with name='appInit'
+     * - confirm there is no double entry
+     * - save the above socket data in the socketStore of the envelop
+     * - this will be used in the push server to push menu data
+     */
+
+    const envl: ICdPushEnvelop = { ...pushEnvelope };
+    envl.pushData.triggerEvent = triggerEvent;
+    envl.pushData.emittEvent = emittEvent;
+
+    // set sender
+    const uSender: ICommConversationSub = { ...users[0] }
+    uSender.subTypeId = 1;
+    envl.pushData.pushRecepients.push(uSender)
+
+
+    // set recepient
+    console.log('cd-user-v2::cdLoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
+    console.log('cd-user-v2::cdLoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
+    const uRecepient: ICommConversationSub = { ...users[0] }
+    uRecepient.subTypeId = 7;
+    console.log('cd-user-v2::cdLoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
+    uRecepient.cdObjId = this.sidebarInitData.value
+    envl.pushData.pushRecepients.push(uRecepient)
+
+    console.log('cd-user-v2::cdLoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
+
+    return envl;
+
+  }
+
+  searchLocalStorage(f: LsFilter) {
+    console.log('starting LoginComponent::searchLocalStorage()/lcLength:');
+    // const lc = { ...localStorage };
+    const lcArr = [];
+
+    const lcLength = localStorage.length;
+    console.log('LoginComponent::searchLocalStorage()/lcLength:', lcLength);
+    let i = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+      // try {
+      // set iteration key name
+      const k = localStorage.key(i);
+      // use key name to retrieve the corresponding value
+      var v = localStorage.getItem(k!);
+      // console.log the iteration key and value
+      console.log('Key: ' + k + ', Value: ' + v);
+      try {
+        console.log('LoginComponent::searchLocalStorage()/1')
+        if (typeof (v) === 'object') {
+          console.log('LoginComponent::searchLocalStorage()/2')
+          console.log('LoginComponent::searchLocalStorage()/v:', v)
+          const lcItem = JSON.parse(v!);
+          if ('success' in lcItem) {
+            console.log('LoginComponent::searchLocalStorage()/3')
+            const appState: IAppState = lcItem;
+            console.log('LoginComponent::searchLocalStorage()/appState:', appState)
+          }
+          if ('resourceGuid' in lcItem) {
+            console.log('LoginComponent::searchLocalStorage()/4')
+            const cdObjId = lcItem;
+            console.log('LoginComponent::searchLocalStorage()/cdObjId:', cdObjId)
+          }
+          console.log('LoginComponent::searchLocalStorage()/5')
+          lcArr.push({ key: k, value: JSON.parse(v!) })
+        } else {
+          console.log('LoginComponent::searchLocalStorage()/typeof (v):', typeof (v))
+          console.log('LoginComponent::searchLocalStorage()/6')
+          lcArr.push({ key: k, value: JSON.parse(v) })
+        }
+
+      } catch (e) {
+        console.log('offending item:', v);
+        console.log('the item is not an object');
+        console.log('Error:', e);
+      }
+
+    }
+    console.log('LoginComponent::searchLocalStorage()/lcArr:', lcArr);
+    console.log('LoginComponent::searchLocalStorage()/f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
+    // isAppState
+    // const resourceName = 'UserModule';
+    const AppStateItems = (d: any) => 'success' in d.value;
+    const isObject = (d: any) => typeof (d.value) === 'object';
+    const CdObjIdItems = (d: any) => 'resourceName' in d.value;
+    const filtObjName = (d: any) => d.value.resourceName === f.cdObjId!.resourceName && d.value.ngModule === f.cdObjId!.ngModule;
+    const latestItem = (prev: any, current: any) => (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+    let ret: any = null;
+    try {
+      if (this.debug) {
+        console.log('LoginComponent::searchLocalStorage()/debug=true:');
+        ret = lcArr
+          .filter((d: any) => {
+            if (typeof (d.value) === 'object') {
+              console.log('LoginComponent::searchLocalStorage()/filteredByObject: d:', d);
+              return d
+            } else {
+              return null;
+            }
+          })
+          .filter((d: any) => {
+            if ('resourceName' in d.value) {
+              console.log('LoginComponent::searchLocalStorage()/filteredByResourceNameField: d:', d);
+              return d;
+            } else {
+              return null;
+            }
+          })
+          .filter((d: any) => {
+            console.log('LoginComponent::searchLocalStorage()/filteredByName: d:', d);
+            console.log('LoginComponent::searchLocalStorage()/filteredByName: d.value.resourceName:', d.value.resourceName);
+            console.log('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
+            console.log('LoginComponent::searchLocalStorage()/filteredByName: d.value.ngModule:', d.value.ngModule);
+            console.log('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.ngModule:', f.cdObjId!.ngModule);
+            if (d.value.resourceName === f.cdObjId!.resourceName && d.value.ngModule === f.cdObjId!.ngModule) {
+              return d;
+            } else {
+              return null;
+            }
+          })
+          .reduce(
+            (prev = {}, current = {}) => {
+              console.log('LoginComponent::searchLocalStorage()/prev:', prev);
+              console.log('LoginComponent::searchLocalStorage()/current:', current);
+              return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+            }
+          );
+      } else {
+        console.log('LoginComponent::searchLocalStorage()/debug=false:');
+        ret = lcArr
+          .filter(isObject)
+          .filter(CdObjIdItems!)
+          .filter(filtObjName!)
+          .reduce(latestItem!)
+      }
+      console.log('LoginComponent::searchLocalStorage()/ret:', ret);
+    } catch (e) {
+      console.log('Error:', e);
+    }
+    return ret;
+  }
+
+  onFocus() {
+    this.errMsg = "";
+  }
+
+  logout(){
+    //http://localhost:4500/account/login?returnUrl=%2F
+  }
+
+}
+
+
+

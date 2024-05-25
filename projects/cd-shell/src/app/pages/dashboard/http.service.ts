@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { DEFAULT_ARGS, DEFAULT_DAT, DEFAULT_ENVELOPE_GET, ICdRequest, IQuery, SYS_CTX } from './IBase';
+import { ICoopType, IGeoLocation } from './dashboard.model';
 
 // interface ICoopType {
 //     coopId: number;
@@ -80,17 +81,19 @@ export class HttpService {
     // locationData: IGeoLocation[] = []
 
     constructor(private http: HttpClient) {
-        const h = new HttpHeaders({
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        });
-        this.options = {
-            headers: h
-        };
+        // const h = new HttpHeaders({
+        //     'Content-Type': 'application/json',
+        //     // 'Access-Control-Allow-Origin': '*',
+        //     // 'Access-Control-Allow-Headers': 'Authorization'
+        // });
+        // this.options = {
+        //     headers: h
+        // };
+        this.options = environment.apiOptions;
     }
 
     // init() {
-    //     let postUrl = "http://localhost:3001"
+    //     let postUrl = "https://cd-shell.asdap.africa:8181"
     //     let postData = {
     //         ctx: "App",
     //         m: "Coops",
@@ -152,7 +155,7 @@ export class HttpService {
     proc(params: CdRequest) {
         console.log('base/ServerService::proc()/params:', params)
         // return this.http.post(environment.apiEndpoint, params, this.options)
-        return this.http.post("http://localhost:3001", params, this.options)
+        return this.http.post("https://cd-api.co.ke/api", params, this.options)
     }
 
     

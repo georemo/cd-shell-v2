@@ -7,21 +7,22 @@ import { EnvConfig } from "@corpdesk/core";
 export const environment: EnvConfig = {
   appId: '',
   production: true,
-  // apiEndpoint: 'http://192.168.0.12/cdapi/public/api/cd',
-  apiEndpoint: 'http://cd-api-92:3001',
-  sioEndpoint: 'http://cd-sio-93:3002',
-  wsEndpoint: 'ws://cd-sio-93:3000',
+  // apiEndpoint: 'https://cd-shell.asdap.africa/cdapi/public/api/cd',
+  apiEndpoint: 'https://cd-api.co.ke/api',
+  sioEndpoint: 'https://cd-api.co.ke/sio',
+  wsEndpoint: 'ws://cd-api.co.ke:3000',
   CD_PORT: 3001,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
   USER_RESOURCES: 'http://routed-93/user-resources',
-  apiHost: 'http://cd-api-92',
-  sioHost: 'http://cd-sio-93',
-  shellHost: 'http://192.168.0.12',
+  apiHost: 'https://cd-api.co.ke',
+  sioHost: 'https://cd-api.co.ke',
+  shellHost: 'https://cd-shell.asdap.africa',
   consumer: '',
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id
-  SOCKET_IO_PORT: 3000, // push server port
+  SOCKET_IO_PORT: 3002, // push server port
   defaultauth: 'fackbackend',
+  mfManifestPath: '/assets/mf.manifest.json',
   firebaseConfig: {
     apiKey: '',
     authDomain: '',

@@ -191,8 +191,10 @@
 
       <div class="dropdown d-inline-block" ngbDropdown>
         <button type="button" class="btn header-item" id="page-header-user-dropdown" ngbDropdownToggle>
-          <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" alt="Header Language" height="16"> <span
-            class="ms-1">{{countryName}}</span>
+          <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" alt="Header Language" height="16"> 
+          <span
+            class="ms-1">{{countryName}}
+          </span>
           <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="16">
           <span *ngIf="flagvalue === undefined" class="ms-1">English</span>
         </button>

@@ -1,4 +1,4 @@
-import { IDisplayConfig } from "./dashboard.model";
+import { ICoopType, IDisplayConfig, IGeoLocation } from "./dashboard.model";
 
 let YEAR_MIN = 2016
 
@@ -15,35 +15,86 @@ const colrs = [
     '#E5FF33', '#33E5FF', '#FF33B0', '#B0FF33', '#33B0FF', '#FF33FD',
     '#FDFF33', '#33FDFF', '#FF33D9', '#D9FF33', '#33D9FF', '#FF336D',
     '#6DFF33', '#336DFF'
-  ];
+];
 
-const GeoLocationDisplayArr: IDisplayConfig[]= [
-  {cdGeoLocationId: 111,cdGeoLocationDisplay: true},
-  {cdGeoLocationId: 112,cdGeoLocationDisplay: false},
-  {cdGeoLocationId: 113,cdGeoLocationDisplay: true},
-  {cdGeoLocationId: 114,cdGeoLocationDisplay: false},
-  {cdGeoLocationId: 115,cdGeoLocationDisplay: false}
+const GeoLocationDisplayArr: IDisplayConfig[] = [
+    { cdGeoLocationId: 111, cdGeoLocationDisplay: true },
+    { cdGeoLocationId: 112, cdGeoLocationDisplay: false },
+    { cdGeoLocationId: 113, cdGeoLocationDisplay: true },
+    { cdGeoLocationId: 114, cdGeoLocationDisplay: false },
+    { cdGeoLocationId: 115, cdGeoLocationDisplay: false }
 ]
 
 const emailData = [
     {
-        id: 1,
-        title: 'Waters, Jacobs and Ortiz',
-        // tslint:disable-next-line: max-line-length
-        subject: 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt ',
-        date: '09-Dec'
-    }, {
-        id: 2,
-        title: 'Ernser, Bernier and Schaden',
-        // tslint:disable-next-line: max-line-length
-        subject: 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu ',
-        date: '29-Apr'
-    }, {
-        id: 3,
-        title: 'Davis, Pouros and Welch',
-        // tslint:disable-next-line: max-line-length
-        subject: 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, ',
-        date: '12-Jun'
-    }];
+        id: 112,
+        title: 'Eswatini',
+        subject: '',
+        date: '',
+        flag: 'assets/images/flags/flags-3/es.png',
+        checked: true
+    },
+    {
+        id: 114,
+        title: 'Gambia',
+        subject: '',
+        date: '',
+        flag: 'assets/images/flags/flags-3/ga.png',
+        checked: true
+    },
+    {
+        id: 113,
+        title: 'Ghana',
+        subject: ' ',
+        date: '',
+        flag: 'assets/images/flags/flags-3/gh.png',
+        checked: true
+    },
+    {
+        id: 115,
+        title: 'Malawi',
+        subject: '',
+        date: '',
+        flag: 'assets/images/flags/flags-3/mw.png',
+        checked: true
+    },
+    {
+        id: 5,
+        title: 'Tanzania',
+        subject: '',
+        date: '',
+        flag: 'assets/images/flags/flags-3/tz.png',
+        checked: true
+    }
+];
 
-export { colrs, YEAR_MIN,GeoLocationDisplayArr, emailData };
+// <option value="coopCountSeries">No. of COOPs</option>
+//               <option value="membersCountSeries">No. of Members</option>
+//               <option value="coopSavesSharesSeries">Savings and Shares</option>
+//               <option value="coopAssetsSeries">Assets</option>
+//               <option value="coopLoansSeries">Loans</option>
+//               <option value="coopMemberPenetrationSeries">Penetration</option>
+
+const coopParamOptions = [
+    { label: 'No. of COOPs', value: 'coopCountSeries' },
+    { label: 'No. of Members', value: 'membersCountSeries' },
+    { label: 'Savings and Shares', value: 'coopSavesSharesSeries' },
+    { label: 'Assets', value: 'coopAssetsSeries' },
+    { label: 'Loans', value: 'coopLoansSeries' },
+    { label: 'Penetration', value: 'coopMemberPenetrationSeries' },
+];
+
+
+
+
+// export function setCoopData(cd: ICoopType[]){
+//     coopData = cd
+// }
+
+// export function getCoopData():ICoopType[]{
+//     return coopData
+// }
+
+
+
+export { colrs, YEAR_MIN, GeoLocationDisplayArr, emailData, coopParamOptions };

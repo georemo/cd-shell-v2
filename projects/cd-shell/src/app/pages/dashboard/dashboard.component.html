@@ -12,12 +12,25 @@
 
       <div class="card">
         <div class="card-body pb-1">
-          <div class="float-end d-none d-md-inline-block">
+          <!-- <div class="float-end d-none d-md-inline-block">
             <div class="btn-group mb-2">
               <button type="button" class="btn btn-sm btn-light">Today</button>
               <button type="button" class="btn btn-sm btn-light active">Weekly</button>
               <button type="button" class="btn btn-sm btn-light">Monthly</button>
             </div>
+          </div> -->
+          <div class="float-end">
+            <select [(ngModel)]="selectedCoopParam" (change)="onSelectCoopParam()"
+              class="custom-select custom-select-sm">
+              <!-- <option selected>No. of COOPs</option> -->
+              <!-- <option value="coopCountSeries">No. of COOPs</option>
+              <option value="membersCountSeries">No. of Members</option>
+              <option value="coopSavesSharesSeries">Savings and Shares</option>
+              <option value="coopAssetsSeries">Assets</option>
+              <option value="coopLoansSeries">Loans</option>
+              <option value="coopMemberPenetrationSeries">Penetration</option> -->
+              <option *ngFor="let option of coopParams" [value]="option.value">{{ option.label }}</option>
+            </select>
           </div>
           <h4 class="card-title mb-4">Number of SACCOs</h4>
           <div>
@@ -66,49 +79,75 @@
       </div>
     </div>
     <div class="col-xl-4">
+      <!-- start email card -->
       <div class="card">
-        <div class="card-body">
-          <div class="float-end">
-            <select class="custom-select custom-select-sm">
-              <option selected>2022</option>
-              <option value="1">2021</option>
-              <option value="2">2020</option>
-              <option value="3">2019</option>
-              <option value="3">2018</option>
-              <option value="3">2017</option>
-            </select>
+        <div class="btn-toolbar p-3" role="toolbar">
+          <div class="btn-group me-2 mb-2 mb-sm-0">
+            <button type="button" class="btn btn-primary"><i class="fa fa-inbox"></i></button>
+            <button type="button" class="btn btn-primary"><i class="fa fa-exclamation-circle"></i></button>
+            <!-- <button type="button" class="btn btn-primary" (click)="confirm()"><i
+                class="fa fa-trash-alt"></i></button> -->
           </div>
-          <h4 class="card-title mb-4">Assets Comparison</h4>
+          <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-folder"></i> <i class="mdi mdi-chevron-down ms-1"></i>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+              <a class="dropdown-item" href="javascript: void(0);">Social</a>
+              <a class="dropdown-item" href="javascript: void(0);">Team Manage</a>
+            </div>
+          </div>
+          <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-tag"></i> <i class="mdi mdi-chevron-down ms-1"></i>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+              <a class="dropdown-item" href="javascript: void(0);">Social</a>
+              <a class="dropdown-item" href="javascript: void(0);">Team Manage</a>
+            </div>
+          </div>
 
-          <apx-chart dir="ltr" class="apex-charts" [series]="salesAnalytics.series" [chart]="salesAnalytics.chart"
-            [legend]="salesAnalytics.legend" [colors]="salesAnalytics.colors" [labels]="salesAnalytics.labels"
-            [dataLabels]="salesAnalytics.dataLabels" [plotOptions]="salesAnalytics.plotOptions">
-          </apx-chart>
-          <div class="row">
-            <div class="col-4">
-              <div class="text-center mt-4">
-                <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-primary font-size-10 me-1"></i> Product A
-                </p>
-                <h5>42 %</h5>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center mt-4">
-                <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success font-size-10 me-1"></i> Product B
-                </p>
-                <h5>26 %</h5>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="text-center mt-4">
-                <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-warning font-size-10 me-1"></i> Product C
-                </p>
-                <h5>42 %</h5>
-              </div>
+          <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
+              aria-expanded="false">
+              More <i class="mdi mdi-dots-vertical ms-2"></i>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" (click)="markUnread()" href="javascript: void(0);">Mark as Unread</a>
+              <a class="dropdown-item" href="javascript: void(0);">Mark as Important</a>
+              <a class="dropdown-item" href="javascript: void(0);">Add to Tasks</a>
+              <a class="dropdown-item" href="javascript: void(0);">Add Star</a>
+              <a class="dropdown-item" href="javascript: void(0);">Mute</a>
             </div>
           </div>
         </div>
+
+        <ul class="message-list">
+          <li class="unread" *ngFor="let email of emailData | slice:0:15; let i = index; "
+            [ngClass]="{ 'unread': email.unread === true }">
+            <div class="col-mail col-mail-1">
+              <div class="checkbox-wrapper-mail">
+                <input type="checkbox" id="chk-{{i}}" [checked]="email.checked"
+                  (change)="selectMail($event,email.id)" />
+                <label for="chk-{{i}}"></label>
+              </div>
+              <a [routerLink]="['../read',email.id]" class="title">{{email.title}}</a>
+              <img src="{{email.flag}}" alt="user-image" class="me-1" height="24">
+              <!-- <span class="ms-1">{{countryName}} </span> -->
+            </div>
+            <div class="col-mail col-mail-2">
+              <a [routerLink]="['../read',email.id]" class="subject">{{email.subject}}</a>
+              <div class="date">{{email.date}}</div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+
 
       <div class="card">
         <div class="card-body">
@@ -170,70 +209,48 @@
 
     <div class="row">
       <div class="col-lg-4">
-        <!-- start email card -->
         <div class="card">
-          <div class="btn-toolbar p-3" role="toolbar">
-            <div class="btn-group me-2 mb-2 mb-sm-0">
-              <button type="button" class="btn btn-primary"><i class="fa fa-inbox"></i></button>
-              <button type="button" class="btn btn-primary"><i class="fa fa-exclamation-circle"></i></button>
-              <!-- <button type="button" class="btn btn-primary" (click)="confirm()"><i
-                  class="fa fa-trash-alt"></i></button> -->
+          <div class="card-body">
+            <div class="float-end">
+              <select class="custom-select custom-select-sm">
+                <option selected>20221</option>
+                <option value="1">2021</option>
+                <option value="2">2020</option>
+                <option value="3">2019</option>
+                <option value="3">2018</option>
+                <option value="3">2017</option>
+              </select>
             </div>
-            <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
-              <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fa fa-folder"></i> <i class="mdi mdi-chevron-down ms-1"></i>
-              </button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <a class="dropdown-item" href="javascript: void(0);">Updates</a>
-                <a class="dropdown-item" href="javascript: void(0);">Social</a>
-                <a class="dropdown-item" href="javascript: void(0);">Team Manage</a>
-              </div>
-            </div>
-            <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
-              <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fa fa-tag"></i> <i class="mdi mdi-chevron-down ms-1"></i>
-              </button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <a class="dropdown-item" href="javascript: void(0);">Updates</a>
-                <a class="dropdown-item" href="javascript: void(0);">Social</a>
-                <a class="dropdown-item" href="javascript: void(0);">Team Manage</a>
-              </div>
-            </div>
+            <h4 class="card-title mb-4">Assets Comparison</h4>
 
-            <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
-              <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
-                aria-expanded="false">
-                More <i class="mdi mdi-dots-vertical ms-2"></i>
-              </button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <a class="dropdown-item" (click)="markUnread()" href="javascript: void(0);">Mark as Unread</a>
-                <a class="dropdown-item" href="javascript: void(0);">Mark as Important</a>
-                <a class="dropdown-item" href="javascript: void(0);">Add to Tasks</a>
-                <a class="dropdown-item" href="javascript: void(0);">Add Star</a>
-                <a class="dropdown-item" href="javascript: void(0);">Mute</a>
+            <apx-chart dir="ltr" class="apex-charts" [series]="salesAnalytics.series" [chart]="salesAnalytics.chart"
+              [legend]="salesAnalytics.legend" [colors]="salesAnalytics.colors" [labels]="salesAnalytics.labels"
+              [dataLabels]="salesAnalytics.dataLabels" [plotOptions]="salesAnalytics.plotOptions">
+            </apx-chart>
+            <div class="row">
+              <div class="col-4">
+                <div class="text-center mt-4">
+                  <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-primary font-size-10 me-1"></i> Product A
+                  </p>
+                  <h5>42 %</h5>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="text-center mt-4">
+                  <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success font-size-10 me-1"></i> Product B
+                  </p>
+                  <h5>26 %</h5>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="text-center mt-4">
+                  <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-warning font-size-10 me-1"></i> Product C
+                  </p>
+                  <h5>42 %</h5>
+                </div>
               </div>
             </div>
           </div>
-
-          <ul class="message-list">
-            <li class="unread" *ngFor="let email of emailData | slice:0:15; let i = index; "
-              [ngClass]="{ 'unread': email.unread === true }">
-              <div class="col-mail col-mail-1">
-                <div class="checkbox-wrapper-mail">
-                  <input type="checkbox" id="chk-{{i}}" (change)="selectMail($event,email.id)" />
-                  <label for="chk-{{i}}"></label>
-                </div>
-                <a [routerLink]="['../read',email.id]" class="title">{{email.title}}</a>
-                <span class="star-toggle far fa-star"></span>
-              </div>
-              <div class="col-mail col-mail-2">
-                <a [routerLink]="['../read',email.id]" class="subject">{{email.subject}}</a>
-                <div class="date">{{email.date}}</div>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
       <div class="col-lg-4">

@@ -22,7 +22,7 @@ export class KanbanComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.breadCrumbItems = [{ label: 'Nazox' }, { label: 'Kanban Board', active: true }];
+    this.breadCrumbItems = [{ label: 'ASDAP' }, { label: 'Kanban Board', active: true }];
 
     this._fetchData();
   }

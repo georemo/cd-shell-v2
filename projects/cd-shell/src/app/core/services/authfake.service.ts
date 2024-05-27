@@ -12,6 +12,7 @@ export class AuthfakeauthenticationService {
     public currentUser: Observable<User>;
 
     constructor(private http: HttpClient) {
+        console.log("AuthfakeauthenticationService::constructor()/01")
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
@@ -21,10 +22,17 @@ export class AuthfakeauthenticationService {
     }
 
     login(email: string, password: string) {
+        console.log("AuthfakeauthenticationService::login()/01")
+        console.log("AuthfakeauthenticationService::login()/email:", email)
+        console.log("AuthfakeauthenticationService::login()/password:", password)
         return this.http.post<any>(`/users/authenticate`, { email, password })
             .pipe(map(user => {
+                console.log("AuthfakeauthenticationService::login()/02")
                 // login successful if there's a jwt token in the response
                 if (user && user.token) {
+                    console.log("AuthfakeauthenticationService::login()/email:", email)
+                    console.log("AuthfakeauthenticationService::login()/password:", password)
+                    console.log("AuthfakeauthenticationService::login()/user:", JSON.stringify(user))
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     this.currentUserSubject.next(user);

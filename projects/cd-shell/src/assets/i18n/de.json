@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Profil",
-      "MY_WALLET": "My Wallet",
+      "PROJECTS": "Projects",
       "SETTINGS": "Einstellungen",
       "LOCK_SCREEN": "Bildschirm sperren",
       "LOGOUT": "Abmelden"

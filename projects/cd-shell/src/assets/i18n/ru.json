@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Профиль",
-      "MY_WALLET": "Мой кошелек",
+      "PROJECTS": "Мой кошелек",
       "SETTINGS": "Настройки",
       "LOCK_SCREEN": "Экран блокировки",
       "LOGOUT": "Выход"

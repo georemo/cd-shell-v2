@@ -1,5 +1,5 @@
 modify sidebar component to host cd menu:
-- replace /media/emp-06/disk-02/projects/nazoxTest/cd-shell/src/app/layouts/shared/sidebar/menu.model.ts
-- replace /media/emp-06/disk-02/projects/nazoxTest/cd-shell/src/app/layouts/shared/sidebar/menu.ts
-- /media/emp-06/disk-02/projects/nazoxTest/cd-shell/src/app/layouts/shared/sidebar/sidebar.component.ts
+- replace /media/emp-06/disk-02/projects/ASDAPTest/cd-shell/src/app/layouts/shared/sidebar/menu.model.ts
+- replace /media/emp-06/disk-02/projects/ASDAPTest/cd-shell/src/app/layouts/shared/sidebar/menu.ts
+- /media/emp-06/disk-02/projects/ASDAPTest/cd-shell/src/app/layouts/shared/sidebar/sidebar.component.ts
 

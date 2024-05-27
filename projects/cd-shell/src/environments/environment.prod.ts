@@ -21,8 +21,16 @@ export const environment: EnvConfig = {
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id
   SOCKET_IO_PORT: 3002, // push server port
-  defaultauth: 'fackbackend',
+  defaultauth: 'cd-auth',
   mfManifestPath: '/assets/mf.manifest.json',
+  apiOptions: {
+    headers: {'Content-Type': 'application/json'}
+  },
+  // this.socket = io(`${this.env.sioEndpoint}`,this.env.sioOptions);
+  sioOptions: {
+    transports: ['websocket'],
+    withCredentials: true
+  },
   firebaseConfig: {
     apiKey: '',
     authDomain: '',

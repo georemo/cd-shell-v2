@@ -1,14 +1,10 @@
 <div class="container-fluid">
-  <app-pagetitle title="Benin" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+  <app-pagetitle title="National Data" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
 
   <div class="row">
+
     <div class="col-xl-8">
-      <div class="row">
-        <div *ngFor="let stat of statData" class="col-md-4">
-          <app-stat [title]="stat.title" [value]="stat.value" [icon]="stat.icon"></app-stat>
-        </div>
-      </div>
-      <!-- end row -->
+
 
       <div class="card">
         <div class="card-body pb-1">
@@ -20,7 +16,7 @@
             </div>
           </div> -->
           <div class="float-end">
-            <select [(ngModel)]="selectedCoopParam" (change)="onSelectCoopParam()"
+            <select [(ngModel)]="selectedCoopParam" (change)="onSelectCoopParam($event)"
               class="custom-select custom-select-sm">
               <!-- <option selected>No. of COOPs</option> -->
               <!-- <option value="coopCountSeries">No. of COOPs</option>
@@ -32,7 +28,7 @@
               <option *ngFor="let option of coopParams" [value]="option.value">{{ option.label }}</option>
             </select>
           </div>
-          <h4 class="card-title mb-4">Number of SACCOs</h4>
+          <h4 class="card-title mb-4">{{ chartTitle }}</h4>
           <div>
             <apx-chart dir="ltr" class="apex-charts" [series]="revenueChart.series" [chart]="revenueChart.chart"
               [legend]="revenueChart.legend" [colors]="revenueChart.colors" [labels]="revenueChart.labels"
@@ -41,7 +37,7 @@
           </div>
         </div>
 
-        <div class="card-body border-top text-center">
+        <!-- <div class="card-body border-top text-center">
           <div class="row">
             <div class="col-sm-4">
               <div class="d-inline-flex">
@@ -75,18 +71,27 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
+      <!-- Metrics row -->
+      <!-- <div class="row">
+        <div *ngFor="let stat of statData" class="col-md-4">
+          <app-stat [title]="stat.title" [value]="stat.value" [icon]="stat.icon"></app-stat>
+        </div>
+      </div> -->
+      <!-- end row -->
     </div>
+
     <div class="col-xl-4">
+
       <!-- start email card -->
       <div class="card">
-        <div class="btn-toolbar p-3" role="toolbar">
+        <!-- <div class="btn-toolbar p-3" role="toolbar">
           <div class="btn-group me-2 mb-2 mb-sm-0">
             <button type="button" class="btn btn-primary"><i class="fa fa-inbox"></i></button>
             <button type="button" class="btn btn-primary"><i class="fa fa-exclamation-circle"></i></button>
-            <!-- <button type="button" class="btn btn-primary" (click)="confirm()"><i
-                class="fa fa-trash-alt"></i></button> -->
+            <button type="button" class="btn btn-primary" (click)="confirm()"><i
+                class="fa fa-trash-alt"></i></button>
           </div>
           <div class="btn-group me-2 mb-2 mb-sm-0" ngbDropdown>
             <button type="button" class="btn btn-primary dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
@@ -124,7 +129,7 @@
               <a class="dropdown-item" href="javascript: void(0);">Mute</a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <ul class="message-list">
           <li class="unread" *ngFor="let email of emailData | slice:0:15; let i = index; "
@@ -149,7 +154,7 @@
 
 
 
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-body">
           <div class="dropdown float-end" ngbDropdown>
             <a href="javascript: void(0);" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
@@ -157,13 +162,9 @@
               <i class="mdi mdi-dots-vertical"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-              <!-- item-->
               <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-              <!-- item-->
               <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-              <!-- item-->
               <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-              <!-- item-->
               <a href="javascript:void(0);" class="dropdown-item">Action</a>
             </div>
           </div>
@@ -203,17 +204,242 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- end row -->
 
     <div class="row">
+      <!-- Chat panel -->
+      <!-- <div class="col-lg-4">
+        
+        <div class="card" id="chat-card">
+          <div class="card-body border-bottom">
+
+            <div class="user-chat-border">
+              <div class="row">
+                <div class="col-md-5 col-9">
+                  <h5 class="font-size-15 mb-1">Frank Vickery</h5>
+                  <p class="text-muted mb-0"><i class="mdi mdi-circle text-success align-middle ms-1"></i> Active now
+                  </p>
+                </div>
+                <div class="col-md-7 col-3">
+                  <ul class="list-inline user-chat-nav text-end mb-0">
+                    <li class="list-inline-item">
+                      <div class="dropdown" ngbDropdown>
+                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0" ngbDropdownMenu>
+                          <form class="p-2">
+                            <div class="search-box">
+                              <div class="position-relative">
+                                <input type="text" class="form-control rounded bg-light border-0"
+                                  placeholder="Search...">
+                                <i class="mdi mdi-magnify search-icon"></i>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-inline-item d-none d-sm-inline-block">
+                      <div class="dropdown" ngbDropdown>
+                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          <i class="mdi mdi-cog"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                          <a class="dropdown-item" href="#">View Profile</a>
+                          <a class="dropdown-item" href="#">Clear chat</a>
+                          <a class="dropdown-item" href="#">Muted</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="list-inline-item">
+                      <div class="dropdown" ngbDropdown>
+                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chat-widget">
+              <div class="chat-conversation">
+                <perfect-scrollbar style="height: 292px;">
+                  <ul class="list-unstyled mb-0 pr-3" *ngFor="let data of chatData"
+                    [ngClass]="{ 'right': data.align === 'right' }">
+                    <li *ngIf="!data.text">
+                      <div class="conversation-list">
+                        <div class="chat-avatar">
+                          <img src="{{data.image}}" alt="" *ngIf="data.image">
+                        </div>
+                        <div class="ctext-wrap">
+                          <div class="conversation-name">{{data.name}}</div>
+                          <div class="ctext-wrap-content">
+                            <p class="mb-0">
+                              {{data.message}}
+                            </p>
+                          </div>
+                          <p class="chat-time mb-0"><i class="mdi mdi-clock-outline align-middle ms-1"></i>
+                            {{data.time}}
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li *ngIf="data.text">
+                      <div class="chat-day-title">
+                        <span class="title">{{data.text}}</span>
+                      </div>
+                    </li>
+                  </ul>
+                </perfect-scrollbar>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 chat-input-section border-top">
+            <form (ngSubmit)="messageSave()" [formGroup]="formData" class="row">
+              <div class="col">
+                <div class="position-relative">
+                  <input type="text" class="form-control chat-input" placeholder="Enter Message..."
+                    formControlName="message" [ngClass]="{'is-invalid': chatSubmit && form.message.errors}">
+                  <div *ngIf="chatSubmit && form.message.errors" class="invalid-feedback">
+                    <span *ngIf="form.message.errors.required">This value is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary chat-send w-md waves-effect waves-light"><span
+                    class="d-none d-sm-inline-block">Send</span> <i class="mdi mdi-send ms-1"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="dropdown float-end" ngbDropdown>
+              <a href="javascript: void(0);" class="dropdown-toggle arrow-none card-drop" ngbDropdownToggle
+                data-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-dots-vertical"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                <a href="javascript:void(0);" class="dropdown-item">Eswatini</a>
+                <a href="javascript:void(0);" class="dropdown-item">Gambia</a>
+                <a href="javascript:void(0);" class="dropdown-item">Ghana</a>
+                <a href="javascript:void(0);" class="dropdown-item">Tanzania</a>
+              </div>
+            </div>
+            <h4 class="card-title mb-4">National Data</h4>
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div id="tickets-table_filter" class="dataTables_filter text-md-end"><label
+                    class="d-inline-flex align-items-center">Search:
+                    <input type="text" name="searchTerm" class="form-control form-control-sm ms-2"
+                      aria-controls="tickets-table" [(ngModel)]="term" /></label></div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <!-- 
+                {
+                  "coopId": 33,
+                  "coopGuid": "",
+                  "coopName": "Ghana",
+                  "coopTypeGuid": 105,
+                  "coopTypeName": "National Apex",
+                  "docId": 19545,
+                  "coopDescription": "2005",
+                  "coopTypeId": 105,
+                  "cdGeoLocationId": 113,
+                  "coopCount": 260,
+                  "coopMembersCount": "174026",
+                  "coopSavesShares": "46578511",
+                  "coopLoans": "32439584",
+                  "coopAssets": "55712411",
+                  "coopMemberPenetration": "1.40",
+                  "coopDateLabel": "2005-12-31T20:59:59.000Z",
+                  "coopWoccu": 0,
+                  "coopReserves": "4096018",
+                  "parentGuid": null,
+                  "cdGeoLocationName": "Ghana",
+                  "cdGeoPoliticalTypeId": 10,
+                  "coopEnabled": null,
+                  "coopDisplay": null,
+                  "cdGeoLocationEnabled": 1,
+                  "cdGeoLocationDisplay": 1
+                } 
+              -->
+              <table class="table table-centered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Coop ID</th>
+                    <th>Country</th>
+                    <th>SACCOs</th>
+                    <th>Members</th>
+                    <th>Saves & Shares</th>
+                    <th>Loans</th>
+                    <th>Assets</th>
+                    <th>Penetration</th>
+                    <th>Reserves</th>
+                    <th>DateTime</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of transactions|filter:term">
+                    <td>{{item.coopId}}</td>
+                    <td>{{item.coopName}}</td>
+                    <td>{{item.coopCount}}</td>
+                    <td>{{item.coopMembersCount}}</td>
+                    <td>{{item.coopSavesShares}}</td>
+                    <td>{{item.coopLoans}}</td>
+                    <td>{{item.coopAssets}}</td>
+                    <td>{{item.coopMemberPenetration}}</td>
+                    <td>{{item.coopReserves}}</td>
+                    <td>{{item.coopDateLabel}}</td>
+                    <!-- <td>
+                      <div class="badge font-size-12" [ngClass]="{'bg-danger-subtle text-danger': item.paymentstatus === 'Chargeback',
+                      'bg-success-subtle text-success':item.paymentstatus === 'Paid',
+                      'bg-warning-subtle text-warning': item.paymentstatus === 'Unpaid'}">{{item.paymentstatus}}
+                      </div>
+                    </td> -->
+                    <td>
+                      <a href="javascript:void(0);" class="me-3 text-primary" ngbTooltip="Edit"><i
+                          class="mdi mdi-pencil font-size-18"></i></a>
+                      <a href="javascript:void(0);" class="text-danger" ngbTooltip="Delete"><i
+                          class="mdi mdi-trash-can font-size-18"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+
+    <!-- <div class="row">
       <div class="col-lg-4">
         <div class="card">
           <div class="card-body">
             <div class="float-end">
               <select class="custom-select custom-select-sm">
-                <option selected>20221</option>
+                <option selected>2022</option>
                 <option value="1">2021</option>
                 <option value="2">2020</option>
                 <option value="3">2019</option>
@@ -262,13 +488,9 @@
                 <i class="mdi mdi-dots-vertical"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Action</a>
               </div>
             </div>
@@ -403,13 +625,9 @@
                 <i class="mdi mdi-dots-vertical"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">Action</a>
               </div>
             </div>
@@ -452,193 +670,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- end row -->
 
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body border-bottom">
 
-            <div class="user-chat-border">
-              <div class="row">
-                <div class="col-md-5 col-9">
-                  <h5 class="font-size-15 mb-1">Frank Vickery</h5>
-                  <p class="text-muted mb-0"><i class="mdi mdi-circle text-success align-middle ms-1"></i> Active now
-                  </p>
-                </div>
-                <div class="col-md-7 col-3">
-                  <ul class="list-inline user-chat-nav text-end mb-0">
-                    <li class="list-inline-item">
-                      <div class="dropdown" ngbDropdown>
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
-                          <i class="mdi mdi-magnify"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0" ngbDropdownMenu>
-                          <form class="p-2">
-                            <div class="search-box">
-                              <div class="position-relative">
-                                <input type="text" class="form-control rounded bg-light border-0"
-                                  placeholder="Search...">
-                                <i class="mdi mdi-magnify search-icon"></i>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-inline-item d-none d-sm-inline-block">
-                      <div class="dropdown" ngbDropdown>
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
-                          <i class="mdi mdi-cog"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                          <a class="dropdown-item" href="#">View Profile</a>
-                          <a class="dropdown-item" href="#">Clear chat</a>
-                          <a class="dropdown-item" href="#">Muted</a>
-                          <a class="dropdown-item" href="#">Delete</a>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="list-inline-item">
-                      <div class="dropdown" ngbDropdown>
-                        <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
-                          <i class="mdi mdi-dots-horizontal"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else</a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="chat-widget">
-              <div class="chat-conversation">
-                <perfect-scrollbar style="height: 292px;">
-                  <ul class="list-unstyled mb-0 pr-3" *ngFor="let data of chatData"
-                    [ngClass]="{ 'right': data.align === 'right' }">
-                    <li *ngIf="!data.text">
-                      <div class="conversation-list">
-                        <div class="chat-avatar">
-                          <img src="{{data.image}}" alt="" *ngIf="data.image">
-                        </div>
-                        <div class="ctext-wrap">
-                          <div class="conversation-name">{{data.name}}</div>
-                          <div class="ctext-wrap-content">
-                            <p class="mb-0">
-                              {{data.message}}
-                            </p>
-                          </div>
-                          <p class="chat-time mb-0"><i class="mdi mdi-clock-outline align-middle ms-1"></i>
-                            {{data.time}}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li *ngIf="data.text">
-                      <div class="chat-day-title">
-                        <span class="title">{{data.text}}</span>
-                      </div>
-                    </li>
-                  </ul>
-                </perfect-scrollbar>
-              </div>
-            </div>
-          </div>
-          <div class="p-3 chat-input-section border-top">
-            <form (ngSubmit)="messageSave()" [formGroup]="formData" class="row">
-              <div class="col">
-                <div class="position-relative">
-                  <input type="text" class="form-control chat-input" placeholder="Enter Message..."
-                    formControlName="message" [ngClass]="{'is-invalid': chatSubmit && form.message.errors}">
-                  <div *ngIf="chatSubmit && form.message.errors" class="invalid-feedback">
-                    <span *ngIf="form.message.errors.required">This value is required.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-primary chat-send w-md waves-effect waves-light"><span
-                    class="d-none d-sm-inline-block">Send</span> <i class="mdi mdi-send ms-1"></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body">
-            <div class="dropdown float-end" ngbDropdown>
-              <a href="javascript: void(0);" class="dropdown-toggle arrow-none card-drop" ngbDropdownToggle
-                data-toggle="dropdown" aria-expanded="false">
-                <i class="mdi mdi-dots-vertical"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-              </div>
-            </div>
-            <h4 class="card-title mb-4">Latest Transactions</h4>
-            <div class="row">
-              <div class="col-sm-12 col-md-12">
-                <div id="tickets-table_filter" class="dataTables_filter text-md-end"><label
-                    class="d-inline-flex align-items-center">Search:
-                    <input type="text" name="searchTerm" class="form-control form-control-sm ms-2"
-                      aria-controls="tickets-table" [(ngModel)]="term" /></label></div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <table class="table table-centered">
-                <thead class="table-light">
-                  <tr>
-                    <th>Order ID</th>
-                    <th>Date</th>
-                    <th>Billing Name</th>
-                    <th>Total</th>
-                    <th>Payment Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let item of transactions|filter:term">
-                    <td>{{item.orderid}}</td>
-                    <td>{{item.date}}</td>
-                    <td>{{item.billingname}}</td>
-                    <td>{{item.total}}</td>
-                    <td>
-                      <div class="badge font-size-12" [ngClass]="{'bg-danger-subtle text-danger': item.paymentstatus === 'Chargeback',
-                      'bg-success-subtle text-success':item.paymentstatus === 'Paid',
-                      'bg-warning-subtle text-warning': item.paymentstatus === 'Unpaid'}">{{item.paymentstatus}}
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript:void(0);" class="me-3 text-primary" ngbTooltip="Edit"><i
-                          class="mdi mdi-pencil font-size-18"></i></a>
-                      <a href="javascript:void(0);" class="text-danger" ngbTooltip="Delete"><i
-                          class="mdi mdi-trash-can font-size-18"></i></a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end row -->
   </div>

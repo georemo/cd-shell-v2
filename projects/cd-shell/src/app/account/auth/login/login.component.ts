@@ -50,13 +50,18 @@ export class LoginComponent implements OnInit {
    * Form submit
    */
   onSubmit() {
+    console.log("starting onSubmit()/01")
+    console.log("this.loginForm.valid:", this.loginForm.valid)
     this.submitted = true;
 
     // stop here if form is invalid
     if (this.loginForm.invalid) {
+      console.log("starting onSubmit()/02")
       return;
     } else {
+      console.log("starting onSubmit()/03")
       if (environment.defaultauth === 'firebase') {
+        console.log("starting onSubmit()/04")
         this.authenticationService.login(this.f.email.value, this.f.password.value).then((res: any) => {
           this.router.navigate(['/']);
         })
@@ -64,15 +69,18 @@ export class LoginComponent implements OnInit {
             this.error = error ? error : '';
           });
       } else {
+        console.log("starting onSubmit()/05")
         this.authFackservice.login(this.f.email.value, this.f.password.value)
           .pipe(first())
           .subscribe(
             data => {
+              console.log("onSubmit/data:", data)
               this.router.navigate(['/']);
             },
             error => {
               this.error = error ? error : '';
             });
+        // this.router.navigate(['/']);
       }
     }
   }

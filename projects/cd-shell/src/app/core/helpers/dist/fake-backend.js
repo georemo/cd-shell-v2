@@ -17,7 +17,7 @@ var FakeBackendInterceptor = /** @class */ (function () {
     FakeBackendInterceptor.prototype.intercept = function (request, next) {
         // array in local storage for registered users
         // tslint:disable-next-line: max-line-length
-        var users = JSON.parse(localStorage.getItem('users')) || [{ username: 'admin', email: 'admin@themesdesign.in', password: '123456' }];
+        var users = JSON.parse(localStorage.getItem('users')) || [{ username: 'admin', email: 'user@asdap.africa', password: '123456' }];
         // wrap in delayed observable to simulate server api call
         return rxjs_1.of(null).pipe(operators_1.mergeMap(function () {
             // authenticate

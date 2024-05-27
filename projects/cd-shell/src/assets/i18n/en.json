@@ -7,18 +7,18 @@
       "VIEW_ALL": "View All",
       "LOAD_MORE": "View More..",
       "FIRST": {
-        "TITLE": "Your order is placed",
-        "TEXT": "If several languages coalesce the grammar",
+        "TITLE": "New Data",
+        "TEXT": "New data from Malawi has been entered",
         "TIME": "3 min ago"
       },
       "SECOND": {
-        "TITLE": "James Lemire",
-        "TEXT": "It will seem like simplified English.",
-        "TIME": "1 hours ago"
+        "TITLE": "ASDAP Updates",
+        "TEXT": "2024 ASDAP TOT is now available online",
+        "TIME": "3 weeks ago"
       },
       "THIRD": {
-        "TITLE": "Your item is shipped",
-        "TEXT": "If several languages coalesce the grammar",
+        "TITLE": "Growing number users",
+        "TEXT": "2,761,893 user registered so far",
         "TIME": "3 min ago"
       },
       "FOUR": {
@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Profile",
-      "MY_WALLET": "My Wallet",
+      "PROJECTS": "Projects",
       "SETTINGS": "Settings",
       "LOCK_SCREEN": "Lock screen",
       "LOGOUT": "Logout"

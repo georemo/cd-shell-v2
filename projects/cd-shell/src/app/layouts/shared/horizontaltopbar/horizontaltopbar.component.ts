@@ -116,12 +116,16 @@ export class HorizontaltopbarComponent implements OnInit {
    * Logout the user
    */
   logout() {
+    console.log("HorizontalTopbar::logout()/01")
     if (environment.defaultauth === 'firebase') {
+      console.log("HorizontalTopbar::logout()/02")
       this.authService.logout();
     } else {
+      console.log("HorizontalTopbar::logout()/03")
       this.authFackservice.logout();
     }
-    this.router.navigate(['/account/login']);
+    console.log("HorizontalTopbar::logout()/04")
+    this.router.navigate(['/']);
   }
 
 }

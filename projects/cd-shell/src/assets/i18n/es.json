@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Perfil",
-      "MY_WALLET": "Mi billetera",
+      "PROJECTS": "Mi billetera",
       "SETTINGS": "Configuración",
       "LOCK_SCREEN": "Pantalla de bloqueo",
       "LOGOUT": "Cerrar sesión"

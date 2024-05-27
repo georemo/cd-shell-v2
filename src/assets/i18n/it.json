@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Profile",
-      "MY_WALLET": "Il mio portafoglio",
+      "PROJECTS": "Il mio portafoglio",
       "SETTINGS": "Impostazioni",
       "LOCK_SCREEN": "Blocca schermo",
       "LOGOUT": "Logout"

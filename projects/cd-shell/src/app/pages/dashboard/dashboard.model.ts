@@ -40,6 +40,35 @@ export interface Transaction {
     paymentstatus: string;
 }
 
+export interface CoopData {
+    coopId: number  | null;
+    coopGuid: string | null;
+    coopName: string | null;
+    coopTypeGuid?: number | null;
+    coopTypeName?: string | null;
+    docId: number | null;
+    coopDescription: string | null;
+    coopTypeId: number | null;
+    cdGeoLocationId: number | null;
+    coopCount: number | null;
+    coopMembersCount: number | null;
+    coopSavesShares: number | null;
+    coopLoans: number | null;
+    coopAssets: number | null;
+    coopMemberPenetration?: number | null;
+    coopDateLabel?: string | null;
+    coopWoccu?: boolean | null;
+    coopReserves?: number | null;
+    coopRefId?: number | null;
+    parentGuid?: string | null,
+    cdGeoLocationName?: string | null;
+    cdGeoPoliticalTypeId?: number | null;
+    coopEnabled?: boolean | number | null,
+    coopDisplay?: boolean | number | null,
+    cdGeoLocationEnabled?: number | boolean | null;
+    cdGeoLocationDisplay?: number | boolean | null;
+  }
+
 // Define the interface ICoopType
 export interface ICoopType {
     coopId: number;

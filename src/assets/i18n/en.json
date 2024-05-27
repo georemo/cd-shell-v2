@@ -59,7 +59,7 @@
     },
     "LOGIN": {
       "PROFILE": "Profile",
-      "MY_WALLET": "My Wallet",
+      "PROJECTS": "Projects",
       "SETTINGS": "Settings",
       "LOCK_SCREEN": "Lock screen",
       "LOGOUT": "Logout"

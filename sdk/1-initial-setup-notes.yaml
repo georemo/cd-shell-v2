@@ -1,18 +1,18 @@
 
 INTRODUCTION:
-Use nazox theme to create module federated projects.
-Two project will be created cd-shell and cd-user based on nazox starter kit.
+Use ASDAP theme to create module federated projects.
+Two project will be created cd-shell and cd-user based on ASDAP starter kit.
 cd-shell will be configured to load cd-user on navigation request.
-Nazox Ref: https://themeforest.net/item/nazox-angular-10-admin-dashboard-template/28441799?utm_campaign=item_update&utm_content=item_update&utm_keyword=sysemail&utm_medium=email&utm_source=System+Email&utm_term=sysemail
+ASDAP Ref: https://themeforest.net/item/ASDAP-angular-10-admin-dashboard-template/28441799?utm_campaign=item_update&utm_content=item_update&utm_keyword=sysemail&utm_medium=email&utm_source=System+Email&utm_term=sysemail
 
 
 NB:
-  - the following refers to procedure for nazox for angulr 15. 
+  - the following refers to procedure for ASDAP for angulr 15. 
   - If already setup, you can skip to "RUNNING EXISTING MODULES"
 1. Preliminary confirmations:
   - confirm that the database is up and reachable
   - confirm that cd-api is up and running and reachable
-2. seup nazox project with starter kit:
+2. seup ASDAP project with starter kit:
   - test to confirm starter kit is in working state
 3. create new 'app' in the project:
   - Ref: https://www.tektutorialshub.com/angular/angular-multiple-apps-in-one-project/

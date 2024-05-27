@@ -16,7 +16,7 @@ export class SioClientService {
   constructor(
 
   ) {
-    this.socket = io(environment.sioEndpoint);
+    this.socket = io(environment.sioEndpoint,environment.sioOptions);
   }
   /**
    * - save resource in localStorag so it is sharable

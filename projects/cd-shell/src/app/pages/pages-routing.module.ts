@@ -9,6 +9,7 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 
 const routes: Routes = [
     { path: '', component: DashboardComponent },
+    { path: 'dashboard', component: DashboardComponent },
     { path: 'calendar', component: CalendarComponent },
     { path: 'chat', component: ChatComponent },
     { path: 'kanban-board', component: KanbanComponent },

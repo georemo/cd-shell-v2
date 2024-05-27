@@ -35,7 +35,7 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.breadCrumbItems = [{ label: 'Nazox' }, { label: 'Chat', active: true }];
+    this.breadCrumbItems = [{ label: 'ASDAP' }, { label: 'Chat', active: true }];
 
     this.formData = this.formBuilder.group({
       message: ['', [Validators.required]],

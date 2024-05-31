@@ -53,7 +53,7 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-user.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-user.asdap.africa/remoteEntry.js',
                 remoteName: 'cdUser',
                 exposedModule: './UserFrontModule'
             })
@@ -63,7 +63,7 @@ const routes: Routes = [
         path: 'pms',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-pms.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-pms.asdap.africa/remoteEntry.js',
                 remoteName: 'cdPms',
                 exposedModule: './PmsModule'
             })
@@ -73,7 +73,7 @@ const routes: Routes = [
         path: 'comm',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-comm.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-comm.asdap.africa/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './MemoModule'
             })
@@ -89,7 +89,7 @@ const routes: Routes = [
         path: 'memo',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-memo.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-memo.asdap.africa/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './MemoModule'
             })
@@ -99,7 +99,7 @@ const routes: Routes = [
         path: 'inte-ract',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-interact.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-interact.asdap.africa/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './InteRactModule'
             })
@@ -109,7 +109,7 @@ const routes: Routes = [
         path: 'moduleman',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'http://cd-moduleman.asdap.africa:80/remoteEntry.js',
+                remoteEntry: 'https://cd-moduleman.asdap.africa/remoteEntry.js',
                 remoteName: 'cdModuleman',
                 exposedModule: './ModulemanModule'
             })
@@ -119,22 +119,23 @@ const routes: Routes = [
     //     path: 'menu',
     //     loadChildren: () =>
     //         loadRemoteModule({
-    //             remoteEntry: 'http://asdap.africa:4402/remoteEntry.js',
+    //             remoteEntry: 'https://asdap.africa/remoteEntry.js',
     //             remoteName: 'cdModuleman',
     //             exposedModule: './MenuModule'
     //         })
     //             .then(m => m.MenuModule)
     // },
-    {
-        path: 'hrm',
-        loadChildren: () =>
-            loadRemoteModule({
-                remoteEntry: 'http://cd-hrm.asdap.africa:80/remoteEntry.js',
-                remoteName: 'cdHrm',
-                exposedModule: './RecruitModule'
-            })
-                .then(m => m.RecruitModule)
-    }
+    ////////////////////////////////////////////////
+    // {
+    //     path: 'hrm',
+    //     loadChildren: () =>
+    //         loadRemoteModule({
+    //             remoteEntry: 'https://cd-hrm.asdap.africa/remoteEntry.js',
+    //             remoteName: 'cdHrm',
+    //             exposedModule: './RecruitModule'
+    //         })
+    //             .then(m => m.RecruitModule)
+    // }
 ];
 
 @NgModule({

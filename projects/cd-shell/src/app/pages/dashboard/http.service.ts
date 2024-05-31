@@ -63,7 +63,6 @@ export class HttpService {
     postData: ICdRequest;
     module = '';
     controller = '';
-    options: any;
     resp$: Observable<ArrayBuffer> = new Observable<ArrayBuffer>();
     token: any;
     params: CdRequest = {
@@ -81,15 +80,7 @@ export class HttpService {
     // locationData: IGeoLocation[] = []
 
     constructor(private http: HttpClient) {
-        // const h = new HttpHeaders({
-        //     'Content-Type': 'application/json',
-        //     // 'Access-Control-Allow-Origin': '*',
-        //     // 'Access-Control-Allow-Headers': 'Authorization'
-        // });
-        // this.options = {
-        //     headers: h
-        // };
-        this.options = environment.apiOptions;
+        
     }
 
     // init() {
@@ -154,8 +145,7 @@ export class HttpService {
 
     proc(params: CdRequest) {
         console.log('base/ServerService::proc()/params:', params)
-        // return this.http.post(environment.apiEndpoint, params, this.options)
-        return this.http.post("https://cd-api.co.ke/api", params, this.options)
+        return this.http.post(environment.apiEndpoint, params, environment.apiOptions)
     }
 
     

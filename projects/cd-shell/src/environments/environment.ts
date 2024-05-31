@@ -11,7 +11,7 @@ export const environment: EnvConfig = {
   appId: '',
   production: false,
   apiEndpoint: 'https://cd-api.co.ke/api',
-  sioEndpoint: 'https://cd-api.co.ke/sio',
+  sioEndpoint: 'https://cd-api.co.ke:3002/sio',
   wsEndpoint: 'ws://cd-api.co.ke:3000',
   CD_PORT: 3001,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
@@ -26,12 +26,13 @@ export const environment: EnvConfig = {
   defaultauth: 'cd-auth',
   mfManifestPath: '/assets/mf.manifest.json',
   apiOptions: {
-    headers: {'Content-Type': 'application/json'}
+    headers: { 'Content-Type': 'application/json' }
   },
   // this.socket = io(`${this.env.sioEndpoint}`,this.env.sioOptions);
   sioOptions: {
-    transports: ['websocket'],
-    withCredentials: true
+    path: '/socket.io',
+    transports: ['websocket', 'polling'],
+    secure: true
   },
   firebaseConfig: {
     apiKey: '',

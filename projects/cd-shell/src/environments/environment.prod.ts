@@ -9,7 +9,7 @@ export const environment: EnvConfig = {
   production: true,
   // apiEndpoint: 'https://cd-shell.asdap.africa/cdapi/public/api/cd',
   apiEndpoint: 'https://cd-api.co.ke/api',
-  sioEndpoint: 'https://cd-api.co.ke/sio',
+  sioEndpoint: 'https://cd-api.co.ke:3002/sio',
   wsEndpoint: 'ws://cd-api.co.ke:3000',
   CD_PORT: 3001,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
@@ -28,8 +28,9 @@ export const environment: EnvConfig = {
   },
   // this.socket = io(`${this.env.sioEndpoint}`,this.env.sioOptions);
   sioOptions: {
-    transports: ['websocket'],
-    withCredentials: true
+    path: '/sio',
+    transports: ['websocket', 'polling'],
+    secure: true
   },
   firebaseConfig: {
     apiKey: '',

@@ -1,21 +1,21 @@
 {
     "/api": {
-        "target": "https://cd-shell.asdap.africa:8181",
+        "target": "https://cd-api.co.ke",
         "secure": false,
         "logLevel": "debug"
     },
     "/sio": {
-        "target": "https://cd-shell.asdap.africa:8181",
+        "target": "https://cd-api.co.ke:3002",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "https://cd-shell.asdap.africa:4407",
+        "target": "https://cd-user.asdap.africa",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "https://cd-shell.asdap.africa:4401",
+        "target": "https://cd-moduleman.asdap.africa",
         "secure": false,
         "logLevel": "debug"
     }

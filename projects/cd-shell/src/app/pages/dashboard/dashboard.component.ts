@@ -68,14 +68,7 @@ export class DashboardComponent implements OnInit {
     public formBuilder: UntypedFormBuilder,
     private http: HttpService,
   ) {
-    // const h = new HttpHeaders({
-    //   'Content-Type': 'application/json',
-    //   'Access-Control-Allow-Origin': '*'
-    // });
-    // const h = new HttpHeaders(environment.apiOptions.headers);
-    // this.httpOptions = {
-    //   headers: h
-    // };
+    
     this.httpOptions = environment.apiOptions;
 
     this.coopParams = coopParamOptions

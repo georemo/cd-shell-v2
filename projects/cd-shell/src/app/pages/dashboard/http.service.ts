@@ -148,6 +148,11 @@ export class HttpService {
         return this.http.post(environment.apiEndpoint, params, environment.apiOptions)
     }
 
+    // procPusher(pusherParams: any) {
+    //     console.log('base/ServerService::procPusher()/params:', pusherParams)
+    //     return this.http.post(`${environment.sioHost}:${environment.SOCKET_IO_PORT}`, pusherParams, environment.pusherOptions)
+    // }
+
     
 
 

@@ -7,12 +7,46 @@ import { EnvConfig } from "@corpdesk/core";
 
 // const h = new HttpHeaders({'Content-Type': 'application/json'});
 
+const API_HOST = "https://cd-api.co.ke"
+const API_ROUTE = '/api'
+const API_PORT = '443'
+const PUSH_HOST = API_HOST
+const SIO_ROUTE = '/sio'
+
 export const environment: EnvConfig = {
   appId: '',
   production: false,
-  apiEndpoint: 'https://cd-api.co.ke/api',
-  sioEndpoint: 'https://cd-api.co.ke:3002/sio',
+  apiEndpoint: `${API_HOST}${API_ROUTE}`,
+  sioEndpoint: `${API_HOST}${API_PORT}${API_ROUTE}`,
   wsEndpoint: 'ws://cd-api.co.ke:3000',
+  wsMode: 'wss',
+  pushConfig: {
+    sio: {
+      enabled: true,
+    },
+    wss: {
+      enabled: false,
+    },
+    pusher: {
+      enabled: true,
+      apiKey: 'DtVRY9V5j41KwSxKrd8L_dRijUJh9gVcqwBH5wb96no',
+      options: {
+        appId: "1813536",
+        key: "d0a484e9f13f58c57476",
+        secret: "1281499b5868057dc567",
+        cluster: 'ap2',
+        forceTLS: true,
+        userAuthentication: {
+          // endpoint: "/pusher/user-auth",
+          endpoint: "/pusher/auth",
+          transport: "ajax",
+          params: {},
+          headers: {},
+          customHandler: null,
+        }
+      }
+    }
+  },
   CD_PORT: 3001,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
   USER_RESOURCES: 'http://routed-93/user-resources',

@@ -17,6 +17,22 @@ export const environment: EnvConfig = {
   apiHost: 'https://cd-api.co.ke',
   sioHost: 'https://cd-api.co.ke',
   shellHost: 'https://cd-shell.asdap.africa',
+  pushConfig: {
+    enabled: true,
+    apiKey: 'DtVRY9V5j41KwSxKrd8L_dRijUJh9gVcqwBH5wb96no',
+    options: {
+      cluster: 'ap2',
+      forceTLS: true,
+      userAuthentication: {
+        // endpoint: "/pusher/user-auth",
+        endpoint: "/pusher/auth",
+        transport: "ajax",
+        params: {},
+        headers: {},
+        customHandler: null,
+      }
+    }
+  },
   consumer: '',
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id

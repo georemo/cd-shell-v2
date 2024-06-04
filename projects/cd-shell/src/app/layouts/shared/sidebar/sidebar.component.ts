@@ -18,6 +18,7 @@ import {
 import { HtmlElemService, HtmlCtx } from '@corpdesk/core/src/lib/guig';
 import { MenuItem } from './menu.model';
 import { environment } from 'src/environments/environment';
+import { PusherService } from '../../../core/services/pusher.service';
 // import { SioClientService } from '../../../core/services/sio-client.service';
 
 let $ = new HtmlElemService();
@@ -48,6 +49,11 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     skipLocationChange: true,
     replaceUrl: false
   };
+
+  // for pusher
+  messages: string[] = [];
+  newMessage: string = '';
+
   constructor(
     private elementRef: ElementRef,
     private eventService: EventService,
@@ -60,9 +66,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public cd: ChangeDetectorRef,
     private svBase: BaseService,
     private svSio: SioClientService,
+    private svPusher: PusherService,
   ) {
-    this.svSio.env = environment;
-    this.svSio.initSio(this, this.socketAction);
+    // this.svSio.env = environment;
+    // this.svSio.initSio(this, this.socketAction);
 
     $ = this.svHtml;
     router.events.forEach((event) => {
@@ -261,6 +268,16 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    */
   initialize(): void {
     console.log('starting initialize()');
+    //initialize socket.io service
+    this.svSio.env = environment;
+    this.svSio.initSio(this, this.socketAction);
+
+    // initialize pusher
+    this.svPusher.subscribe('my-channel', 'my-event', (data) => {
+      this.messages.push(data.message);
+      console.log("data received:", data)
+      console.log("messages:", this.messages)
+    });
   }
 
   initSession() {
@@ -429,6 +446,20 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         }
       }
     }
+  }
+
+  /**
+   * Send pusher message
+   */
+  sendMessage() {
+    this.newMessage = 'Hello pusher'
+    this.svPusher.sendMessage('my-channel', 'my-event', this.newMessage)
+      .subscribe(() => {
+        console.log('Pusher message sent');
+        this.newMessage = '';
+      }, error => {
+        console.error('Error sending message', error);
+      });
   }
 
   /**
@@ -780,6 +811,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         menuItemEl.addEventListener('click', (e: Event) => this.router.navigate([menuItem.link], this.routParams));
       }
     }
+  }
+
+  ngOnDestroy() {
+    this.svPusher.unsubscribe('my-channel');
   }
 
 }

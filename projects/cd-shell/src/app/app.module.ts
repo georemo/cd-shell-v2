@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -38,6 +40,14 @@ export function createTranslateLoader(http: HttpClient): any {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    LoggerModule.forRoot({
+      level: NgxLoggerLevel.TRACE,
+      serverLogLevel: NgxLoggerLevel.OFF,
+      serverLoggingUrl: '/api/logs',
+      disableConsoleLogging: false, // Disable logging to the browser console
+      enableSourceMaps: true, // Enable source maps to map errors back to original TypeScript code
+      colorScheme: ['purple', 'teal', 'gray', 'gray', 'red', 'red', 'red'] // Customize log colors
+    }),
     PagesModule,
     LayoutsModule,
     FormsModule,

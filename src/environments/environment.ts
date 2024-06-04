@@ -10,6 +10,23 @@ export const environment: EnvConfig = {
   apiEndpoint: 'https://cd-api.co.ke/api',
   sioEndpoint: 'https://cd-api.co.ke:3002/sio',
   wsEndpoint: 'ws://cd-api.co.ke:3000',
+  wsMode: 'wss',
+  pushConfig: {
+    enabled: true,
+    apiKey: 'DtVRY9V5j41KwSxKrd8L_dRijUJh9gVcqwBH5wb96no',
+    options: {
+      cluster: 'ap2',
+      forceTLS: true,
+      userAuthentication: {
+        // endpoint: "/pusher/user-auth",
+        endpoint: "/pusher/auth",
+        transport: "ajax",
+        params: {},
+        headers: {},
+        customHandler: null,
+      }
+    }
+  },
   CD_PORT: 443,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
   USER_RESOURCES: 'http://routed-93/user-resources',
@@ -19,7 +36,7 @@ export const environment: EnvConfig = {
   consumer: '',
   clientAppGuid: 'ca0fe39f-92b2-484d-91ef-487d4fc462a2',
   clientAppId: 2, // this client application identifies itself to the server with this id
-  SOCKET_IO_PORT: 443, // push server port
+  SOCKET_IO_PORT: 3002, // push server port
   defaultauth: 'cd-auth',
   mfManifestPath: '/assets/mf.manifest.json',
   apiOptions: {
@@ -30,7 +47,7 @@ export const environment: EnvConfig = {
     transports: ['websocket', 'polling'],
     secure: true,
     reconnection: true,
-    reconnectionAttempts: Infinity,
+    // reconnectionAttempts: Infinity,
     reconnectionDelay: 1000,
     timeout: 20000,
     // transports: ['websocket'],

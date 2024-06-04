@@ -11,6 +11,23 @@ export const environment: EnvConfig = {
   apiEndpoint: 'https://cd-api.co.ke/api',
   sioEndpoint: 'https://cd-api.co.ke/sio',
   wsEndpoint: 'ws://cd-api.co.ke:3000',
+  wsMode: 'wss',
+  pushConfig: {
+    enabled: true,
+    apiKey: 'DtVRY9V5j41KwSxKrd8L_dRijUJh9gVcqwBH5wb96no',
+    options: {
+      cluster: 'ap2',
+      forceTLS: true,
+      userAuthentication: {
+        // endpoint: "/pusher/user-auth",
+        endpoint: "/pusher/auth",
+        transport: "ajax",
+        params: {},
+        headers: {},
+        customHandler: null,
+      }
+    }
+  },
   CD_PORT: 3001,
   consumerToken: 'B0B3DA99-1859-A499-90F6-1E3F69575DCD',// current company consumer
   USER_RESOURCES: 'http://routed-93/user-resources',

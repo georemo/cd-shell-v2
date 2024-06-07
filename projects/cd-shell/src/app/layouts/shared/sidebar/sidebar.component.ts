@@ -19,7 +19,9 @@ import { HtmlElemService, HtmlCtx } from '@corpdesk/core/src/lib/guig';
 import { MenuItem } from './menu.model';
 import { environment } from 'src/environments/environment';
 import { PusherService } from '../../../core/services/pusher.service';
+import { MenuDataService } from './menu-data.service';
 // import { SioClientService } from '../../../core/services/sio-client.service';
+import { CommunicationService } from './communication.service';
 
 let $ = new HtmlElemService();
 interface IdleTimerOptions {
@@ -67,6 +69,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     private svBase: BaseService,
     private svSio: SioClientService,
     private svPusher: PusherService,
+    private communicationService: CommunicationService,
   ) {
     // this.svSio.env = environment;
     // this.svSio.initSio(this, this.socketAction);
@@ -268,6 +271,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    */
   initialize(): void {
     console.log('starting initialize()');
+    
+    // register itself with the CommunicationService when it initializes
+    this.communicationService.registerSidebar(this);
+
     //initialize socket.io service
     this.svSio.env = environment;
     this.svSio.initSio(this, this.socketAction);
@@ -279,6 +286,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       console.log("messages:", this.messages)
     });
 
+    // test pusher
     this.sendMessage()
   }
 

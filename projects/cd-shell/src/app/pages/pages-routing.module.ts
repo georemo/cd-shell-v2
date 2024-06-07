@@ -8,11 +8,12 @@ import { KanbanComponent } from './kanban/kanban.component';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 
 const routes: Routes = [
-    { path: '', component: DashboardComponent },
+    // { path: '', component: DashboardComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'calendar', component: CalendarComponent },
     { path: 'chat', component: ChatComponent },
     { path: 'kanban-board', component: KanbanComponent },
+    { path: '', loadChildren: () => import('../account/account.module').then(m => m.AccountModule) },
     { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
     { path: 'email', loadChildren: () => import('./email/email.module').then(m => m.EmailModule) },
     { path: 'pages', loadChildren: () => import('./utility/utility.module').then(m => m.UtilityModule) },

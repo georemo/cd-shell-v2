@@ -5,13 +5,15 @@ import { AuthenticationService } from '../services/auth.service';
 import { AuthfakeauthenticationService } from '../services/authfake.service';
 
 import { environment } from '../../../environments/environment';
+import { AuthCdAuthenticationService } from '../services/authCd.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
     constructor(
         private router: Router,
         private authenticationService: AuthenticationService,
-        private authFackservice: AuthfakeauthenticationService
+        private authFackservice: AuthfakeauthenticationService,
+        private authCdservice: AuthCdAuthenticationService,
     ) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
@@ -21,8 +23,16 @@ export class AuthGuard implements CanActivate {
                 // logged in so return true
                 return true;
             }
-        } else {
+        } 
+        else if(environment.defaultauth === 'fckService') {
             const currentUser = this.authFackservice.currentUserValue;
+            if (currentUser) {
+                // logged in so return true
+                return true;
+            }
+        }
+        else if(environment.defaultauth === 'cd-auth') {
+            const currentUser = this.authCdservice.currentUserValue;
             if (currentUser) {
                 // logged in so return true
                 return true;

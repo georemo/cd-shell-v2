@@ -17,15 +17,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initFirebaseBackend } from './authUtils';
 
-import { ErrorInterceptor } from './core/helpers/error.interceptor';
-import { JwtInterceptor } from './core/helpers/jwt.interceptor';
-import { FakeBackendInterceptor } from './core/helpers/fake-backend';
+// import { ErrorInterceptor } from './core/helpers/error.interceptor';
+// import { JwtInterceptor } from './core/helpers/jwt.interceptor';
+// import { FakeBackendInterceptor } from './core/helpers/fake-backend';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
 } else {
   // tslint:disable-next-line: no-unused-expression
-  FakeBackendInterceptor;
+  // FakeBackendInterceptor;
 }
 
 export function createTranslateLoader(http: HttpClient): any {
@@ -60,9 +60,9 @@ export function createTranslateLoader(http: HttpClient): any {
     }),
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

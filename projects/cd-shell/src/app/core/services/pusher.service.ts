@@ -21,13 +21,13 @@ export class PusherService {
         // const watchlistEventHandler = (event) => {
         //     console.log("event.userIds:", event.user_ids)
         //     console.log("event.name:", event.name)
-            
+
         // };
         // this.pusher.user.watchlist.bind('online', watchlistEventHandler);
         // this.pusher.user.watchlist.bind('offline', watchlistEventHandler);
     }
 
-    initPusher(){
+    initPusher() {
         /**
          * Pusher Options:
          * {
@@ -55,8 +55,16 @@ export class PusherService {
                 }
             }
          */
-            this.pusher = new Pusher(environment.pushConfig.apiKey, environment.pushConfig.pusher.options);
-            this.pusher.signin();
+        // this.pusher.x
+        // Pusher.Runtime.createXHR = function () {
+        //     var xhr = new XMLHttpRequest()
+        //     xhr.withCredentials = true
+        //     return xhr
+        // }
+
+        this.pusher = new Pusher(environment.pushConfig.pusher.apiKey, environment.pushConfig.pusher.options);
+
+        // this.pusher.signin();
     }
 
     subscribe(channelName: string, eventName: string, callback: (data: any) => void) {
@@ -70,10 +78,22 @@ export class PusherService {
 
     sendMessage(channel: string, event: string, message: string): Observable<any> {
         const ep = `${environment.sioHost}:${environment.SOCKET_IO_PORT}/notify`
-        return this.http.post(ep, { message, channel, event });
+        console.log("sendMessage()/ep:", ep)
+        return this.http.post('https://cd-api.co.ke:3002/notify', { message, channel, event });
     }
 
-    newChannel(channelName){
+    // sendMessage2(user: string, text: string) {
+    //     const message: Message = {
+    //         user: user,
+    //         text: text,
+    //     }
+    //     this.pusher.channel.trigger('client-new-message', message);
+    //     this.messages.push(message);
+    // }
+
+    
+
+    newChannel(channelName) {
         return this.pusher.channel(channelName);
     }
 }

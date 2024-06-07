@@ -1,9 +1,11 @@
 export class User {
     id: number;
-    username: string;
+    userName: string;
     password: string;
-    firstName?: string;
+    firstname?: string;
     lastName?: string;
     token?: string;
     email: string;
+    // rememberMe?: boolean;
+    // consumerGuid: string;
 }

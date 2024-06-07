@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 import { environment } from '../../../../environments/environment';
+import { AuthCdAuthenticationService } from '../../../core/services/authCd.service';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,14 @@ export class LoginComponent implements OnInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, public authenticationService: AuthenticationService, public authFackservice: AuthfakeauthenticationService) { }
+  constructor(
+    private formBuilder: UntypedFormBuilder, 
+    private route: ActivatedRoute, 
+    private router: Router, 
+    public authenticationService: AuthenticationService, 
+    public authFackservice: AuthfakeauthenticationService,
+    public authCdservice: AuthCdAuthenticationService,
+  ) { }
 
   ngOnInit() {
     document.body.removeAttribute('data-layout');
@@ -68,9 +76,22 @@ export class LoginComponent implements OnInit {
           .catch(error => {
             this.error = error ? error : '';
           });
-      } else {
-        console.log("starting onSubmit()/05")
+      } else if(environment.defaultauth === 'fckService') {
+        console.log("starting onSubmit()/06")
         this.authFackservice.login(this.f.email.value, this.f.password.value)
+          .pipe(first())
+          .subscribe(
+            data => {
+              console.log("onSubmit/data:", data)
+              this.router.navigate(['/']);
+            },
+            error => {
+              this.error = error ? error : '';
+            });
+        // this.router.navigate(['/']);
+      } else if(environment.defaultauth === 'cd-auth') {
+        console.log("starting onSubmit()/07")
+        this.authCdservice.login(this.f.email.value, this.f.password.value)
           .pipe(first())
           .subscribe(
             data => {

@@ -144,11 +144,11 @@ export class HttpService {
     // }
 
     proc(params: CdRequest) {
-        console.log('base/ServerService::proc()/params:', params)
+        console.log('', params)
         return this.http.post(environment.apiEndpoint, params, environment.apiOptions)
     }
 
-    // procPusher(pusherParams: any) {
+    // procPusher(pusherPbase/ServerService::proc()/params:arams: any) {
     //     console.log('base/ServerService::procPusher()/params:', pusherParams)
     //     return this.http.post(`${environment.sioHost}:${environment.SOCKET_IO_PORT}`, pusherParams, environment.pusherOptions)
     // }

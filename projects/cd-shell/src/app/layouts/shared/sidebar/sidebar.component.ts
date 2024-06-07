@@ -278,6 +278,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       console.log("data received:", data)
       console.log("messages:", this.messages)
     });
+
+    this.sendMessage()
   }
 
   initSession() {

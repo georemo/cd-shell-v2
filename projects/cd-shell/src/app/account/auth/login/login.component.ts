@@ -95,13 +95,12 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
             data => {
-              console.log("onSubmit/data:", data)
+              console.log("onSubmit/data:", JSON.stringify(data))
               this.router.navigate(['/']);
             },
             error => {
               this.error = error ? error : '';
             });
-        // this.router.navigate(['/']);
       }
     }
   }

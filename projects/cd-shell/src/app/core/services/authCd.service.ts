@@ -11,7 +11,9 @@ export class AuthCdAuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
-    constructor(private http: HttpClient) {
+    constructor(
+        private http: HttpClient
+    ) {
         console.log("AuthCdAuthenticationService::constructor()/01")
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
@@ -35,6 +37,27 @@ export class AuthCdAuthenticationService {
                     console.log("AuthCdAuthenticationService::login()/email:", email)
                     console.log("AuthCdAuthenticationService::login()/password:", password)
                     console.log("AuthCdAuthenticationService::login()/user:", JSON.stringify(user))
+                    // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.currentUserSubject.next(user);
+                }
+                return user;
+            }));
+    }
+
+    loginCd(email: string, password: string) {
+        console.log("AuthCdAuthenticationService::loginCd()/01")
+        console.log("AuthCdAuthenticationService::loginCd()/email:", email)
+        console.log("AuthCdAuthenticationService::loginCd()/password:", password)
+        return this.http.post<any>(`/users/authenticate`, { email, password })
+            .pipe(map(user => {
+                console.log("AuthCdAuthenticationService::loginCd()/02")
+                console.log("AuthCdAuthenticationService::loginCd()/user.token:", user)
+                // login successful if there's a jwt token in the response
+                if (user && user.token) {
+                    console.log("AuthCdAuthenticationService::loginCd()/email:", email)
+                    console.log("AuthCdAuthenticationService::loginCd()/password:", password)
+                    console.log("AuthCdAuthenticationService::loginCd()/user:", JSON.stringify(user))
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     this.currentUserSubject.next(user);

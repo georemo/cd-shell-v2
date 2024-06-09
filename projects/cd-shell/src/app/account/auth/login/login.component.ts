@@ -85,6 +85,12 @@ export class LoginComponent implements OnInit {
     //   password: ['123456', [Validators.required]],
     // });
 
+    this.fg = this.formBuilder.group({
+      userName: ['', [Validators.required]],
+      // email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
+
     // // reset login status
     // // this.authenticationService.logout();
     // // get return url from route parameters or default to '/'
@@ -255,10 +261,12 @@ export class LoginComponent implements OnInit {
             replaceUrl: false
           };
           // below: old method
-          this.router.navigate(['/comm'], params);
+          // this.router.navigate(['/dashboard']);
 
           // below new method based on this.baseModel;
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
+          // this.svNav.nsNavigate(this,'/comm',params)
+          this.router.navigate(['/com'], params);
         }
       } else {
         this.errMsg = "The userName and password were not valid"

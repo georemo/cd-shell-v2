@@ -105,7 +105,7 @@ export class LoginComponent implements OnInit {
     //   password: new FormControl(),
     //   rememberMe: new FormControl()
     // });
-    this.logger.info('cd-user-v2::LoginComponent::ngOnInit()/StorageType.CdObjId:', StorageType.CdObjId);
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::ngOnInit()/StorageType.CdObjId:', StorageType.CdObjId);
     // this.logger.debug('AppComponent initialized');
 
     const filter: LsFilter = {
@@ -120,7 +120,7 @@ export class LoginComponent implements OnInit {
         commTrack: null
       }
     }
-    this.logger.info('cd-user-v2::LoginComponent::ngOnInit()/filter:', filter);
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::ngOnInit()/filter:', filter);
     // this.sidebarInitData = this.svBase.searchLocalStorage(filter);
     this.sidebarInitData = this.searchLocalStorage(filter);
     this.logger.info('user/LoginComponent::ngOnInit()/this.sidebarInitData:', this.sidebarInitData);
@@ -267,6 +267,7 @@ export class LoginComponent implements OnInit {
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
           // this.svNav.nsNavigate(this,'/comm',params)
           this.router.navigate(['/com'], params);
+          // this.router.navigate(['/dashboard'], params);
         }
       } else {
         this.errMsg = "The userName and password were not valid"
@@ -278,7 +279,7 @@ export class LoginComponent implements OnInit {
   }
 
   configPushPayload(triggerEvent: string, emittEvent: string, cuid: number): ICdPushEnvelop {
-    this.logger.info('starting cd-user-v2::LoginComponent::configPushPayload()');
+    this.logger.info('starting cd-shell/LoginComponent::LoginComponent::configPushPayload()');
     const pushEnvelope: ICdPushEnvelop = {
       pushData: {
         pushGuid: '',
@@ -350,22 +351,22 @@ export class LoginComponent implements OnInit {
 
 
     // set recepient
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
     const uRecepient: ICommConversationSub = { ...users[0] }
     uRecepient.subTypeId = 7;
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
     uRecepient.cdObjId = this.sidebarInitData.value
     envl.pushData.pushRecepients.push(uRecepient)
 
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
 
     return envl;
 
   }
 
   searchLocalStorage(f: LsFilter) {
-    this.logger.info('starting LoginComponent::searchLocalStorage()/lcLength:');
+    this.logger.info('starting LoginComponent::searchLocalStorage()/01');
     // const lc = { ...localStorage };
     const lcArr = [];
 

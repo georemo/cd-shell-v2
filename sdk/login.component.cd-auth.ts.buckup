@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
-import { AuthenticationService } from '../../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
+
+
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { v4 as uuidv4 } from 'uuid';
 
-import { environment } from '../../../../environments/environment';
+
 
 import {
   UserService, AuthData, SessService, MenuService, NavService, SioClientService, ICommConversationSub,
   BaseModel, IAppState, CdObjId, BaseService, LsFilter, StorageType, ICdPushEnvelop, ISocketItem
 } from '@corpdesk/core';
+import { AuthenticationService } from 'src/app/core/services/auth.service';
+import { AuthfakeauthenticationService } from 'src/app/core/services/authfake.service';
 
 interface IInitData {
   key: string;

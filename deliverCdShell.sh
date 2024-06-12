@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Source and destination directories
 PROJ_DIR="$HOME/cd-projects/cd-shell"
 DIST_DIR="$HOME/cd-projects/cd-shell-dist"
@@ -7,9 +9,21 @@ SOURCE_DIR="$HOME/cd-projects/cd-shell/dist/cd-shell"
 DEST_DIR="$HOME/cd-projects/cd-shell-dist"
 
 cd "$PROJ_DIR"
+
+echo "\n----------------------------------------------------"
+echo "UPDATE cd libs"
+echo "----------------------------------------------------"
+npm i @corpdesk/core@latest @corpdesk/naz@latest --legacy-peer-deps
+
+echo "\n----------------------------------------------------"
+echo "BUILD cd-shell"
+echo "----------------------------------------------------"
 ng build cd-shell
 
 
+echo "\n----------------------------------------------------"
+echo "COPY dist files to cd-shell project"
+echo "----------------------------------------------------"
 # Copy the contents of the source directory to the destination directory recursively
 # The --exclude option ensures that .git directories are not copied
 rsync -av --delete --exclude '.git' "$SOURCE_DIR"/ "$DEST_DIR"
@@ -23,6 +37,9 @@ fi
 
 ###########################################
 # SYNC WITH REPOSITORY
+echo "\n----------------------------------------------------"
+echo "SYNC WITH cd-shell-dist REPOSITORY"
+echo "----------------------------------------------------"
 
 cd "$DIST_DIR"
 echo "current directory:"
@@ -50,3 +67,8 @@ else
   echo "Failed to push changes. Please check the error messages above."
   exit 1
 fi
+
+echo "\n----------------------------------------------------"
+echo "UPDATE REMOTE DEPLOYMENT"
+echo "----------------------------------------------------"
+sh "$PROJ_DIR/execRemote.sh"

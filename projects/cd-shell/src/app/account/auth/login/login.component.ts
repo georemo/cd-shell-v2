@@ -234,7 +234,7 @@ export class LoginComponent implements OnInit {
           const envl: ICdPushEnvelop = this.configPushPayload('login', 'push-menu', res.data.userData.userId)
           envl.pushData.m = res.data.menuData;
           this.communicationService.callHtmlMenu(res.data.menuData);
-          
+
           this.logger.info('user/LoginComponent::initSession/envl:', envl);
 
           if (environment.wsMode === 'sio') {
@@ -401,17 +401,20 @@ export class LoginComponent implements OnInit {
           lcArr.push({ key: k, value: JSON.parse(v!) })
         } else {
           this.logger.info('LoginComponent::searchLocalStorage()/typeof (v):', typeof (v))
+          this.logger.info('LoginComponent::searchLocalStorage()/v:', v)
           this.logger.info('LoginComponent::searchLocalStorage()/6')
-          lcArr.push({ key: k, value: JSON.parse(v) })
+          lcArr.push({ key: k, value: v })
         }
 
       } catch (e) {
-        this.logger.info('offending item:', v);
-        this.logger.info('the item is not an object');
-        this.logger.info('Error:', e);
+        this.logger.info('LoginComponent::searchLocalStorage()/7')
+        this.logger.error('offending item:', v);
+        this.logger.error('the item is not an object');
+        this.logger.error('Error:', e);
       }
 
     }
+    this.logger.info('LoginComponent::searchLocalStorage()/8')
     this.logger.info('LoginComponent::searchLocalStorage()/lcArr:', lcArr);
     this.logger.info('LoginComponent::searchLocalStorage()/f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
     // isAppState
@@ -424,44 +427,65 @@ export class LoginComponent implements OnInit {
     let ret: any = null;
     try {
       if (this.debug) {
+        this.logger.info('LoginComponent::searchLocalStorage()/9')
         this.logger.info('LoginComponent::searchLocalStorage()/debug=true:');
         ret = lcArr
           .filter((d: any) => {
+            this.logger.info('LoginComponent::searchLocalStorage()/10')
             if (typeof (d.value) === 'object') {
+              this.logger.info('LoginComponent::searchLocalStorage()/11')
               this.logger.info('LoginComponent::searchLocalStorage()/filteredByObject: d:', d);
               return d
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/12')
+              return [];
             }
           })
           .filter((d: any) => {
-            if ('resourceName' in d.value) {
-              this.logger.info('LoginComponent::searchLocalStorage()/filteredByResourceNameField: d:', d);
-              return d;
+            this.logger.info('LoginComponent::searchLocalStorage()/13')
+            this.logger.info('LoginComponent::searchLocalStorage()//d:', d)
+            if (typeof (d.value) === 'object') {
+              this.logger.info('LoginComponent::searchLocalStorage()/13-1')
+              if ('resourceName' in d.value) {
+                this.logger.info('LoginComponent::searchLocalStorage()/14')
+                this.logger.info('LoginComponent::searchLocalStorage()/filteredByResourceNameField: d:', d);
+                return d;
+              } else {
+                this.logger.info('LoginComponent::searchLocalStorage()/15')
+                return [];
+              }
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/15-1')
+              return [];
             }
           })
           .filter((d: any) => {
+            this.logger.info('LoginComponent::searchLocalStorage()/16')
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d:', d);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d.value.resourceName:', d.value.resourceName);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d.value.ngModule:', d.value.ngModule);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.ngModule:', f.cdObjId!.ngModule);
             if (d.value.resourceName === f.cdObjId!.resourceName && d.value.ngModule === f.cdObjId!.ngModule) {
+              this.logger.info('LoginComponent::searchLocalStorage()/17')
               return d;
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/18')
+              return [];
             }
           })
           .reduce(
             (prev = {}, current = {}) => {
+              this.logger.info('LoginComponent::searchLocalStorage()/19')
               this.logger.info('LoginComponent::searchLocalStorage()/prev:', prev);
               this.logger.info('LoginComponent::searchLocalStorage()/current:', current);
-              return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+              if('commTrack' in prev.value && 'commTrack' in current.value){
+                return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+              }   
             }
           );
       } else {
+        this.logger.info('LoginComponent::searchLocalStorage()/20')
         this.logger.info('LoginComponent::searchLocalStorage()/debug=false:');
         ret = lcArr
           .filter(isObject)
@@ -469,10 +493,13 @@ export class LoginComponent implements OnInit {
           .filter(filtObjName!)
           .reduce(latestItem!)
       }
+      this.logger.info('LoginComponent::searchLocalStorage()/21')
       this.logger.info('LoginComponent::searchLocalStorage()/ret:', ret);
     } catch (e) {
-      this.logger.info('Error:', e);
+      this.logger.info('LoginComponent::searchLocalStorage()/22')
+      this.logger.error('Error:', e);
     }
+    this.logger.info('LoginComponent::searchLocalStorage()/22')
     return ret;
   }
 

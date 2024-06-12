@@ -89,7 +89,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('starting ngAfterViewInit()');
-    this.setAppId()
     this._activateMenuDropdown();
     this.initSession();
   }
@@ -120,8 +119,11 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   setAppId() {
     console.log('starting SidebarComponent::setAppId()')
+    console.log('SidebarComponent::setAppId()/01')
     localStorage.removeItem('appId');
     localStorage.setItem('appId', this.svBase.getGuid());
+    const appId = localStorage.getItem('appId');
+    console.log('SidebarComponent::setAppId()/appId:', appId)
     const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
     this.svSio.sendPayLoad(envl)
   }
@@ -271,6 +273,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    */
   initialize(): void {
     console.log('starting initialize()');
+    this.setAppId()
     
     // register itself with the CommunicationService when it initializes
     this.communicationService.registerSidebar(this);

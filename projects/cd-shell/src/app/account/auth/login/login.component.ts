@@ -233,7 +233,7 @@ export class LoginComponent implements OnInit {
           this.logger.info('user/LoginComponent::initSession/02');
           const envl: ICdPushEnvelop = this.configPushPayload('login', 'push-menu', res.data.userData.userId)
           envl.pushData.m = res.data.menuData;
-          this.communicationService.callHtmlMenu(res.data.menuData);
+          this.communicationService.callHtmlMenu(res.data.menuData, res.app_state.sess.cd_token);
 
           this.logger.info('user/LoginComponent::initSession/envl:', envl);
 
@@ -266,7 +266,7 @@ export class LoginComponent implements OnInit {
           // below new method based on this.baseModel;
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
           // this.svNav.nsNavigate(this,'/comm',params)
-          this.router.navigate(['/com'], params);
+          this.router.navigate(['/comm'], params);
           // this.router.navigate(['/dashboard'], params);
         }
       } else {
@@ -479,9 +479,45 @@ export class LoginComponent implements OnInit {
               this.logger.info('LoginComponent::searchLocalStorage()/19')
               this.logger.info('LoginComponent::searchLocalStorage()/prev:', prev);
               this.logger.info('LoginComponent::searchLocalStorage()/current:', current);
-              if('commTrack' in prev.value && 'commTrack' in current.value){
-                return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
-              }   
+
+              // Helper function to safely parse JSON
+              const safeParse = (item) => {
+                if (typeof item.value === 'string') {
+                  try {
+                    return JSON.parse(item.value);
+                  } catch (e) {
+                    this.logger.error('Failed to parse item.value:', item.value);
+                    return null; // or handle the error as needed
+                  }
+                }
+                return item.value;
+              };
+
+              // Parse prev and current items
+              const prevValue = safeParse(prev);
+              const currentValue = safeParse(current);
+
+              // return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+              // Check if prevValue and currentValue are valid objects
+              if (prevValue && currentValue && prevValue.commTrack && currentValue.commTrack) {
+                // Validate initTime exists and is a valid number
+                const prevInitTime = prevValue.commTrack.initTime;
+                const currentInitTime = currentValue.commTrack.initTime;
+
+                if (typeof prevInitTime === 'number' && typeof currentInitTime === 'number') {
+                  return (prevInitTime > currentInitTime) ? prev : current;
+                } else {
+                  this.logger.error('Invalid initTime:', prevInitTime, currentInitTime);
+                }
+              } else {
+                this.logger.error('Invalid commTrack structure:');
+                this.logger.error('prevValue:', prevValue);
+                this.logger.error('currentValue:', currentValue);
+              }
+
+              // Default return if validation fails
+              return prev;
+
             }
           );
       } else {

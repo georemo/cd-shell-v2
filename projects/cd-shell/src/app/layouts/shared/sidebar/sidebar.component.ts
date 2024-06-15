@@ -41,6 +41,7 @@ const idleTimerOptions: IdleTimerOptions = {
 export class SidebarComponent implements OnInit, AfterViewInit {
   resourceName = 'SidebarComponent';
   resourceGuid = '';
+  cdToken = '';
   jwtWsToken = '';
   menu: any;
   menuItems = [] as any;
@@ -307,7 +308,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           return this.svMenu.getMenu$(`cdMenu` as MenuCollection, m)
         })
       ).subscribe((menuData) => {
-        this.htmlMenu(menuData);
+        this.htmlMenu(menuData, '');
       })
   }
 
@@ -358,7 +359,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
           if (menuData) {
-            this.htmlMenu(JSON.parse(payLoad.pushData.m));
+            this.htmlMenu(JSON.parse(payLoad.pushData.m),payLoad.pushData.token);
           }
         }
       })
@@ -620,7 +621,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     document.body.removeAttribute('data-topbar');
   }
 
-  async htmlMenu(menuData: MenuItem[]) {
+  async htmlMenu(menuData: MenuItem[],cdToken:string) {
+    this.routParams.queryParams.token = cdToken;
     menuData = await this.svMenu.mapMenu(menuData)
     console.log('starting cdShellV2::SidebarComponent/htmlMenu()')
     this.toggleEvents = [];

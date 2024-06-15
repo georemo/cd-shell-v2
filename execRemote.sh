@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Variables
+PROJ_NAME="cd-shell"
 REMOTE_USER="root"
 REMOTE_HOST="cd-shell.asdap.africa"
 REMOTE_SCRIPT="/home/devops/updateCdShell.sh"

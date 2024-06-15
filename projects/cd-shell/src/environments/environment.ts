@@ -10,6 +10,7 @@ import { EnvConfig } from "@corpdesk/core";
 const API_HOST = "https://cd-api.co.ke"
 const API_ROUTE = '/api'
 const API_PORT = '443'
+const SIO_PORT = '3002'
 const PUSH_HOST = API_HOST
 const SIO_ROUTE = '/sio'
 
@@ -17,7 +18,7 @@ export const environment: EnvConfig = {
   appId: '',
   production: false,
   apiEndpoint: `${API_HOST}${API_ROUTE}`,
-  sioEndpoint: `${API_HOST}${API_PORT}${API_ROUTE}`,
+  sioEndpoint: `${API_HOST}:${SIO_PORT}`,
   wsEndpoint: 'ws://cd-api.co.ke:3000',
   wsMode: 'wss',
   pushConfig: {

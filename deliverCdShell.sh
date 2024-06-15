@@ -3,10 +3,11 @@
 clear
 
 # Source and destination directories
-PROJ_DIR="$HOME/cd-projects/cd-shell"
-DIST_DIR="$HOME/cd-projects/cd-shell-dist"
-SOURCE_DIR="$HOME/cd-projects/cd-shell/dist/cd-shell"
-DEST_DIR="$HOME/cd-projects/cd-shell-dist"
+PROJ_NAME="cd-shell"
+PROJ_DIR="$HOME/cd-projects/$PROJ_NAME"
+DIST_DIR="$HOME/cd-projects/$PROJ_NAME-dist"
+SOURCE_DIR="$HOME/cd-projects/$PROJ_NAME/dist/$PROJ_NAME"
+DEST_DIR="$HOME/cd-projects/$PROJ_NAME-dist"
 
 cd "$PROJ_DIR"
 
@@ -16,13 +17,13 @@ echo "----------------------------------------------------"
 npm i @corpdesk/core@latest @corpdesk/naz@latest --legacy-peer-deps
 
 echo "\n----------------------------------------------------"
-echo "BUILD cd-shell"
+echo "BUILD $PROJ_NAME"
 echo "----------------------------------------------------"
-ng build cd-shell
+ng build $PROJ_NAME
 
 
 echo "\n----------------------------------------------------"
-echo "COPY dist files to cd-shell project"
+echo "COPY dist files to $PROJ_NAME project"
 echo "----------------------------------------------------"
 # Copy the contents of the source directory to the destination directory recursively
 # The --exclude option ensures that .git directories are not copied
@@ -38,7 +39,7 @@ fi
 ###########################################
 # SYNC WITH REPOSITORY
 echo "\n----------------------------------------------------"
-echo "SYNC WITH cd-shell-dist REPOSITORY"
+echo "SYNC WITH $PROJ_NAME-dist REPOSITORY"
 echo "----------------------------------------------------"
 
 cd "$DIST_DIR"

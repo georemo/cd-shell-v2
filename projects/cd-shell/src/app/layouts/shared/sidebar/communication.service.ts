@@ -12,9 +12,9 @@ export class CommunicationService {
     this.sidebarComponent = sidebarComponent;
   }
 
-  async callHtmlMenu(menuData: MenuItem[]): Promise<void> {
+  async callHtmlMenu(menuData: MenuItem[], cdToken:string): Promise<void> {
     if (this.sidebarComponent) {
-      await this.sidebarComponent.htmlMenu(menuData);
+      await this.sidebarComponent.htmlMenu(menuData, cdToken);
     } else {
       console.error('SidebarComponent not registered.');
     }

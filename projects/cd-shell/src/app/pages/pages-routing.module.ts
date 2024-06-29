@@ -54,7 +54,7 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'https://cd-user.asdap.africa/remoteEntry.js',
+                remoteEntry: 'https://cd-user.asdap.net/remoteEntry.js',
                 remoteName: 'cdUser',
                 exposedModule: './UserFrontModule'
             })
@@ -74,7 +74,7 @@ const routes: Routes = [
         path: 'comm',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'https://cd-comm.asdap.africa/remoteEntry.js',
+                remoteEntry: 'https://cd-comm.asdap.net/remoteEntry.js',
                 remoteName: 'cdComm',
                 exposedModule: './MemoModule'
             })
@@ -110,7 +110,7 @@ const routes: Routes = [
         path: 'moduleman',
         loadChildren: () =>
             loadRemoteModule({
-                remoteEntry: 'https://cd-moduleman.asdap.africa/remoteEntry.js',
+                remoteEntry: 'https://cd-moduleman.asdap.net/remoteEntry.js',
                 remoteName: 'cdModuleman',
                 exposedModule: './ModulemanModule'
             })

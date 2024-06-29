@@ -84,7 +84,7 @@ export class HttpService {
     }
 
     // init() {
-    //     let postUrl = "https://cd-shell.asdap.africa:8181"
+    //     let postUrl = "https://asdap.net:8181"
     //     let postData = {
     //         ctx: "App",
     //         m: "Coops",

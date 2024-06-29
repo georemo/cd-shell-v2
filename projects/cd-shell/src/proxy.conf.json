@@ -1,11 +1,11 @@
 {
     "/": {
-        "target": "https://cd-api.co.ke/api",
+        "target": "https://34.224.98.250/api",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "https://cd-api.co.ke/sio",
+        "target": "https://34.224.98.250/sio",
         "secure": false,
         "changeOrigin": true,
         "pathRewrite": {
@@ -13,12 +13,12 @@
         }
     },
     "/": {
-        "target": "https://cd-api.co.ke",
+        "target": "https://34.224.98.250",
         "secure": false,
         "logLevel": "debug"
     },
     "/": {
-        "target": "https://cd-api.co.ke",
+        "target": "https://34.224.98.250",
         "secure": false,
         "logLevel": "debug"
     }

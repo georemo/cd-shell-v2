@@ -30,6 +30,6 @@ solution:
 
 - integrate sio with cd-ui-lib
 login page:
-https://cd-shell.asdap.africa:4500/account/login?returnUrl=%2F
+https://asdap.net:4500/account/login?returnUrl=%2F
 
 

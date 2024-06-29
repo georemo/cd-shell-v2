@@ -266,8 +266,8 @@ export class LoginComponent implements OnInit {
           // below new method based on this.baseModel;
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
           // this.svNav.nsNavigate(this,'/comm',params)
-          this.router.navigate(['/comm'], params);
-          // this.router.navigate(['/dashboard'], params);
+          // this.router.navigate(['/comm'], params);
+          this.router.navigate(['/dashboard'], params);
         }
       } else {
         this.errMsg = "The userName and password were not valid"

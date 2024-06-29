@@ -48,7 +48,7 @@ NB:
   - contents: declare module 'user/PagesModule';
 9. On the webpack config add:
   remotes: {
-    "user": "https://cd-shell.asdap.africa:4407/remoteEntry.js",    
+    "user": "https://asdap.net:4407/remoteEntry.js",    
   },
 
 REMOTE APP(cd-user):
@@ -103,7 +103,7 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
     loadChildren: () =>
         loadRemoteModule({
             type: 'module',
-            remoteEntry: 'https://cd-shell.asdap.africa:4407/remoteEntry.js',
+            remoteEntry: 'https://asdap.net:4407/remoteEntry.js',
             exposedModule: './PagesModule'
         })
         .then(m => m.PagesModule)
@@ -134,7 +134,7 @@ import { loadRemoteEntry } from '@angular-architects/module-federation';
 Promise.all([
   loadRemoteEntry({
     type: 'module',
-    remoteEntry: 'https://cd-shell.asdap.africa:3000/remoteEntry.js',
+    remoteEntry: 'https://asdap.net:3000/remoteEntry.js',
   }),
 ])
   .catch((err) => console.error('Error loading remote entries', err))
@@ -177,7 +177,7 @@ check cd-api:
   - cd ansible-testbed/lxd-deploy/routed-container/
   - sh cd-api-start.sh
   test with json login request:
-  - curl -k -X POST -H 'Content-Type: application/json' -d '{ "ctx": "Sys", "m": "User", "c": "User", "a": "Login", "dat": { "f_vals": [ { "data": { "userName": "karl", "password": "secret", "consumerGuid": "B0B3DA99-1859-A499-90F6-1E3F69575DCD" } } ], "token": null }, "args": null }' https://cd-shell.asdap.africa:3001 -v
+  - curl -k -X POST -H 'Content-Type: application/json' -d '{ "ctx": "Sys", "m": "User", "c": "User", "a": "Login", "dat": { "f_vals": [ { "data": { "userName": "karl", "password": "secret", "consumerGuid": "B0B3DA99-1859-A499-90F6-1E3F69575DCD" } } ], "token": null }, "args": null }' https://asdap.net:3001 -v
 
 test front end from development source:
   - adjust configuration based on target backend

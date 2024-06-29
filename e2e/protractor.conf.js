@@ -16,7 +16,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://cd-shell.asdap.africa:4200/',
+  baseUrl: 'https://asdap.net:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

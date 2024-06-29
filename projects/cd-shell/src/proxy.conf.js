@@ -1,5 +1,5 @@
-const CD_API = "https://cd-api.co.ke"
-const CD_SIO = "https://cd-api.co.ke"
+const CD_API = "https://34.224.98.250"
+const CD_SIO = "https://34.224.98.250"
 
 const PROXY_CONFIG = [
 {

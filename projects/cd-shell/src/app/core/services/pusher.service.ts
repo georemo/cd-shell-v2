@@ -79,7 +79,7 @@ export class PusherService {
     sendMessage(channel: string, event: string, message: string): Observable<any> {
         const ep = `${environment.sioHost}:${environment.SOCKET_IO_PORT}/notify`
         console.log("sendMessage()/ep:", ep)
-        return this.http.post('https://34.224.98.250:3002/notify', { message, channel, event });
+        return this.http.post('https://cd-api.co.ke:3002/notify', { message, channel, event });
     }
 
     // sendMessage2(user: string, text: string) {

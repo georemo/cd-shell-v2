@@ -365,15 +365,21 @@
         </button>
         <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
           <!-- item-->
-          <a class="dropdown-item" href="javascript: void(0);"><i class="ri-user-line align-middle me-1"></i> {{ 'HEADER.LOGIN.PROFILE' | translate}}</a>
+          <a class="dropdown-item" href="javascript: void(0);">
+            <i class="ri-user-line align-middle me-1"></i> {{ 'HEADER.LOGIN.PROFILE' | translate}}
+          </a>
           <!-- <a class="dropdown-item" href="javascript: void(0);"><i class="ri-wallet-2-line align-middle me-1"></i>{{ 'HEADER.LOGIN.PROJECTS' | translate}}</a> -->
-          <a class="dropdown-item d-block" href="javascript: void(0);"><span class="badge badge-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i>{{ 'HEADER.LOGIN.SETTINGS' | translate}} </a>
+          <a class="dropdown-item d-block" href="javascript: void(0);">
+            <span class="badge badge-success float-end mt-1">11</span>
+            <i class="ri-settings-2-line align-middle me-1"></i>{{ 'HEADER.LOGIN.SETTINGS' | translate}} 
+          </a>
           <!-- <a class="dropdown-item" href="javascript: void(0);"><i class="ri-lock-unlock-line align-middle me-1"></i>
             {{ 'HEADER.LOGIN.LOCK_SCREEN' | translate}}</a> -->
           <div class="dropdown-divider"></div>
           <a class="dropdown-item text-danger" href="javascript: void(0);" (click)="logout()"><i
               class="ri-shut-down-line align-middle me-1 text-danger"></i>
-            {{ 'HEADER.LOGIN.LOGOUT' | translate}}</a>
+            {{ 'HEADER.LOGIN.LOGOUT' | translate}}
+          </a>
         </div>
       </div>
 

@@ -62,6 +62,7 @@ export const environment: EnvConfig = {
   clientAppId: 2, // this client application identifies itself to the server with this id
   SOCKET_IO_PORT: 3002, // push server port
   defaultauth: 'cd-auth', // fckService | cd-auth | firebase
+  initialPage: 'dashboard', // the default page, on successful login
   mfManifestPath: '/assets/mf.manifest.json',
   apiOptions: {
     headers: { 'Content-Type': 'application/json' }

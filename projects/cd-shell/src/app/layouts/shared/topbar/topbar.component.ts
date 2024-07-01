@@ -139,7 +139,7 @@ export class TopbarComponent implements OnInit {
   }
 
   register() {
-    this.svNav.sNavigate(this, '/inte-ract');
+    this.svNav.sNavigate(this, '/user/register');
   }
 
   profile() {

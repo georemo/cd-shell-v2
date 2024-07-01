@@ -17,6 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initFirebaseBackend } from './authUtils';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 // import { ErrorInterceptor } from './core/helpers/error.interceptor';
 // import { JwtInterceptor } from './core/helpers/jwt.interceptor';
 // import { FakeBackendInterceptor } from './core/helpers/fake-backend';
@@ -40,6 +43,8 @@ export function createTranslateLoader(http: HttpClient): any {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
     LoggerModule.forRoot({
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.OFF,

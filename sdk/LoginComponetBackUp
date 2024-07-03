@@ -1,42 +1,60 @@
-import { v4 as uuidv4 } from 'uuid';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+
+import { AuthenticationService } from '../../../core/services/auth.service';
+import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
+
 import { ActivatedRoute, Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+
+import { environment } from '../../../../environments/environment';
+import { AuthCdAuthenticationService } from '../../../core/services/authCd.service';
+
+import { v4 as uuidv4 } from 'uuid';
+import { FormGroup, FormControl } from '@angular/forms';
 import { NGXLogger } from 'ngx-logger';
+
 import {
   UserService, AuthData, SessService, MenuService, NavService, SioClientService, WebsocketService, ICommConversationSub,
-  BaseModel, IAppState, CdObjId, BaseService, LsFilter, StorageType, ICdPushEnvelop, ISocketItem,
-  User
+  BaseModel, IAppState, CdObjId, BaseService, LsFilter, StorageType, ICdPushEnvelop, ISocketItem
 } from '@corpdesk/core';
-import { environment } from '../../../../environments/environment';
-// import { SioClientService } from '../../../core/services/sio-client.service';
+import { MenuDataService } from '../../../layouts/shared/sidebar/menu-data.service';
+import { CommunicationService } from '../../../layouts/shared/sidebar/communication.service';
+import { User } from '../../../core/models/auth.models';
+import { SidebarComponent } from '../../../layouts/shared/sidebar/sidebar.component';
+
 interface IInitData {
   key: string;
   value: CdObjId;
 }
 
+
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  // providers:[UserService],
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.scss']
 })
-
 export class LoginComponent implements OnInit {
+  // loginForm: UntypedFormGroup;
+  submitted = false;
+  error = '';
+  returnUrl: string;
+
+  // set the currenr year
+  year: number = new Date().getFullYear();
+
+  //////////////////////////////
   debug = true;
   baseModel: BaseModel;
   resourceGuid = uuidv4();
   jwtWsToken: null;
   loginInvalid = false;
   rememberMe = true;
-  submitted = false;
   fg: FormGroup;
   postData: any;
   errMsg: any;
-  error = '';
   sidebarInitData: IInitData;
   socketData: ISocketItem[] | null = [];
-
   ////////////////////////////////////////////
   header = "Welcome!"
   subheader = "Sign in to continue to ASDAP"
@@ -45,7 +63,15 @@ export class LoginComponent implements OnInit {
   uid: string;
   newUser: User;
 
+  // tslint:disable-next-line: max-line-length
   constructor(
+    private formBuilder: UntypedFormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    public authenticationService: AuthenticationService,
+    public authFackservice: AuthfakeauthenticationService,
+    public authCdservice: AuthCdAuthenticationService,
+    ///////////////////////////////////////
     private logger: NGXLogger,
     private svSio: SioClientService,
     private svWss: WebsocketService,
@@ -53,23 +79,18 @@ export class LoginComponent implements OnInit {
     private svSess: SessService,
     private svMenu: MenuService,
     private svNav: NavService,
-    private route: Router,
-    private aRoute: ActivatedRoute,
     private svBase: BaseService,
-  ) {
-    this.svSio.env = environment;
-    this.svSio.initSio(null, null);
-    this.fg = new FormGroup({
-      userName: new FormControl(),
-      password: new FormControl(),
-      rememberMe: new FormControl()
-    });
-  }
+    private svMenuData: MenuDataService,
+    private communicationService: CommunicationService,
+  ) { }
 
   ngOnInit() {
-    this.logger.info('cd-user-v2::LoginComponent::ngOnInit()/StorageType.CdObjId:', StorageType.CdObjId);
+    document.body.removeAttribute('data-layout');
+    document.body.classList.add('auth-body-bg');
+    const sidebar = this.communicationService.getSidebar();
+    this.communicationService.registerSidebar(sidebar)
 
-    this.aRoute.queryParams.subscribe(params => {
+    this.route.queryParams.subscribe(params => {
       this.key = params['key'];
       this.sid = params['sid'];
       this.uid = params['uid'];
@@ -81,8 +102,35 @@ export class LoginComponent implements OnInit {
       this.setHeader();
     });
 
+
+    // this.loginForm = this.formBuilder.group({
+    //   email: ['user@asdap.africa', [Validators.required, Validators.email]],
+    //   password: ['123456', [Validators.required]],
+    // });
+
+    this.fg = this.formBuilder.group({
+      userName: ['', [Validators.required]],
+      // email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
+
+    // // reset login status
+    // // this.authenticationService.logout();
+    // // get return url from route parameters or default to '/'
+    // // tslint:disable-next-line: no-string-literal
+    // ////////////////////////
+    // // this.returnUrl = this.router.snapshot.queryParams['returnUrl'] || '/';
+    // //////////////////////
+    // this.svSio.env = environment;
+    // this.svSio.initSio(null, null);
+    // this.fg = new FormGroup({
+    //   userName: new FormControl(),
+    //   password: new FormControl(),
+    //   rememberMe: new FormControl()
+    // });
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::ngOnInit()/StorageType.CdObjId:', StorageType.CdObjId);
     // this.logger.debug('AppComponent initialized');
-    
+
     const filter: LsFilter = {
       storageType: StorageType.CdObjId,
       cdObjId: {
@@ -95,7 +143,7 @@ export class LoginComponent implements OnInit {
         commTrack: null
       }
     }
-    this.logger.info('cd-user-v2::LoginComponent::ngOnInit()/filter:', filter);
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::ngOnInit()/filter:', filter);
     // this.sidebarInitData = this.svBase.searchLocalStorage(filter);
     this.sidebarInitData = this.searchLocalStorage(filter);
     this.logger.info('user/LoginComponent::ngOnInit()/this.sidebarInitData:', this.sidebarInitData);
@@ -113,7 +161,6 @@ export class LoginComponent implements OnInit {
     } else {
       this.logger.info('Err: socket data is not valid')
     }
-
   }
 
   setHeader(): void {
@@ -143,8 +190,76 @@ export class LoginComponent implements OnInit {
 
   }
 
+  async confirmUser(): Promise<boolean> {
+    let result = false;
+    const u = await this.svUser.getUser$
+    if (result) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
+
+
+  // convenience getter for easy access to form fields
+  // get f() { return this.loginForm.controls; }
+
+  /**
+   * Form submit
+   */
+  // onSubmit() {
+  //   console.log("starting onSubmit()/01")
+  //   // console.log("this.loginForm.valid:", this.loginForm.valid)
+  //   this.submitted = true;
+
+  //   // stop here if form is invalid
+  //   if (this.fg.invalid) {
+  //     console.log("starting onSubmit()/02")
+  //     return;
+  //   } else {
+  //     console.log("starting onSubmit()/03")
+  //     if (environment.defaultauth === 'firebase') {
+  //       console.log("starting onSubmit()/04")
+  //       this.authenticationService.login(this.f.email.value, this.f.password.value).then((res: any) => {
+  //         this.router.navigate(['/']);
+  //       })
+  //         .catch(error => {
+  //           this.error = error ? error : '';
+  //         });
+  //     } else if (environment.defaultauth === 'fckService') {
+  //       console.log("starting onSubmit()/06")
+  //       this.authFackservice.login(this.f.email.value, this.f.password.value)
+  //         .pipe(first())
+  //         .subscribe(
+  //           data => {
+  //             console.log("onSubmit/data:", data)
+  //             this.router.navigate(['/']);
+  //           },
+  //           error => {
+  //             this.error = error ? error : '';
+  //           });
+  //       // this.router.navigate(['/']);
+  //     } else if (environment.defaultauth === 'cd-auth') {
+  //       console.log("starting onSubmit()/07")
+  //       // this.authCdservice.login(this.f.email.value, this.f.password.value)
+  //       //   .pipe(first())
+  //       //   .subscribe(
+  //       //     data => {
+  //       //       console.log("onSubmit/data:", JSON.stringify(data))
+  //       //       this.router.navigate(['/']);
+  //       //     },
+  //       //     error => {
+  //       //       this.error = error ? error : '';
+  //       //     });
+
+  //       this.router.navigate(['/dashboard']);
+  //     }
+  //   }
+  // }
+
   login(fg: any) {
-    this.logger.info('starting user/LoginComponent::login');
     let authData: AuthData = fg.value;
     const valid = fg.valid;
     this.logger.info('user/LoginComponent::login/01');
@@ -181,8 +296,10 @@ export class LoginComponent implements OnInit {
           this.logger.info('user/LoginComponent::initSession/02');
           const envl: ICdPushEnvelop = this.configPushPayload('login', 'push-menu', res.data.userData.userId)
           envl.pushData.m = res.data.menuData;
+          this.communicationService.callHtmlMenu(res.data.menuData, res.app_state.sess.cd_token);
+
           this.logger.info('user/LoginComponent::initSession/envl:', envl);
-          
+
           if (environment.wsMode === 'sio') {
             this.logger.info('user/LoginComponent::initSession/envl:...useing sio');
             this.svSio.sendPayLoad(envl)
@@ -207,13 +324,13 @@ export class LoginComponent implements OnInit {
             replaceUrl: false
           };
           // below: old method
-          // this.route.navigate(['/comm'], params);
-          this.route.navigate(['/dashboard'], params);
-          this.route.navigate([environment.initialPage], params);
-          
+          // this.router.navigate(['/dashboard']);
 
           // below new method based on this.baseModel;
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
+          // this.svNav.nsNavigate(this,'/comm',params)
+          // this.router.navigate(['/comm'], params);
+          this.router.navigate([environment.initialPage], params);
         }
       } else {
         this.errMsg = "The userName and password were not valid"
@@ -225,7 +342,7 @@ export class LoginComponent implements OnInit {
   }
 
   configPushPayload(triggerEvent: string, emittEvent: string, cuid: number): ICdPushEnvelop {
-    this.logger.info('starting cd-user-v2::LoginComponent::configPushPayload()');
+    this.logger.info('starting cd-shell/LoginComponent::LoginComponent::configPushPayload()');
     const pushEnvelope: ICdPushEnvelop = {
       pushData: {
         pushGuid: '',
@@ -297,22 +414,22 @@ export class LoginComponent implements OnInit {
 
 
     // set recepient
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
     const uRecepient: ICommConversationSub = { ...users[0] }
     uRecepient.subTypeId = 7;
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
     uRecepient.cdObjId = this.sidebarInitData.value
     envl.pushData.pushRecepients.push(uRecepient)
 
-    this.logger.info('cd-user-v2::LoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
+    this.logger.info('cd-shell/LoginComponent::LoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
 
     return envl;
 
   }
 
   searchLocalStorage(f: LsFilter) {
-    this.logger.info('starting LoginComponent::searchLocalStorage()/lcLength:');
+    this.logger.info('starting LoginComponent::searchLocalStorage()/01');
     // const lc = { ...localStorage };
     const lcArr = [];
 
@@ -347,17 +464,20 @@ export class LoginComponent implements OnInit {
           lcArr.push({ key: k, value: JSON.parse(v!) })
         } else {
           this.logger.info('LoginComponent::searchLocalStorage()/typeof (v):', typeof (v))
+          this.logger.info('LoginComponent::searchLocalStorage()/v:', v)
           this.logger.info('LoginComponent::searchLocalStorage()/6')
-          lcArr.push({ key: k, value: JSON.parse(v) })
+          lcArr.push({ key: k, value: v })
         }
 
       } catch (e) {
-        this.logger.info('offending item:', v);
-        this.logger.info('the item is not an object');
-        this.logger.info('Error:', e);
+        this.logger.info('LoginComponent::searchLocalStorage()/7')
+        this.logger.error('offending item:', v);
+        this.logger.error('the item is not an object');
+        this.logger.error('Error:', e);
       }
 
     }
+    this.logger.info('LoginComponent::searchLocalStorage()/8')
     this.logger.info('LoginComponent::searchLocalStorage()/lcArr:', lcArr);
     this.logger.info('LoginComponent::searchLocalStorage()/f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
     // isAppState
@@ -370,44 +490,101 @@ export class LoginComponent implements OnInit {
     let ret: any = null;
     try {
       if (this.debug) {
+        this.logger.info('LoginComponent::searchLocalStorage()/9')
         this.logger.info('LoginComponent::searchLocalStorage()/debug=true:');
         ret = lcArr
           .filter((d: any) => {
+            this.logger.info('LoginComponent::searchLocalStorage()/10')
             if (typeof (d.value) === 'object') {
+              this.logger.info('LoginComponent::searchLocalStorage()/11')
               this.logger.info('LoginComponent::searchLocalStorage()/filteredByObject: d:', d);
               return d
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/12')
+              return [];
             }
           })
           .filter((d: any) => {
-            if ('resourceName' in d.value) {
-              this.logger.info('LoginComponent::searchLocalStorage()/filteredByResourceNameField: d:', d);
-              return d;
+            this.logger.info('LoginComponent::searchLocalStorage()/13')
+            this.logger.info('LoginComponent::searchLocalStorage()//d:', d)
+            if (typeof (d.value) === 'object') {
+              this.logger.info('LoginComponent::searchLocalStorage()/13-1')
+              if ('resourceName' in d.value) {
+                this.logger.info('LoginComponent::searchLocalStorage()/14')
+                this.logger.info('LoginComponent::searchLocalStorage()/filteredByResourceNameField: d:', d);
+                return d;
+              } else {
+                this.logger.info('LoginComponent::searchLocalStorage()/15')
+                return [];
+              }
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/15-1')
+              return [];
             }
           })
           .filter((d: any) => {
+            this.logger.info('LoginComponent::searchLocalStorage()/16')
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d:', d);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d.value.resourceName:', d.value.resourceName);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.resourceName:', f.cdObjId!.resourceName);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: d.value.ngModule:', d.value.ngModule);
             this.logger.info('LoginComponent::searchLocalStorage()/filteredByName: f.cdObjId!.ngModule:', f.cdObjId!.ngModule);
             if (d.value.resourceName === f.cdObjId!.resourceName && d.value.ngModule === f.cdObjId!.ngModule) {
+              this.logger.info('LoginComponent::searchLocalStorage()/17')
               return d;
             } else {
-              return null;
+              this.logger.info('LoginComponent::searchLocalStorage()/18')
+              return [];
             }
           })
           .reduce(
             (prev = {}, current = {}) => {
+              this.logger.info('LoginComponent::searchLocalStorage()/19')
               this.logger.info('LoginComponent::searchLocalStorage()/prev:', prev);
               this.logger.info('LoginComponent::searchLocalStorage()/current:', current);
-              return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+
+              // Helper function to safely parse JSON
+              const safeParse = (item) => {
+                if (typeof item.value === 'string') {
+                  try {
+                    return JSON.parse(item.value);
+                  } catch (e) {
+                    this.logger.error('Failed to parse item.value:', item.value);
+                    return null; // or handle the error as needed
+                  }
+                }
+                return item.value;
+              };
+
+              // Parse prev and current items
+              const prevValue = safeParse(prev);
+              const currentValue = safeParse(current);
+
+              // return (prev.value.commTrack.initTime > current.value.commTrack.initTime) ? prev : current;
+              // Check if prevValue and currentValue are valid objects
+              if (prevValue && currentValue && prevValue.commTrack && currentValue.commTrack) {
+                // Validate initTime exists and is a valid number
+                const prevInitTime = prevValue.commTrack.initTime;
+                const currentInitTime = currentValue.commTrack.initTime;
+
+                if (typeof prevInitTime === 'number' && typeof currentInitTime === 'number') {
+                  return (prevInitTime > currentInitTime) ? prev : current;
+                } else {
+                  this.logger.error('Invalid initTime:', prevInitTime, currentInitTime);
+                }
+              } else {
+                this.logger.error('Invalid commTrack structure:');
+                this.logger.error('prevValue:', prevValue);
+                this.logger.error('currentValue:', currentValue);
+              }
+
+              // Default return if validation fails
+              return prev;
+
             }
           );
       } else {
+        this.logger.info('LoginComponent::searchLocalStorage()/20')
         this.logger.info('LoginComponent::searchLocalStorage()/debug=false:');
         ret = lcArr
           .filter(isObject)
@@ -415,10 +592,13 @@ export class LoginComponent implements OnInit {
           .filter(filtObjName!)
           .reduce(latestItem!)
       }
+      this.logger.info('LoginComponent::searchLocalStorage()/21')
       this.logger.info('LoginComponent::searchLocalStorage()/ret:', ret);
     } catch (e) {
-      this.logger.info('Error:', e);
+      this.logger.info('LoginComponent::searchLocalStorage()/22')
+      this.logger.error('Error:', e);
     }
+    this.logger.info('LoginComponent::searchLocalStorage()/22')
     return ret;
   }
 

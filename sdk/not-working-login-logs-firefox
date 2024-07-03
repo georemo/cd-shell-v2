@@ -1,0 +1,48 @@
+auth$(authData: AuthData) 9647.3e2563119b7150ae.js:1:107367
+DashboardComponent::membersCountSeriesFx/coop.coopCount: 39 3066.c1915057a00dbc03.js:1:1236122
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236206
+DashboardComponent::membersCountSeriesFx/coop.coopCount: 39 3066.c1915057a00dbc03.js:1:1236122
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236206
+DashboardComponent::membersCountSeriesFx/coop.coopCount: 39 3066.c1915057a00dbc03.js:1:1236122
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236206
+DashboardComponent::membersCountSeriesFx/coop.coopCount: 40 3066.c1915057a00dbc03.js:1:1236122
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236206
+DashboardComponent::membersCountSeriesFx/coop.coopCount: 40 3066.c1915057a00dbc03.js:1:1236122
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236206
+DashboardComponent::membersCountSeriesFx/this.coopData: 
+Array(88) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+3066.c1915057a00dbc03.js:1:1236351
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 102421 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 122905 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 145385 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 158972 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 173245 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 170165 3066.c1915057a00dbc03.js:1:1236528
+DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z 3066.c1915057a00dbc03.js:1:1236626
+DashboardComponent::coopDataSeriesFx/cds: 
+Object { coopCountSeries: (6) […], membersCountSeries: (6) […], coopSavesSharesSeries: (6) […], coopAssetsSeries: (6) […], coopReservesSeries: (6) […], coopLoansSeries: (6) […], coopMemberPenetrationSeries: (6) […] }
+3066.c1915057a00dbc03.js:1:1238037
+DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries 3066.c1915057a00dbc03.js:1:1238656
+DashboardComponent::refreshDisplay()/seriesData 
+Array(6) [ 39, 39, 39, 39, 40, 40 ]
+3066.c1915057a00dbc03.js:1:1238728
+DashboardComponent::refreshDisplay()/si 
+Object { name: "Malawi", type: "column", data: (6) […] }
+3066.c1915057a00dbc03.js:1:1238912
+DashboardComponent::fetchData/11 3066.c1915057a00dbc03.js:1:1239102
+membersCountArr_years: 
+Array(6) [ 2017, 2018, 2019, 2020, 2021, 2022 ]
+3066.c1915057a00dbc03.js:1:1239150
+DashboardComponent::activeColors/geoLocationData: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+3066.c1915057a00dbc03.js:1:1235685
+DashboardComponent::activeColors/locationData: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+3066.c1915057a00dbc03.js:1:1235789
+<empty string> 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]

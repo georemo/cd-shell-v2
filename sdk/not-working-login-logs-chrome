@@ -1,0 +1,1839 @@
+6620.b5d8b47dc7844703.js:1 WebSocket connection to 'wss://cd-api.co.ke:3002/socket.io/?EIO=4&transport=websocket' failed: 
+doOpen @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+n @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+(anonymous) @ 6620.b5d8b47dc7844703.js:1
+Y.<computed> @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+S.invoke @ polyfills.c1cff0bce91861aa.js:1
+S.args.<computed> @ polyfills.c1cff0bce91861aa.js:1
+9647.3e2563119b7150ae.js:1 auth$(authData: AuthData)
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.912Z INFO [6262.fc4d95f20aa0267a.js:1:7640] user/LoginComponent::login/01
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.917Z INFO [6262.fc4d95f20aa0267a.js:1:7690] user/LoginComponent::login/fg: m {_pendingDirty: false, _hasOwnPendingAsyncValidator: false, _pendingTouched: false, _parent: null, _onCollectionChange: ƒ, …}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.917Z INFO [6262.fc4d95f20aa0267a.js:1:7743] user/LoginComponent::login/valid: true
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.918Z INFO [6262.fc4d95f20aa0267a.js:1:7876] user/LoginComponent::login/02
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.918Z INFO [6262.fc4d95f20aa0267a.js:1:7930] user/LoginComponent::login/03
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:55.919Z INFO [6262.fc4d95f20aa0267a.js:1:8131] user/LoginComponent::initSession/01
+6620.b5d8b47dc7844703.js:1 WebSocket connection to 'wss://cd-api.co.ke:3002/socket.io/?EIO=4&transport=websocket' failed: 
+doOpen @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+n @ 6620.b5d8b47dc7844703.js:1
+open @ 6620.b5d8b47dc7844703.js:1
+(anonymous) @ 6620.b5d8b47dc7844703.js:1
+Y.<computed> @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+S.invoke @ polyfills.c1cff0bce91861aa.js:1
+S.args.<computed> @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 SidebarComponent not registered.
+(anonymous) @ 3066.c1915057a00dbc03.js:1
+c @ main.fd9224b2c48eb5aa.js:1
+v @ main.fd9224b2c48eb5aa.js:1
+(anonymous) @ main.fd9224b2c48eb5aa.js:1
+e @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ main.fd9224b2c48eb5aa.js:1
+callHtmlMenu @ 3066.c1915057a00dbc03.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+subscribe.h @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+a @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+9647.3e2563119b7150ae.js:1 WebsocketService::sendMsg()/01
+9647.3e2563119b7150ae.js:1 WebsocketService::sendMsg()/pushEnvelop: {pushData: {…}, req: null, resp: null}
+9647.3e2563119b7150ae.js:1 WebsocketService::sendMsg()/03
+9647.3e2563119b7150ae.js:1 starting core::UserService::setSess()/01
+9647.3e2563119b7150ae.js:1 SessService::setSess()/res.data: {consumer: Array(1), menuData: Array(2), userData: {…}}
+9647.3e2563119b7150ae.js:1 start cdUiLib::MenuServices::mapMenu(cdMenu)
+9647.3e2563119b7150ae.js:1 starting fetchModules()
+6262.fc4d95f20aa0267a.js:1 AccountRoutingModule::monitorRouting()/Navigation started to: /dashboard?token=cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1
+6262.fc4d95f20aa0267a.js:1 AuthRoutingModule::monitorRouting()/Navigation started to: /dashboard?token=cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1 with state: null
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/01
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/menthis.jwtWsTokenu: 
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/filter: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: 48545994-e50e-4a0d-90a8-3f303a14c937
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/03
+3066.c1915057a00dbc03.js:1 JSON parsing error: Unexpected non-whitespace character after JSON at position 8 (line 1 column 9)
+ce @ 3066.c1915057a00dbc03.js:1
+searchLocalStorage @ 3066.c1915057a00dbc03.js:1
+(anonymous) @ 9647.3e2563119b7150ae.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+unsubscribe @ 7284.859dcfd91a78e05e.js:1
+_complete @ 7284.859dcfd91a78e05e.js:1
+complete @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 Invalid JSON string: 48545994-e50e-4a0d-90a8-3f303a14c937
+ce @ 3066.c1915057a00dbc03.js:1
+searchLocalStorage @ 3066.c1915057a00dbc03.js:1
+(anonymous) @ 9647.3e2563119b7150ae.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+unsubscribe @ 7284.859dcfd91a78e05e.js:1
+_complete @ 7284.859dcfd91a78e05e.js:1
+complete @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"225d2d85-15a3-42d3-9484-25bab9ae7e43","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"cf6af813-f40a-4d7e-9bc3-d737b5e0be6d","jwtToken":"","socket":null,"commTrack":{"initTime":1719960963153,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"38d77c1f-94ae-4cbd-9335-b2a4f00a52bb","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"215e295c-0c28-4773-84fa-fa6f8f390e3f","jwtToken":"","socket":null,"commTrack":{"initTime":1719956947386,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"34023d4c-5fc4-425e-b76d-06b40eec304b","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"14eefbb8-7525-4338-8b4b-2f3572c18c2d","jwtToken":"","socket":null,"commTrack":{"initTime":1719961092474,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"93397e4c-8d1a-4465-a9a9-561a19e6f19f","userId":1010,"jwt":null,"ttl":600,"initUuid":"c9e7bf5c-2135-4375-8dea-37a47896b2ed","initTime":"1719961064.794"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"a7747682-8607-445e-a2fa-9a0240a96e81","userId":1010,"jwt":null,"ttl":600,"initUuid":"77c07e9b-2d5c-433b-a27d-ce007eb45a52","initTime":"1719961107.994"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"9e27d0e3-8ef5-41b1-8316-a12877d40242","userId":1010,"jwt":null,"ttl":600,"initUuid":"7ffda810-3226-4166-8a45-518910d54f80","initTime":"1719960963.074"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"timestamp":1719961098087,"transport":"ws","latency":5633,"cacheSkipCount":0}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"48545994-e50e-4a0d-90a8-3f303a14c937","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"0e9378ac-be62-42f8-8399-55b56ad41617","jwtToken":"","socket":null,"commTrack":{"initTime":1719961226502,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"0bdbd7d4-7fb7-488a-bcdc-c2d17973e813","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e","jwtToken":"","socket":null,"commTrack":{"initTime":1719956680002,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1","userId":1010,"jwt":null,"ttl":600,"initUuid":"9c6c3b6f-185c-4e98-96d8-a814f5795580","initTime":"1719961258.328"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"7df4624c-2800-4328-a9e8-de71315e62f1","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"79e90153-b6f1-4f98-98d3-aa044a7fc453","jwtToken":"","socket":null,"commTrack":{"initTime":1719957355994,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/10
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/lcArr: (12) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/11
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'appId', value: null}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '93397e4c-8d1a-4465-a9a9-561a19e6f19f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'a7747682-8607-445e-a2fa-9a0240a96e81', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '9e27d0e3-8ef5-41b1-8316-a12877d40242', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'pusherTransportTLS', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'appId', value: null}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '93397e4c-8d1a-4465-a9a9-561a19e6f19f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'a7747682-8607-445e-a2fa-9a0240a96e81', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '9e27d0e3-8ef5-41b1-8316-a12877d40242', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'pusherTransportTLS', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: true
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret1: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret2: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/105
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/prev: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/current: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/105
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/prev: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/current: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/105
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/prev: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/current: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/105
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/prev: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/current: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/105
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/prev: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/current: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret3: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/sidebarCdObj: {appId: '48545994-e50e-4a0d-90a8-3f303a14c937', ngModule: 'SharedModule', resourceName: 'SidebarComponent', resourceGuid: '0e9378ac-be62-42f8-8399-55b56ad41617', jwtToken: '', …}
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: 48545994-e50e-4a0d-90a8-3f303a14c937
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/03
+3066.c1915057a00dbc03.js:1 JSON parsing error: Unexpected non-whitespace character after JSON at position 8 (line 1 column 9)
+ce @ 3066.c1915057a00dbc03.js:1
+searchLocalStorage @ 3066.c1915057a00dbc03.js:1
+(anonymous) @ 9647.3e2563119b7150ae.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+unsubscribe @ 7284.859dcfd91a78e05e.js:1
+_complete @ 7284.859dcfd91a78e05e.js:1
+complete @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 Invalid JSON string: 48545994-e50e-4a0d-90a8-3f303a14c937
+ce @ 3066.c1915057a00dbc03.js:1
+searchLocalStorage @ 3066.c1915057a00dbc03.js:1
+(anonymous) @ 9647.3e2563119b7150ae.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+unsubscribe @ 7284.859dcfd91a78e05e.js:1
+_complete @ 7284.859dcfd91a78e05e.js:1
+complete @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"225d2d85-15a3-42d3-9484-25bab9ae7e43","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"cf6af813-f40a-4d7e-9bc3-d737b5e0be6d","jwtToken":"","socket":null,"commTrack":{"initTime":1719960963153,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"38d77c1f-94ae-4cbd-9335-b2a4f00a52bb","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"215e295c-0c28-4773-84fa-fa6f8f390e3f","jwtToken":"","socket":null,"commTrack":{"initTime":1719956947386,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"34023d4c-5fc4-425e-b76d-06b40eec304b","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"14eefbb8-7525-4338-8b4b-2f3572c18c2d","jwtToken":"","socket":null,"commTrack":{"initTime":1719961092474,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"93397e4c-8d1a-4465-a9a9-561a19e6f19f","userId":1010,"jwt":null,"ttl":600,"initUuid":"c9e7bf5c-2135-4375-8dea-37a47896b2ed","initTime":"1719961064.794"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"a7747682-8607-445e-a2fa-9a0240a96e81","userId":1010,"jwt":null,"ttl":600,"initUuid":"77c07e9b-2d5c-433b-a27d-ce007eb45a52","initTime":"1719961107.994"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"9e27d0e3-8ef5-41b1-8316-a12877d40242","userId":1010,"jwt":null,"ttl":600,"initUuid":"7ffda810-3226-4166-8a45-518910d54f80","initTime":"1719960963.074"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"timestamp":1719961098087,"transport":"ws","latency":5633,"cacheSkipCount":0}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"48545994-e50e-4a0d-90a8-3f303a14c937","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"0e9378ac-be62-42f8-8399-55b56ad41617","jwtToken":"","socket":null,"commTrack":{"initTime":1719961226502,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"0bdbd7d4-7fb7-488a-bcdc-c2d17973e813","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e","jwtToken":"","socket":null,"commTrack":{"initTime":1719956680002,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1","userId":1010,"jwt":null,"ttl":600,"initUuid":"9c6c3b6f-185c-4e98-96d8-a814f5795580","initTime":"1719961258.328"},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/03
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/v: {"appId":"7df4624c-2800-4328-a9e8-de71315e62f1","ngModule":"SharedModule","resourceName":"SidebarComponent","resourceGuid":"79e90153-b6f1-4f98-98d3-aa044a7fc453","jwtToken":"","socket":null,"commTrack":{"initTime":1719957355994,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/typeof (v): string
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/08
+3066.c1915057a00dbc03.js:1 starting BaseService::searchLocalStorage()/safeJsonParse()/01
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/safeJsonParse()/02
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/10
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/lcArr: (12) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/11
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'appId', value: null}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '93397e4c-8d1a-4465-a9a9-561a19e6f19f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'a7747682-8607-445e-a2fa-9a0240a96e81', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '9e27d0e3-8ef5-41b1-8316-a12877d40242', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'pusherTransportTLS', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/102
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'appId', value: null}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '93397e4c-8d1a-4465-a9a9-561a19e6f19f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'a7747682-8607-445e-a2fa-9a0240a96e81', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '9e27d0e3-8ef5-41b1-8316-a12877d40242', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'pusherTransportTLS', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/103
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'cf6af813-f40a-4d7e-9bc3-d737b5e0be6d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '215e295c-0c28-4773-84fa-fa6f8f390e3f', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '14eefbb8-7525-4338-8b4b-2f3572c18c2d', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '0e9378ac-be62-42f8-8399-55b56ad41617', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: 'e13af8b9-98b2-4b3d-a7e5-dc6197a7dc6e', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/104
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/d: {key: '79e90153-b6f1-4f98-98d3-aa044a7fc453', value: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/f: {storageType: 0, cdObjId: {…}}
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret: false
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret1: []
+3066.c1915057a00dbc03.js:1 BaseService::searchLocalStorage()/ret3: []
+9647.3e2563119b7150ae.js:1 SessService::setSess()/sessCdObj: undefined
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/sending message
+9647.3e2563119b7150ae.js:1 SessionService::setSess()/pushEnvelop: {pushData: {…}, req: {…}, resp: {…}}
+9647.3e2563119b7150ae.js:1 ui-lib/SessService::setSess()/res.app_state.sConfig!.usePush: true
+9647.3e2563119b7150ae.js:1 ui-lib/SessService::setSess()/sConfig.usePush2===true:
+9647.3e2563119b7150ae.js:1 ui-lib/SessService::setSess()/sConfig.usePush2===true:
+9647.3e2563119b7150ae.js:1 SioService::pushData(): error: socket is invalid
+pushData @ 9647.3e2563119b7150ae.js:1
+(anonymous) @ 9647.3e2563119b7150ae.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+unsubscribe @ 7284.859dcfd91a78e05e.js:1
+_complete @ 7284.859dcfd91a78e05e.js:1
+complete @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 BaseService::cacheCreate$()/this.controller: CdCache
+3066.c1915057a00dbc03.js:1 BaseService::setEnvelope$()/d: {key: 'User_User_Login_cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1_1010', value: '{"pushData":{"appId":"48545994-e50e-4a0d-90a8-3f30…null,"activationKey":"8968959","userTypeId":1}}}}'}
+3066.c1915057a00dbc03.js:1 BaseService::setEnvelope$()/cdToken: cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1
+3066.c1915057a00dbc03.js:1 BaseService::setEnvelopeCache()/this.postData: {ctx: 'Sys', m: 'Moduleman', c: 'CdCache', a: 'Create', dat: {…}, …}
+3066.c1915057a00dbc03.js:1 cacheCreate$()/this.postData: {"ctx":"Sys","m":"Moduleman","c":"CdCache","a":"Create","dat":{"f_vals":[{"query":null,"data":{"key":"User_User_Login_cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1_1010","value":"{\"pushData\":{\"appId\":\"48545994-e50e-4a0d-90a8-3f303a14c937\",\"pushGuid\":\"9326f6f0-0f47-4311-9f47-da3c1dc45502\",\"m\":[{\"label\":\"Modman\",\"id\":995,\"icon\":\"ri-user-settings-line\",\"link\":\"./admin\",\"isTitle\":null,\"badge\":null,\"parentId\":-1,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[{\"label\":\"dashboard\",\"id\":996,\"icon\":null,\"link\":\"admin/admin-dashboard\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"cdobj\",\"id\":997,\"icon\":null,\"link\":\"/moduleman/cd-obj/list\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"company\",\"id\":998,\"icon\":null,\"link\":\"/moduleman/company/list\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"grus\",\"id\":999,\"icon\":null,\"link\":\"admin/grus\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"menu\",\"id\":1000,\"icon\":null,\"link\":\"/moduleman/menu/list\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"module\",\"id\":1001,\"icon\":null,\"link\":\"/moduleman/module/list\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"consumer\",\"id\":1269,\"icon\":null,\"link\":\"/moduleman/consumer/list\",\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]},{\"label\":\"consumer-resource\",\"id\":1271,\"icon\":null,\"link\":null,\"isTitle\":null,\"badge\":null,\"parentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"subItems\":[]}]},{\"label\":\"cd_geo\",\"id\":469,\"icon\":\"ri-map-pin-line\",\"link\":null,\"isTitle\":null,\"badge\":null,\"parentId\":-1,\"isLayout\":null,\"moduleIsPublic\":1,\"moduleGuid\":\"C620F2D8-A0AE-0406-7DB7-7ECE806722AA\",\"subItems\":[{\"label\":\"location\",\"id\":470,\"icon\":null,\"link\":\"/moduleman/module/list\",\"isTitle\":null,\"badge\":null,\"parentId\":469,\"isLayout\":null,\"moduleIsPublic\":1,\"moduleGuid\":\"C620F2D8-A0AE-0406-7DB7-7ECE806722AA\",\"subItems\":[]}]}],\"pushRecepients\":[{\"userId\":1010,\"subTypeId\":7,\"cdObjId\":{\"appId\":\"48545994-e50e-4a0d-90a8-3f303a14c937\",\"ngModule\":\"SharedModule\",\"resourceName\":\"SidebarComponent\",\"resourceGuid\":\"0e9378ac-be62-42f8-8399-55b56ad41617\",\"jwtToken\":\"\",\"socket\":null,\"commTrack\":{\"initTime\":1719961226502,\"relayTime\":null,\"relayed\":false,\"pushed\":false,\"pushTime\":null,\"deliveryTime\":null,\"delivered\":false,\"completed\":false,\"completedTime\":null}}},{\"userId\":1010,\"subTypeId\":1}],\"triggerEvent\":\"login\",\"emittEvent\":\"push-menu\",\"token\":\"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1\",\"commTrack\":{\"initTime\":null,\"relayTime\":null,\"relayed\":false,\"deliveryTime\":null,\"deliverd\":false,\"pushed\":false,\"pushTime\":null,\"delivered\":false},\"isNotification\":false},\"req\":{\"ctx\":\"Sys\",\"m\":\"User\",\"c\":\"User\",\"a\":\"Login\",\"dat\":{\"f_vals\":[{\"data\":null}],\"token\":\"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1\"},\"args\":null},\"resp\":{\"app_state\":{\"success\":true,\"info\":{\"messages\":[],\"code\":\"\",\"app_msg\":\"Welcome karl!\"},\"sess\":{\"cd_token\":\"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1\",\"userId\":1010,\"jwt\":null,\"ttl\":600,\"initUuid\":\"9c6c3b6f-185c-4e98-96d8-a814f5795580\",\"initTime\":\"1719961258.328\"},\"cache\":{},\"sConfig\":{\"usePush\":true,\"usePolling\":true,\"useCacheStore\":true}},\"data\":{\"consumer\":[{\"consumerId\":33,\"consumerGuid\":\"B0B3DA99-1859-A499-90F6-1E3F69575DCD\",\"consumerName\":\"emp_services\",\"consumerEnabled\":1,\"docId\":9276,\"companyId\":85,\"companyGuid\":\"8a7ee96e-6c76-11ec-a1b0-4184d18c49ca\"}],\"menuData\":[{\"menuLabel\":\"Modman\",\"menuId\":995,\"icon\":\"ri-user-settings-line\",\"path\":\"./admin\",\"isTitle\":null,\"badge\":null,\"menuParentId\":-1,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[{\"menuLabel\":\"dashboard\",\"menuId\":996,\"icon\":null,\"path\":\"admin/admin-dashboard\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"cdobj\",\"menuId\":997,\"icon\":null,\"path\":\"/moduleman/cd-obj/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"company\",\"menuId\":998,\"icon\":null,\"path\":\"/moduleman/company/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"grus\",\"menuId\":999,\"icon\":null,\"path\":\"admin/grus\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"menu\",\"menuId\":1000,\"icon\":null,\"path\":\"/moduleman/menu/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"module\",\"menuId\":1001,\"icon\":null,\"path\":\"/moduleman/module/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"consumer\",\"menuId\":1269,\"icon\":null,\"path\":\"/moduleman/consumer/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]},{\"menuLabel\":\"consumer-resource\",\"menuId\":1271,\"icon\":null,\"path\":null,\"isTitle\":null,\"badge\":null,\"menuParentId\":995,\"isLayout\":null,\"moduleIsPublic\":null,\"moduleGuid\":\"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b\",\"children\":[]}]},{\"menuLabel\":\"cd_geo\",\"menuId\":469,\"icon\":\"ri-map-pin-line\",\"path\":null,\"isTitle\":null,\"badge\":null,\"menuParentId\":-1,\"isLayout\":null,\"moduleIsPublic\":1,\"moduleGuid\":\"C620F2D8-A0AE-0406-7DB7-7ECE806722AA\",\"children\":[{\"menuLabel\":\"location\",\"menuId\":470,\"icon\":null,\"path\":\"/moduleman/module/list\",\"isTitle\":null,\"badge\":null,\"menuParentId\":469,\"isLayout\":null,\"moduleIsPublic\":1,\"moduleGuid\":\"C620F2D8-A0AE-0406-7DB7-7ECE806722AA\",\"children\":[]}]}],\"userData\":{\"userId\":1010,\"userGuid\":\"fe5b1a9d-df45-4fce-a181-65289c48ea00\",\"userName\":\"karl\",\"email\":\"karl.lulu@anon.com\",\"companyId\":85,\"docId\":34,\"mobile\":\"895909\",\"gender\":1,\"birthDate\":\"1976-03-10T06:53:37.000Z\",\"postalAddr\":\"85849\",\"fName\":\"Karl\",\"mName\":\"D\",\"lName\":\"Lulu\",\"nationalId\":85909,\"passportId\":89599,\"userEnabled\":true,\"zipCode\":null,\"activationKey\":\"8968959\",\"userTypeId\":1}}}}"}}],"token":"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1"},"args":{}}
+6262.fc4d95f20aa0267a.js:1 AccountRoutingModule::monitorRouting()/Navigation ended at: /dashboard?token=cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1
+6262.fc4d95f20aa0267a.js:1 AuthRoutingModule::monitorRouting()/Navigation ended at: /dashboard?token=cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1 with state: /dashboard?token=cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1
+9647.3e2563119b7150ae.js:1 cd-push/SocketioService::listen()/01
+9647.3e2563119b7150ae.js:1 cd-push/SocketioService::listen()/eventName: push-notif
+9647.3e2563119b7150ae.js:1 cd-push/SocketioService::listen()/02
+3066.c1915057a00dbc03.js:1 starting SidebarComponent::ngOnInit()
+3066.c1915057a00dbc03.js:1 starting initialize()
+3066.c1915057a00dbc03.js:1 starting SidebarComponent::setAppId()
+3066.c1915057a00dbc03.js:1 SidebarComponent::setAppId()/01
+3066.c1915057a00dbc03.js:1 SidebarComponent::setAppId()/appId: 3cb72ac4-fc94-4b66-a905-69ec3ce70ec6
+3066.c1915057a00dbc03.js:1 starting cd-shell-v2::SidebarComponent::configPushPayload()
+3066.c1915057a00dbc03.js:1 cd-shell-v2::SidebarComponent::configPushPayload()/this.resourceGuid: e8b5489d-e414-497b-9d0e-b5fdd9376fd2
+3066.c1915057a00dbc03.js:1 starting cd-user-v2::LoginComponent::configPushPayload()/envl: {pushData: {…}, req: null, resp: null}
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::sendPayLoad/01/pushEnvelope: {pushData: {…}, req: null, resp: null}
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::sendPayLoad/02/pushEnvelope:
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::initSio()/01
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::listenSecure()/emittEvent/01 push-registered-client
+9647.3e2563119b7150ae.js:1 initSio::listenSecure/action=push-registered-client
+3066.c1915057a00dbc03.js:1 SidebarComponent::onPushRegisteredClient():payLoadStr: 
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::listenSecure()/emittEvent/01 push-msg-pushed
+9647.3e2563119b7150ae.js:1 initSio::listenSecure/action=push-msg-pushed
+3066.c1915057a00dbc03.js:1 SidebarComponent::onPushMsgPushed():payLoad: 
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::listenSecure()/emittEvent/01 push-msg-relayed
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::initSio()/listenSecure()/push-msg-relayed/:payLoadStr: 
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::listenSecure()/emittEvent/01 push-msg-pushed
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::initSio()/listenSecure()/push-delivered/:payLoadStr: 
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::listenSecure()/emittEvent/01 push-delivered
+9647.3e2563119b7150ae.js:1 cdUiLib::SioClientService::initSio()/listenSecure()/push-delivered/:payLoadStr: 
+3066.c1915057a00dbc03.js:1 sendMessage()/ep: https://cd-api.co.ke:3002/notify
+3066.c1915057a00dbc03.js:1 DashboardComponent::activeColors/geoLocationData: undefined
+3066.c1915057a00dbc03.js:1 DashboardComponent::activeColors/locationData: []
+3066.c1915057a00dbc03.js:1  []
+3066.c1915057a00dbc03.js:1  {ctx: 'App', m: 'Coops', c: 'Coop', a: 'StatsByGeoLocation', dat: {…}, …}
+3066.c1915057a00dbc03.js:1 starting ngAfterViewInit()
+9647.3e2563119b7150ae.js:1 auth$(authData: AuthData)
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.416Z ERROR [9647.3e2563119b7150ae.js:1:33457] cdUiLib::SioClientService::sendPayLoad/:unable to push message. socket is null
+logModern @ 2009.d0fcfcddf7afdf00.js:1
+writeMessage @ 2009.d0fcfcddf7afdf00.js:1
+(anonymous) @ 2009.d0fcfcddf7afdf00.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+a @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+L @ 7284.859dcfd91a78e05e.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+a @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+L @ 7284.859dcfd91a78e05e.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+a @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+L @ 7284.859dcfd91a78e05e.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_error @ 7284.859dcfd91a78e05e.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+a @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+L @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+_log @ 2009.d0fcfcddf7afdf00.js:1
+error @ 2009.d0fcfcddf7afdf00.js:1
+sendPayLoad @ 9647.3e2563119b7150ae.js:1
+setAppId @ 3066.c1915057a00dbc03.js:1
+initialize @ 3066.c1915057a00dbc03.js:1
+ngOnInit @ 3066.c1915057a00dbc03.js:1
+Bg @ 4650.3505a54882cccef8.js:1
+zl @ 4650.3505a54882cccef8.js:1
+Tr @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+eo @ 4650.3505a54882cccef8.js:1
+detectChanges @ 4650.3505a54882cccef8.js:1
+tick @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+run @ 4650.3505a54882cccef8.js:1
+next @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+Ua @ 4650.3505a54882cccef8.js:1
+onHasTask @ 4650.3505a54882cccef8.js:1
+hasTask @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+3066.c1915057a00dbc03.js:1 Error sending message k {headers: g, status: 0, statusText: 'Unknown Error', url: 'https://cd-api.co.ke:3002/notify', ok: false, …}
+(anonymous) @ 3066.c1915057a00dbc03.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+_error @ 9357.f4786cd2ca56cdfa.js:1
+error @ 9357.f4786cd2ca56cdfa.js:1
+f @ 7471.18eb48bd551b9059.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+error (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+sendMessage @ 3066.c1915057a00dbc03.js:1
+initialize @ 3066.c1915057a00dbc03.js:1
+ngOnInit @ 3066.c1915057a00dbc03.js:1
+Bg @ 4650.3505a54882cccef8.js:1
+zl @ 4650.3505a54882cccef8.js:1
+Tr @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+eo @ 4650.3505a54882cccef8.js:1
+detectChanges @ 4650.3505a54882cccef8.js:1
+tick @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+run @ 4650.3505a54882cccef8.js:1
+next @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+Ua @ 4650.3505a54882cccef8.js:1
+onHasTask @ 4650.3505a54882cccef8.js:1
+hasTask @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+polyfills.c1cff0bce91861aa.js:1 
+        
+        
+       POST https://cd-api.co.ke:3002/notify net::ERR_CONNECTION_REFUSED
+_e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleMacroTask @ polyfills.c1cff0bce91861aa.js:1
+we @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+o.<computed> @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+sendMessage @ 3066.c1915057a00dbc03.js:1
+initialize @ 3066.c1915057a00dbc03.js:1
+ngOnInit @ 3066.c1915057a00dbc03.js:1
+Bg @ 4650.3505a54882cccef8.js:1
+zl @ 4650.3505a54882cccef8.js:1
+Tr @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Qv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+Zv @ 4650.3505a54882cccef8.js:1
+bv @ 4650.3505a54882cccef8.js:1
+Jr @ 4650.3505a54882cccef8.js:1
+eo @ 4650.3505a54882cccef8.js:1
+detectChanges @ 4650.3505a54882cccef8.js:1
+tick @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+onInvoke @ 4650.3505a54882cccef8.js:1
+invoke @ polyfills.c1cff0bce91861aa.js:1
+run @ polyfills.c1cff0bce91861aa.js:1
+run @ 4650.3505a54882cccef8.js:1
+next @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+Ua @ 4650.3505a54882cccef8.js:1
+onHasTask @ 4650.3505a54882cccef8.js:1
+hasTask @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+_updateTaskCount @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+y @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+load (async)
+e @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+onScheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleTask @ polyfills.c1cff0bce91861aa.js:1
+scheduleEventTask @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ polyfills.c1cff0bce91861aa.js:1
+(anonymous) @ 7471.18eb48bd551b9059.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+g @ 7284.859dcfd91a78e05e.js:1
+b @ 7284.859dcfd91a78e05e.js:1
+_next @ 7284.859dcfd91a78e05e.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+_trySubscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+r @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 7284.859dcfd91a78e05e.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+subscribe @ 9357.f4786cd2ca56cdfa.js:1
+initSession @ 6262.fc4d95f20aa0267a.js:1
+login @ 6262.fc4d95f20aa0267a.js:1
+(anonymous) @ 6262.fc4d95f20aa0267a.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+_next @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+(anonymous) @ 9357.f4786cd2ca56cdfa.js:1
+_ @ 9357.f4786cd2ca56cdfa.js:1
+next @ 9357.f4786cd2ca56cdfa.js:1
+emit @ 4650.3505a54882cccef8.js:1
+onSubmit @ 4006.d46711bcdaa03e26.js:1
+(anonymous) @ 4006.d46711bcdaa03e26.js:1
+kd @ 4650.3505a54882cccef8.js:1
+i @ 4650.3505a54882cccef8.js:1
+(anonymous) @ 8255.c7ae93cea90c7e5b.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+onInvokeTask @ 4650.3505a54882cccef8.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+runTask @ polyfills.c1cff0bce91861aa.js:1
+invokeTask @ polyfills.c1cff0bce91861aa.js:1
+F @ polyfills.c1cff0bce91861aa.js:1
+U @ polyfills.c1cff0bce91861aa.js:1
+le @ polyfills.c1cff0bce91861aa.js:1
+9647.3e2563119b7150ae.js:1 core/User/SessService::CacheResponse: {app_state: {…}, data: {…}}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.316Z INFO [6262.fc4d95f20aa0267a.js:1:8254] user/LoginComponent::initSession/res: {"app_state":{"success":true,"info":{"messages":[],"code":"","app_msg":"Welcome karl!"},"sess":{"cd_token":"cb5cf927-56ee-45a1-a4b1-7bf85ecc0ed1","userId":1010,"jwt":null,"ttl":600},"cache":{},"sConfig":{"usePush":true,"usePolling":true,"useCacheStore":true}},"data":{"consumer":[{"consumerId":33,"consumerGuid":"B0B3DA99-1859-A499-90F6-1E3F69575DCD","consumerName":"emp_services","consumerEnabled":1,"docId":9276,"companyId":85,"companyGuid":"8a7ee96e-6c76-11ec-a1b0-4184d18c49ca"}],"menuData":[{"menuLabel":"Modman","menuId":995,"icon":"ri-user-settings-line","path":"./admin","isTitle":null,"badge":null,"menuParentId":-1,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[{"menuLabel":"dashboard","menuId":996,"icon":null,"path":"admin/admin-dashboard","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"cdobj","menuId":997,"icon":null,"path":"/moduleman/cd-obj/list","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"company","menuId":998,"icon":null,"path":"/moduleman/company/list","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"grus","menuId":999,"icon":null,"path":"admin/grus","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"menu","menuId":1000,"icon":null,"path":"/moduleman/menu/list","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"module","menuId":1001,"icon":null,"path":"/moduleman/module/list","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"consumer","menuId":1269,"icon":null,"path":"/moduleman/consumer/list","isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]},{"menuLabel":"consumer-resource","menuId":1271,"icon":null,"path":null,"isTitle":null,"badge":null,"menuParentId":995,"isLayout":null,"moduleIsPublic":null,"moduleGuid":"00e7c6a8-83e4-40e2-bd27-51fcff9ce63b","children":[]}]},{"menuLabel":"cd_geo","menuId":469,"icon":"ri-map-pin-line","path":null,"isTitle":null,"badge":null,"menuParentId":-1,"isLayout":null,"moduleIsPublic":1,"moduleGuid":"C620F2D8-A0AE-0406-7DB7-7ECE806722AA","children":[{"menuLabel":"location","menuId":470,"icon":null,"path":"/moduleman/module/list","isTitle":null,"badge":null,"menuParentId":469,"isLayout":null,"moduleIsPublic":1,"moduleGuid":"C620F2D8-A0AE-0406-7DB7-7ECE806722AA","children":[]}]}],"userData":{"userId":1010,"userGuid":"fe5b1a9d-df45-4fce-a181-65289c48ea00","userName":"karl","email":"karl.lulu@anon.com","companyId":85,"docId":34,"mobile":"895909","gender":1,"birthDate":"1976-03-10T06:53:37.000Z","postalAddr":"85849","fName":"Karl","mName":"D","lName":"Lulu","nationalId":85909,"passportId":89599,"userEnabled":true,"zipCode":null,"activationKey":"8968959","userTypeId":1}}}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.319Z INFO [6262.fc4d95f20aa0267a.js:1:8418] user/LoginComponent::initSession/02
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.320Z INFO [6262.fc4d95f20aa0267a.js:1:9514] starting cd-shell/LoginComponent::LoginComponent::configPushPayload()
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.320Z INFO [6262.fc4d95f20aa0267a.js:1:10361] cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData: {"key":"appId","value":"48545994-e50e-4a0d-90a8-3f303a14c937"}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.321Z INFO [6262.fc4d95f20aa0267a.js:1:10501] cd-shell/LoginComponent::LoginComponent::configPushPayload()/this.sidebarInitData.value: "48545994-e50e-4a0d-90a8-3f303a14c937"
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.321Z INFO [6262.fc4d95f20aa0267a.js:1:10692] cd-shell/LoginComponent::LoginComponent::configPushPayload()/uRecepient: {"userId":1010,"subTypeId":7,"cdObjId":{"appId":"","ngModule":"UserFrontModule","resourceName":"LoginComponent","resourceGuid":"a32c2247-aef8-400e-a27b-d40aabb5e149","jwtToken":"","socket":null,"socketId":"","commTrack":{"initTime":1719961258320,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.321Z INFO [6262.fc4d95f20aa0267a.js:1:10874] cd-shell/LoginComponent::LoginComponent::configPushPayload()/envl: {"pushData":{"pushGuid":"","m":"","pushRecepients":[{"userId":1010,"subTypeId":1,"cdObjId":{"appId":"","ngModule":"UserFrontModule","resourceName":"LoginComponent","resourceGuid":"a32c2247-aef8-400e-a27b-d40aabb5e149","jwtToken":"","socket":null,"socketId":"","commTrack":{"initTime":1719961258320,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}}},{"userId":1010,"subTypeId":7,"cdObjId":"48545994-e50e-4a0d-90a8-3f303a14c937"}],"triggerEvent":"login","emittEvent":"push-menu","token":"","isNotification":null,"appSockets":[],"commTrack":{"initTime":1719961258320,"relayTime":null,"relayed":false,"pushed":false,"pushTime":null,"deliveryTime":null,"delivered":false,"completed":false,"completedTime":null}},"req":null,"resp":null}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.324Z INFO [6262.fc4d95f20aa0267a.js:1:8660] user/LoginComponent::initSession/envl: {pushData: {…}, req: null, resp: null}
+2009.d0fcfcddf7afdf00.js:1 2024-07-02T23:00:58.324Z INFO [6262.fc4d95f20aa0267a.js:1:8862] user/LoginComponent::initSession/envl:...useing wss
+3066.c1915057a00dbc03.js:1 DashboardComponent::fetchData/this.locationData/1: (5) [{…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 5559
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 6138
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 6178
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 6178
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 6178
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 1900
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 1153248
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 1584285
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 2447332
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 2447332
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 2447332
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 1524513
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopDataSeriesFx/cds: {coopCountSeries: Array(6), membersCountSeries: Array(6), coopSavesSharesSeries: Array(6), coopAssetsSeries: Array(6), coopReservesSeries: Array(6), …}
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/seriesData (6) [5559, 6138, 6178, 6178, 6178, 1900]
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/si {name: 'Tanzania', type: 'column', data: Array(6)}
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 99
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 113
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 123
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 126
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 129
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 83
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 60652
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 50843
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 54022
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 62637
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 61589
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 33632
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopDataSeriesFx/cds: {coopCountSeries: Array(6), membersCountSeries: Array(6), coopSavesSharesSeries: Array(6), coopAssetsSeries: Array(6), coopReservesSeries: Array(6), …}
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/seriesData (6) [99, 113, 123, 126, 129, 83]
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/si {name: 'Eswatini', type: 'column', data: Array(6)}
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 481
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 566
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 510
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 489
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 490
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 490
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 577194
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 862638
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 783815
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 884495
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 983023
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 983023
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopDataSeriesFx/cds: {coopCountSeries: Array(6), membersCountSeries: Array(6), coopSavesSharesSeries: Array(6), coopAssetsSeries: Array(6), coopReservesSeries: Array(6), …}
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/seriesData (6) [481, 566, 510, 489, 490, 490]
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/si {name: 'Ghana', type: 'column', data: Array(6)}
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 64
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 72
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 69
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 71
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 71
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 71
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 76570
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 78451
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 84065
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 91551
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 91551
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 102477
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopDataSeriesFx/cds: {coopCountSeries: Array(6), membersCountSeries: Array(6), coopSavesSharesSeries: Array(6), coopAssetsSeries: Array(6), coopReservesSeries: Array(6), …}
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/seriesData (6) [64, 72, 69, 71, 71, 71]
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/si {name: 'Gambia', type: 'column', data: Array(6)}
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 39
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 39
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 39
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 39
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 40
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopCount: 40
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/this.coopData: (88) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 102421
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2017-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 122905
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2018-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 145385
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2019-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 158972
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2020-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 173245
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2021-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopMembersCount: 170165
+3066.c1915057a00dbc03.js:1 DashboardComponent::membersCountSeriesFx/coop.coopDateLabel: 2022-12-31T20:59:59.000Z
+3066.c1915057a00dbc03.js:1 DashboardComponent::coopDataSeriesFx/cds: {coopCountSeries: Array(6), membersCountSeries: Array(6), coopSavesSharesSeries: Array(6), coopAssetsSeries: Array(6), coopReservesSeries: Array(6), …}
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/selectedCoopParam coopCountSeries
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/seriesData (6) [39, 39, 39, 39, 40, 40]
+3066.c1915057a00dbc03.js:1 DashboardComponent::refreshDisplay()/si {name: 'Malawi', type: 'column', data: Array(6)}
+3066.c1915057a00dbc03.js:1 DashboardComponent::fetchData/11
+3066.c1915057a00dbc03.js:1 membersCountArr_years: (6) [2017, 2018, 2019, 2020, 2021, 2022]
+3066.c1915057a00dbc03.js:1 DashboardComponent::activeColors/geoLocationData: (5) [{…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1 DashboardComponent::activeColors/locationData: (5) [{…}, {…}, {…}, {…}, {…}]
+3066.c1915057a00dbc03.js:1  (5) [{…}, {…}, {…}, {…}, {…}]
+9647.3e2563119b7150ae.js:1 start cdUiLib::MenuServices::mapMenu(cdMenu)
+9647.3e2563119b7150ae.js:1 start cdUiLib::MenuServices::mapMenu(cdMenu)
+3066.c1915057a00dbc03.js:1 starting cdShellV2::SidebarComponent/htmlMenu()
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlMenu()/01
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlMenu()/menuData: [{…}]
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/01
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/02
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/mi: {label: 'cd_geo', id: 469, icon: 'ri-map-pin-line', link: null, isTitle: null, …}
+3066.c1915057a00dbc03.js:1 SidebarComponent::activateDropdown()/01
+3066.c1915057a00dbc03.js:1 SidebarComponent::activateDropdown()/parentData: [{…}]
+3066.c1915057a00dbc03.js:1 SidebarComponent::activateDropdown()/02
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/03
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/menuData: [{…}]
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/04
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/menuData: [{…}]
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlRootMenu()/mi: {label: 'cd_geo', id: 469, icon: 'ri-map-pin-line', link: null, isTitle: null, …}
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlChildren()/01
+3066.c1915057a00dbc03.js:1 cdShellV2::SidebarComponent/htmlChildren()/01/mi: {label: 'cd_geo', id: 469, icon: 'ri-map-pin-line', link: null, isTitle: null, …}

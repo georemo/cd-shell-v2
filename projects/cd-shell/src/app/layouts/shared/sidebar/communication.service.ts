@@ -19,4 +19,8 @@ export class CommunicationService {
       console.error('SidebarComponent not registered.');
     }
   }
+
+  getSidebar() {
+    return this.sidebarComponent;
+  }
 }

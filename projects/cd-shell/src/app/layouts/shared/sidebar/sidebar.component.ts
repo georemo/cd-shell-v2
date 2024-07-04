@@ -22,6 +22,7 @@ import { PusherService } from '../../../core/services/pusher.service';
 import { MenuDataService } from './menu-data.service';
 // import { SioClientService } from '../../../core/services/sio-client.service';
 import { CommunicationService } from './communication.service';
+import { SioClientTestService } from '../../../core/services/sio-client-test.service';
 
 let $ = new HtmlElemService();
 interface IdleTimerOptions {
@@ -57,6 +58,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   messages: string[] = [];
   newMessage: string = '';
 
+  sioSocket: any;
+
   constructor(
     private elementRef: ElementRef,
     private eventService: EventService,
@@ -69,6 +72,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     public cd: ChangeDetectorRef,
     private svBase: BaseService,
     private svSio: SioClientService,
+    private svSioTest: SioClientTestService,
     private svPusher: PusherService,
     private communicationService: CommunicationService,
   ) {
@@ -119,13 +123,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   setAppId() {
-    console.log('starting SidebarComponent::setAppId()')
     console.log('SidebarComponent::setAppId()/01')
+    console.log('SidebarComponent::setAppId()/this.svSio.socket:', this.svSio.socket)
     localStorage.removeItem('appId');
     localStorage.setItem('appId', this.svBase.getGuid());
     const appId = localStorage.getItem('appId');
     console.log('SidebarComponent::setAppId()/appId:', appId)
     const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
+    console.log('SidebarComponent::setAppId()/envl:', envl)
     this.svSio.sendPayLoad(envl)
   }
 
@@ -274,7 +279,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    */
   initialize(): void {
     console.log('starting initialize()');
-    this.setAppId()
+    
     
     // register itself with the CommunicationService when it initializes
     this.communicationService.registerSidebar(this);
@@ -282,7 +287,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     //initialize socket.io service
     this.svSio.env = environment;
     this.svSio.initSio(this, this.socketAction);
-
+    this.setAppId()
     // initialize pusher
     this.svPusher.subscribe('my-channel', 'my-event', (data) => {
       this.messages.push(data.message);
@@ -292,6 +297,17 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
     // test pusher
     this.sendMessage()
+
+    // test sio for listening to 
+    this.svSioTest.listen('push-registered-client')
+      .subscribe((payLoadStr: string) => {
+        console.log('SidebarComponent::initialize()/this.svSioTest.listen/:payLoadStr:', payLoadStr)
+        if (payLoadStr) {
+          const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+          console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
+          this.saveSocket(payLoad);
+        }
+      })
   }
 
   initSession() {
@@ -425,6 +441,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   socketAction(cls, emittEvent, payLoad) {
+    console.log("SidebarComponent::socketAction()/01")
+    console.log("SidebarComponent::socketAction()/payLoad:", payLoad)
+    console.log("SidebarComponent::socketAction()/emittEvent:", emittEvent)
     if (emittEvent == 'push-registered-client') {
       cls.onPushRegisteredClient(cls, payLoad)
     }

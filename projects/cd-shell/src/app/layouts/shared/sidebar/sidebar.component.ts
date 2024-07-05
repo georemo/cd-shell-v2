@@ -41,9 +41,9 @@ const idleTimerOptions: IdleTimerOptions = {
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
-  
+
   resourceName = 'SidebarComponent';
-  
+
   resourceGuid = '';
   cdToken = '';
   jwtWsToken = '';
@@ -63,7 +63,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   sioSocket: any;
 
-  
+
 
   constructor(
     private logger: NGXLogger,
@@ -138,7 +138,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
     console.log('SidebarComponent::setAppId()/envl:', envl)
     // this.svSio.sendPayLoad(envl)
-    this.listen('push-msg-pushed')
+    this.listen('push-registered-client')
+    this.listen('msg-relayed')
     this.sendSioMessage(envl.pushData.triggerEvent, envl)
   }
 
@@ -288,8 +289,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
    */
   initialize(): void {
     console.log('starting initialize()');
-    
-    
+
+
     // register itself with the CommunicationService when it initializes
     this.communicationService.registerSidebar(this);
 
@@ -321,13 +322,30 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     //   })
   }
 
-  listen(event){
+  listen(event) {
     this.logger.info('cd-shell/SidebarComponent::listen/event:', event);
     // Listen for incoming messages
     this.svSioTest.sioListen(event).subscribe({
-      next: (message: any) => {
-        console.log('cd-shell/SidebarComponent::listen/Received message:', message);
+      next: (payLoadStr: any) => {
+        console.log('cd-shell/SidebarComponent::listen/Received payLoadStr:', payLoadStr);
+        const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+        console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
         // Handle the message payload
+        if (payLoad.pushData.emittEvent === 'push-registered-client') {
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+          if (payLoad.pushData.emittEvent) {
+            this.saveSocket(payLoad);
+          }
+        }
+
+        if (payLoad.pushData.emittEvent === 'msg-relayed') {
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+          if (payLoad.pushData.emittEvent) {
+            console.log("handle msg-relayed event")
+          }
+        }
       },
       error: (error) => {
         console.error('cd-shell/SidebarComponent::listen/Error receiving message:', error);
@@ -338,7 +356,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     })
   }
 
-  sendSioMessage(triggerEvent:string, envl:any): void {
+  sendSioMessage(triggerEvent: string, envl: any): void {
     this.logger.info('user/SidebarComponent::sendSioMessage/triggerEvent:', triggerEvent);
     this.logger.info('user/SidebarComponent::sendSioMessage/envl:', envl);
     this.svSioTest.sendMessage(triggerEvent, envl).subscribe({
@@ -419,7 +437,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
           // load menu
           const menuData = JSON.parse(payLoad.pushData.m);
           if (menuData) {
-            this.htmlMenu(JSON.parse(payLoad.pushData.m),payLoad.pushData.token);
+            this.htmlMenu(JSON.parse(payLoad.pushData.m), payLoad.pushData.token);
           }
         }
       })
@@ -684,7 +702,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     document.body.removeAttribute('data-topbar');
   }
 
-  async htmlMenu(menuData: MenuItem[],cdToken:string) {
+  async htmlMenu(menuData: MenuItem[], cdToken: string) {
     this.routParams.queryParams.token = cdToken;
     menuData = await this.svMenu.mapMenu(menuData)
     console.log('starting cdShellV2::SidebarComponent/htmlMenu()')

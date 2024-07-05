@@ -140,6 +140,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     // this.svSio.sendPayLoad(envl)
     this.listen('push-registered-client')
     this.listen('msg-relayed')
+    this.listen('push-msg-relayed')
     this.sendSioMessage(envl.pushData.triggerEvent, envl)
   }
 
@@ -334,17 +335,21 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         if (payLoad.pushData.emittEvent === 'push-registered-client') {
           console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
           console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-          if (payLoad.pushData.emittEvent) {
-            this.saveSocket(payLoad);
-          }
+          console.log("handle push-registered-client event")
+          this.saveSocket(payLoad);
+        }
+
+        if (payLoad.pushData.emittEvent === 'push-msg-relayed') {
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+          console.log("handle push-msg-relayed event")
+          
         }
 
         if (payLoad.pushData.emittEvent === 'msg-relayed') {
           console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
           console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-          if (payLoad.pushData.emittEvent) {
-            console.log("handle msg-relayed event")
-          }
+          console.log("handle msg-relayed event")
         }
       },
       error: (error) => {

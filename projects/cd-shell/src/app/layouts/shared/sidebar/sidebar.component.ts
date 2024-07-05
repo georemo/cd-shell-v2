@@ -326,9 +326,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.logger.info('cd-shell/SidebarComponent::listen/event:', event);
     // Listen for incoming messages
     this.svSioTest.sioListen(event).subscribe({
-      next: (payLoadStr: any) => {
-        console.log('cd-shell/SidebarComponent::listen/Received payLoadStr:', payLoadStr);
-        const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+      next: (payLoad: ICdPushEnvelop) => {
+        // console.log('cd-shell/SidebarComponent::listen/Received payLoad:', payLoadStr);
+        // const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
         console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
         // Handle the message payload
         if (payLoad.pushData.emittEvent === 'push-registered-client') {

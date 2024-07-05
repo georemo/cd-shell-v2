@@ -21,7 +21,7 @@ export const environment: EnvConfig = {
   apiEndpoint: `${API_HOST}:${API_PORT}${API_ROUTE}`,
   sioEndpoint: `${PUSH_HOST}:${SIO_PORT}`,
   wsEndpoint: 'ws://cd-api.co.ke:3000',
-  wsMode: 'wss',
+  wsMode: 'sio',
   pushConfig: {
     sio: {
       enabled: true,

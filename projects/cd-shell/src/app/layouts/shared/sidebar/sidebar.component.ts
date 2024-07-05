@@ -23,6 +23,7 @@ import { MenuDataService } from './menu-data.service';
 // import { SioClientService } from '../../../core/services/sio-client.service';
 import { CommunicationService } from './communication.service';
 import { SioClientTestService } from '../../../core/services/sio-client-test.service';
+import { NGXLogger } from 'ngx-logger';
 
 let $ = new HtmlElemService();
 interface IdleTimerOptions {
@@ -40,7 +41,9 @@ const idleTimerOptions: IdleTimerOptions = {
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
+  
   resourceName = 'SidebarComponent';
+  
   resourceGuid = '';
   cdToken = '';
   jwtWsToken = '';
@@ -60,7 +63,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   sioSocket: any;
 
+  
+
   constructor(
+    private logger: NGXLogger,
     private elementRef: ElementRef,
     private eventService: EventService,
     private router: Router,
@@ -131,7 +137,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     console.log('SidebarComponent::setAppId()/appId:', appId)
     const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
     console.log('SidebarComponent::setAppId()/envl:', envl)
-    this.svSio.sendPayLoad(envl)
+    // this.svSio.sendPayLoad(envl)
+    this.listen('push-msg-pushed')
+    this.sendSioMessage(envl.pushData.triggerEvent, envl)
   }
 
   configPushPayload(triggerEvent: string, emittEvent: string, cuid: number | string): ICdPushEnvelop {
@@ -175,6 +183,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       resourceGuid: this.resourceGuid,
       jwtToken: this.jwtWsToken,
       socket: null,
+      socketId: '',
       commTrack: {
         initTime: Number(new Date()),
         relayTime: null,
@@ -285,29 +294,64 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.communicationService.registerSidebar(this);
 
     //initialize socket.io service
-    this.svSio.env = environment;
-    this.svSio.initSio(this, this.socketAction);
+    // this.svSio.env = environment;
+    // this.svSio.initSio(this, this.socketAction);
     this.setAppId()
+
+
     // initialize pusher
-    this.svPusher.subscribe('my-channel', 'my-event', (data) => {
-      this.messages.push(data.message);
-      console.log("data received:", data)
-      console.log("messages:", this.messages)
-    });
+    // this.svPusher.subscribe('my-channel', 'my-event', (data) => {
+    //   this.messages.push(data.message);
+    //   console.log("data received:", data)
+    //   console.log("messages:", this.messages)
+    // });
 
     // test pusher
-    this.sendMessage()
+    // this.sendMessage()
 
     // test sio for listening to 
-    this.svSioTest.listen('push-registered-client')
-      .subscribe((payLoadStr: string) => {
-        console.log('SidebarComponent::initialize()/this.svSioTest.listen/:payLoadStr:', payLoadStr)
-        if (payLoadStr) {
-          const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
-          console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
-          this.saveSocket(payLoad);
-        }
-      })
+    // this.svSioTest.listen('push-registered-client')
+    //   .subscribe((payLoadStr: string) => {
+    //     console.log('SidebarComponent::initialize()/this.svSioTest.listen/:payLoadStr:', payLoadStr)
+    //     if (payLoadStr) {
+    //       const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
+    //       console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
+    //       this.saveSocket(payLoad);
+    //     }
+    //   })
+  }
+
+  listen(event){
+    this.logger.info('cd-shell/SidebarComponent::listen/event:', event);
+    // Listen for incoming messages
+    this.svSioTest.sioListen(event).subscribe({
+      next: (message: any) => {
+        console.log('cd-shell/SidebarComponent::listen/Received message:', message);
+        // Handle the message payload
+      },
+      error: (error) => {
+        console.error('cd-shell/SidebarComponent::listen/Error receiving message:', error);
+      },
+      complete: () => {
+        console.log('cd-shell/SidebarComponent::listen/Message subscription complete');
+      }
+    })
+  }
+
+  sendSioMessage(triggerEvent:string, envl:any): void {
+    this.logger.info('user/SidebarComponent::sendSioMessage/triggerEvent:', triggerEvent);
+    this.logger.info('user/SidebarComponent::sendSioMessage/envl:', envl);
+    this.svSioTest.sendMessage(triggerEvent, envl).subscribe({
+      next: (response: boolean) => {
+        console.log('Message sent successfully:', response);
+      },
+      error: (error) => {
+        console.error('Error sending message:', error);
+      },
+      complete: () => {
+        console.log('Message sending complete');
+      }
+    });
   }
 
   initSession() {
@@ -484,16 +528,16 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   /**
    * Send pusher message
    */
-  sendMessage() {
-    this.newMessage = 'Hello pusher'
-    this.svPusher.sendMessage('my-channel', 'my-event', this.newMessage)
-      .subscribe(() => {
-        console.log('Pusher message sent');
-        this.newMessage = '';
-      }, error => {
-        console.error('Error sending message', error);
-      });
-  }
+  // sendMessage() {
+  //   this.newMessage = 'Hello pusher'
+  //   this.svPusher.sendMessage('my-channel', 'my-event', this.newMessage)
+  //     .subscribe(() => {
+  //       console.log('Pusher message sent');
+  //       this.newMessage = '';
+  //     }, error => {
+  //       console.error('Error sending message', error);
+  //     });
+  // }
 
   /**
    * remove active and mm-active class

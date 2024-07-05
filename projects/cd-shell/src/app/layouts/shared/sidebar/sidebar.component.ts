@@ -332,25 +332,41 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         // const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
         console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
         // Handle the message payload
-        if (payLoad.pushData.emittEvent === 'push-registered-client') {
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-          console.log("handle push-registered-client event")
-          this.saveSocket(payLoad);
+        switch (payLoad.pushData.emittEvent) {
+          case 'push-registered-client':
+            console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-registered-client event")
+            this.saveSocket(payLoad);
+            break;
+          case 'push-msg-relayed':
+            console.log('SidebarComponent::listenSecure()/push-msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('SidebarComponent::listenSecure()/push-msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-msg-relayed event")
+            this.updateRelayed(payLoad)
+            break;
+          case 'msg-relayed':
+            console.log('SidebarComponent::listenSecure()/msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('SidebarComponent::listenSecure()/msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle msg-relayed event")
+            break;
+          case 'push-menu':
+            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad:', payLoad)
+            console.log("handle push-menu event")
+            this.routParams.queryParams.token = payLoad.pushData.token;
+            // this.svIdleTimeout.startTimer(this.cd, idleTimerOptions);
+            // load appropriate menu
+            // this.htmlMenu(payLoad.resp.data,payLoad.pushData.token);
+            break;
+          case 'push-msg-pushed':
+            console.log('SidebarComponent::listenSecure()/push-msg-pushed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('SidebarComponent::listenSecure()/push-msg-pushed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-msg-pushed event")
+            break;
         }
 
-        if (payLoad.pushData.emittEvent === 'push-msg-relayed') {
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-          console.log("handle push-msg-relayed event")
-          
-        }
-
-        if (payLoad.pushData.emittEvent === 'msg-relayed') {
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-          console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-          console.log("handle msg-relayed event")
-        }
       },
       error: (error) => {
         console.error('cd-shell/SidebarComponent::listen/Error receiving message:', error);
@@ -393,6 +409,21 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       ).subscribe((menuData) => {
         this.htmlMenu(menuData, '');
       })
+  }
+
+  /**
+   * No action is expected from sender.
+   * No message to send to server
+   * Optionally, the sender can do its own house
+   * data updates and records.
+   * @param payLoad 
+   */
+  updateRelayed(payLoad: ICdPushEnvelop) {
+    console.log('updateRelayed()/01')
+    console.log('updateRelayed()/payLoad:', payLoad)
+    /**
+     * update record of send messages
+     */
   }
 
   // set all the events that compose-doc should listen to

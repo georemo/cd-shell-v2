@@ -91,7 +91,7 @@ export class LoginComponent implements OnInit {
     });
 
     // this.logger.debug('AppComponent initialized');
-    
+
     const filter: LsFilter = {
       storageType: StorageType.CdObjId,
       cdObjId: {
@@ -166,7 +166,7 @@ export class LoginComponent implements OnInit {
     console.log('cd-shell/LoginComponent::setAppId()/01')
     console.log('cd-shell/LoginComponent::setAppId()/this.svSio.socket:', this.svSio.socket)
     localStorage.removeItem('appId');
-    localStorage.setItem('appId', this.svBase.getGuid());
+    // localStorage.setItem('appId', this.svBase.getGuid());
     const appId = localStorage.getItem('appId');
     console.log('cd-shell/LoginComponent::setAppId()/appId:', appId)
     const envl: ICdPushEnvelop = await this.configPushPayload('register-client', 'push-registered-client', 1000)
@@ -175,6 +175,7 @@ export class LoginComponent implements OnInit {
     this.listen('push-registered-client')
     this.listen('msg-relayed')
     this.listen('push-msg-relayed')
+    this.listen('push-menu')
     this.sendSioMessage(envl.pushData.triggerEvent, envl)
   }
 
@@ -245,7 +246,7 @@ export class LoginComponent implements OnInit {
 
   setHeader(): void {
     console.log('starting LoginService::setHeader()');
-    if(this.key && this.uid && this.sid){
+    if (this.key && this.uid && this.sid) {
       const reqQuery = {
         query: {
           where: {
@@ -261,12 +262,12 @@ export class LoginComponent implements OnInit {
           // console.log('LoginService::setHeader()/subscribe/res.data:', res.data.length);
           if (res.data.length > 0) {
             this.header = `Congratulations ${res.data[0].userName}, your account is now active.`
-          } 
+          }
         });
     } else {
       this.header = "Welcome!"
     }
-    
+
 
   }
 
@@ -309,7 +310,7 @@ export class LoginComponent implements OnInit {
           const envl: ICdPushEnvelop = this.configPushPayload('login', 'push-menu', res.data.userData.userId)
           envl.pushData.m = res.data.menuData;
           this.logger.info('cd-shell/LoginComponent::initSession/envl:', envl);
-          
+
           if (environment.wsMode === 'sio') {
             this.logger.info('cd-shell/LoginComponent::initSession/envl:...using sio');
             this.svSio.sendPayLoad(envl)
@@ -337,7 +338,7 @@ export class LoginComponent implements OnInit {
           // this.route.navigate(['/comm'], params);
           this.route.navigate(['/dashboard'], params);
           this.route.navigate([environment.initialPage], params);
-          
+
 
           // below new method based on this.baseModel;
           // this.svNav.nsNavigate(this,'/comm','message from cd-user')
@@ -426,18 +427,16 @@ export class LoginComponent implements OnInit {
     envl.pushData.pushRecepients.push(uSender)
 
 
-    /**
-     * recepient is only used when sending message to 
-     * remote user or component.
-     * In this case we are just connecting and
-     * collecting connection info.
-     */
     // set recepient
-    // const uRecepient: any = { ...users[0] }
-    // uRecepient.subTypeId = 7;
-    // envl.pushData.pushRecepients.push(uRecepient)
+    // this.logger.info('cd-user/LoginComponent::configPushPayload()/this.sidebarInitData:', JSON.stringify(this.sidebarInitData));
+    // this.logger.info('cd-user/LoginComponent::configPushPayload()/this.sidebarInitData.value:', JSON.stringify(this.sidebarInitData.value));
+    const uRecepient: any = { ...users[0] }
+    uRecepient.subTypeId = 7;
+    this.logger.info('cd-user/LoginComponent::configPushPayload()/uRecepient:', JSON.stringify(uRecepient));
+    uRecepient.cdObjId = this.sidebarInitData.value
+    envl.pushData.pushRecepients.push(uRecepient)
 
-    console.log('starting cd-user-v2::LoginComponent::configPushPayload()/envl:', envl);
+    this.logger.info('cd-user/LoginComponent::configPushPayload()/envl:', JSON.stringify(envl));
 
     return envl;
 

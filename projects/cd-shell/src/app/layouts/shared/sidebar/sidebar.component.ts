@@ -138,10 +138,16 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     const envl: ICdPushEnvelop = this.configPushPayload('register-client', 'push-registered-client', 1000)
     console.log('SidebarComponent::setAppId()/envl:', envl)
     // this.svSio.sendPayLoad(envl)
+
+
     this.listen('push-registered-client')
-    this.listen('msg-relayed')
     this.listen('push-msg-relayed')
-    this.sendSioMessage(envl.pushData.triggerEvent, envl)
+    this.listen('push-msg-pushed')
+    this.listen('push-delivered')
+    this.listen('msg-relayed')
+    this.listen('msg-menu')
+    this.listen('push-menu')
+    this.sendSioMessage(envl)
   }
 
   configPushPayload(triggerEvent: string, emittEvent: string, cuid: number | string): ICdPushEnvelop {
@@ -230,7 +236,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     // uRecepient.subTypeId = 7;
     // envl.pushData.pushRecepients.push(uRecepient)
 
-    console.log('starting cd-user-v2::LoginComponent::configPushPayload()/envl:', envl);
+    console.log('starting cd-shell-v2::SidebarComponent::configPushPayload()/envl:', envl);
 
     return envl;
 
@@ -333,37 +339,46 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
         // Handle the message payload
         switch (payLoad.pushData.emittEvent) {
-          case 'push-registered-client':
-            console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-            console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-            console.log("handle push-registered-client event")
-            this.saveSocket(payLoad);
-            break;
           case 'push-msg-relayed':
-            console.log('SidebarComponent::listenSecure()/push-msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-            console.log('SidebarComponent::listenSecure()/push-msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
             console.log("handle push-msg-relayed event")
             this.updateRelayed(payLoad)
             break;
+          case 'push-msg-pushed':
+            console.log('cd-shell/SidebarComponent::listen()/push-msg-pushed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-msg-pushed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-msg-pushed event")
+            this.notificationAcceptDelivery(payLoad)
+            break;
+          case 'push-delivered':
+            console.log('cd-shell/SidebarComponent::listen()/push-delivered/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-delivered/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-delivered-client event")
+            this.notificationMsgComplete(payLoad)
+            break;
+
+          case 'push-registered-client':
+            console.log('cd-shell/SidebarComponent::listen()/push-registered-client/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-registered-client/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log("handle push-registered-client event")
+            this.saveSocket(payLoad);
+            break;
+
           case 'msg-relayed':
-            console.log('SidebarComponent::listenSecure()/msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-            console.log('SidebarComponent::listenSecure()/msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log('cd-shell/SidebarComponent::listen()/msg-relayed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/msg-relayed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
             console.log("handle msg-relayed event")
             break;
           case 'push-menu':
-            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-            console.log('SidebarComponent::listenSecure()/push-menu/:payLoad:', payLoad)
+            console.log('cd-shell/SidebarComponent::listen()/push-menu/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-menu/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
+            console.log('cd-shell/SidebarComponent::listen()/push-menu/:payLoad:', payLoad)
             console.log("handle push-menu event")
             this.routParams.queryParams.token = payLoad.pushData.token;
             // this.svIdleTimeout.startTimer(this.cd, idleTimerOptions);
             // load appropriate menu
             // this.htmlMenu(payLoad.resp.data,payLoad.pushData.token);
-            break;
-          case 'push-msg-pushed':
-            console.log('SidebarComponent::listenSecure()/push-msg-pushed/:payLoad.pushData.emittEvent:', payLoad.pushData.emittEvent)
-            console.log('SidebarComponent::listenSecure()/push-msg-pushed/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
-            console.log("handle push-msg-pushed event")
             break;
         }
 
@@ -377,10 +392,51 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     })
   }
 
-  sendSioMessage(triggerEvent: string, envl: any): void {
-    this.logger.info('user/SidebarComponent::sendSioMessage/triggerEvent:', triggerEvent);
-    this.logger.info('user/SidebarComponent::sendSioMessage/envl:', envl);
-    this.svSioTest.sendMessage(triggerEvent, envl).subscribe({
+  notificationAcceptDelivery(payLoad: ICdPushEnvelop) {
+    console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/01')
+    console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/senderAcceptDelivery:', payLoad)
+    /**
+     * update record of payload
+     * - delivered time
+     * - delivered = true
+     * - isNotification = true
+     */
+    payLoad.pushData.commTrack.deliveryTime = Number(new Date());
+    payLoad.pushData.commTrack.delivered = true;
+    payLoad.pushData.isNotification = true;
+    payLoad.pushData.triggerEvent = 'msg-received';
+    /**
+     * reverse sender and receiver subTypeId
+     */
+    // this.sendPayLoad(payLoad);
+    this.sendSioMessage(payLoad)
+  }
+
+  notificationMsgComplete(payLoad: ICdPushEnvelop) {
+    console.log('cd-shell::SidebarComponent::notificationMsgComplete()/01')
+    console.log('cd-shell::SidebarComponent::notificationMsgComplete()/1:', payLoad)
+    /**
+     * update record of payload
+     * - delivered time
+     * - delivered = true
+     * - isNotification = true
+     */
+    payLoad.pushData.commTrack.completedTime = Number(new Date());
+    payLoad.pushData.commTrack.completed = true;
+    payLoad.pushData.isNotification = true;
+    payLoad.pushData.triggerEvent = 'msg-completed'
+    console.log('cd-shell::SidebarComponent::notificationMsgComplete/2:', payLoad)
+    /**
+     * reverse sender and receiver subTypeId
+     */
+    // this.sendPayLoad(payLoad);
+    this.sendSioMessage(payLoad)
+  }
+
+  sendSioMessage(envl: ICdPushEnvelop): void {
+    this.logger.info('cd-shell/SidebarComponent::sendSioMessage/envl.pushData.triggerEvent:', envl.pushData.triggerEvent);
+    this.logger.info('cd-shell/SidebarComponent::sendSioMessage/envl:', envl);
+    this.svSioTest.sendMessage(envl.pushData.triggerEvent, envl).subscribe({
       next: (response: boolean) => {
         console.log('Message sent successfully:', response);
       },
@@ -453,7 +509,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
     cls.listenSecure('push-registered-client')
       .subscribe((payLoadStr: string) => {
-        console.log('SidebarComponent::listenSecure()/push-registered-client/:payLoadStr:', payLoadStr)
+        console.log('SidebarComponent::listen()/push-registered-client/:payLoadStr:', payLoadStr)
         if (payLoadStr) {
           const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
           console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);
@@ -463,7 +519,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
     cls.listenSecure('push-menu')
       .subscribe((payLoadStr: string) => {
-        console.log('SidebarComponent::listenSecure()/push-menu/:payLoadStr:', payLoadStr)
+        console.log('SidebarComponent::listen()/push-menu/:payLoadStr:', payLoadStr)
         if (payLoadStr) {
           const payLoad: ICdPushEnvelop = JSON.parse(payLoadStr)
           console.log('SidebarComponent::pushSubscribe()/payLoad:', payLoad);

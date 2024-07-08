@@ -329,6 +329,74 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     //   })
   }
 
+
+  // [
+  //   {
+  //     triggerEvent: 'register-client',
+  //     emittEvent: 'push-registered-client',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'srv-received',
+  //     emittEvent: 'push-srv-received',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'msg-relayed',
+  //     emittEvent: 'push-msg-relayed',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'msg-pushed',
+  //     emittEvent: 'push-msg-pushed',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'msg-received',
+  //     emittEvent: 'push-delivered',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'msg-completed',
+  //     emittEvent: 'push-msg-completed',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'register',
+  //     emittEvent: 'registered',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'login',
+  //     emittEvent: 'push-menu',
+  //     sFx: 'pushEnvelop'
+  //   },
+  //   {
+  //     triggerEvent: 'send-memo',
+  //     emittEvent: 'push-memo',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'send-pub',
+  //     emittEvent: 'push-pub',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'send-react',
+  //     emittEvent: 'push-react',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'send-menu',
+  //     emittEvent: 'push-menu',
+  //     sFx: 'push'
+  //   },
+  //   {
+  //     triggerEvent: 'send-notif',
+  //     emittEvent: 'push-notif',
+  //     sFx: 'push'
+  //   }
+  // ]
   listen(event) {
     this.logger.info('cd-shell/SidebarComponent::listen/event:', event);
     // Listen for incoming messages
@@ -405,8 +473,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
      * reverse sender and receiver subTypeId
      */
     console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/senderAcceptDelivery2:', payLoad)
-    payLoad.pushData.pushRecepients[0].subTypeId = 7
-    payLoad.pushData.pushRecepients[1].subTypeId = 1
     // this.sendPayLoad(payLoad);
     this.sendSioMessage(payLoad)
   }

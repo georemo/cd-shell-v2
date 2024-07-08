@@ -375,10 +375,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
             console.log('cd-shell/SidebarComponent::listen()/push-menu/:payLoad.pushData.triggerEvent:', payLoad.pushData.triggerEvent)
             console.log('cd-shell/SidebarComponent::listen()/push-menu/:payLoad:', payLoad)
             console.log("handle push-menu event")
-            this.routParams.queryParams.token = payLoad.pushData.token;
-            // this.svIdleTimeout.startTimer(this.cd, idleTimerOptions);
-            // load appropriate menu
-            // this.htmlMenu(payLoad.resp.data,payLoad.pushData.token);
             break;
         }
 

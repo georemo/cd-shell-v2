@@ -390,7 +390,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   notificationAcceptDelivery(payLoad: ICdPushEnvelop) {
     console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/01')
-    console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/senderAcceptDelivery:', payLoad)
+    console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/senderAcceptDelivery1:', payLoad)
     /**
      * update record of payload
      * - delivered time
@@ -404,6 +404,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     /**
      * reverse sender and receiver subTypeId
      */
+    console.log('cd-shell::SidebarComponent::notificationAcceptDelivery()/senderAcceptDelivery2:', payLoad)
+    payLoad.pushData.pushRecepients[0].subTypeId = 7
+    payLoad.pushData.pushRecepients[1].subTypeId = 1
     // this.sendPayLoad(payLoad);
     this.sendSioMessage(payLoad)
   }

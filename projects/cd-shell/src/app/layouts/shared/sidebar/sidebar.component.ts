@@ -469,6 +469,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     payLoad.pushData.commTrack.delivered = true;
     payLoad.pushData.isNotification = true;
     payLoad.pushData.triggerEvent = 'msg-received';
+    payLoad.pushData.emittEvent = 'push-delivered';
+
+    // make use of delivered data
+    this.htmlMenu(payLoad.pushData.m, payLoad.pushData.token)
     /**
      * reverse sender and receiver subTypeId
      */

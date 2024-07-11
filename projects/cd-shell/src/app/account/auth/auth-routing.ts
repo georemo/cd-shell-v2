@@ -5,11 +5,16 @@ import { NavigationStart, NavigationEnd, NavigationCancel, NavigationError, Even
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PasswordresetComponent } from './passwordreset/passwordreset.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: LoginComponent
+        component: HomeComponent
+    },
+    {
+        path: 'home',
+        component: HomeComponent
     },
     {
         path: 'login',

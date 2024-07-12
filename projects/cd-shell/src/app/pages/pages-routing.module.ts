@@ -116,6 +116,16 @@ const routes: Routes = [
             })
                 .then(m => m.ModulemanModule)
     },
+    {
+        path: 'coops',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'https://coops.asdap.net/remoteEntry.js',
+                remoteName: 'coops',
+                exposedModule: './CoopsFrontModule'
+            })
+                .then(m => m.CoopsFrontModule)
+    },
     // {
     //     path: 'menu',
     //     loadChildren: () =>

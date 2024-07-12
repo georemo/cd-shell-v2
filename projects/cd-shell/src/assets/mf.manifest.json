@@ -1,5 +1,6 @@
 {
 	"cdUser": "https://cd-user.asdap.net/remoteEntry.js",
 	"cdComm": "https://cd-comm.asdap.net/remoteEntry.js",
-	"cdModuleman": "https://cd-moduleman.asdap.net/remoteEntry.js"
+	"cdModuleman": "https://cd-moduleman.asdap.net/remoteEntry.js",
+	"coops": "https://coops.asdap.net/remoteEntry.js"
 }

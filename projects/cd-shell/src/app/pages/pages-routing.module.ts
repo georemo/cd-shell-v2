@@ -61,6 +61,26 @@ const routes: Routes = [
                 .then(m => m.UserFrontModule)
     },
     {
+        path: 'group',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'https://cd-user.asdap.net/remoteEntry.js',
+                remoteName: 'cdUser',
+                exposedModule: './GroupModule'
+            })
+                .then(m => m.UserFrontModule)
+    },
+    {
+        path: 'group-member',
+        loadChildren: () =>
+            loadRemoteModule({
+                remoteEntry: 'https://cd-user.asdap.net/remoteEntry.js',
+                remoteName: 'cdUser',
+                exposedModule: './GroupMemberModule'
+            })
+                .then(m => m.UserFrontModule)
+    },
+    {
         path: 'pms',
         loadChildren: () =>
             loadRemoteModule({

@@ -15,7 +15,7 @@ import {
   // WsHttpService,
   CdObjId, ICdResponse, ICdPushEnvelop, ISocketItem
 } from '@corpdesk/core';
-import { HtmlElemService, HtmlCtx } from '@corpdesk/core/src/lib/guig';
+import { HtmlElemService, HtmlCtx } from '@corpdesk/core';
 import { MenuItem } from './menu.model';
 import { environment } from 'src/environments/environment';
 import { PusherService } from '../../../core/services/pusher.service';
